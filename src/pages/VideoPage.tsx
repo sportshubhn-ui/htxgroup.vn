@@ -6,8 +6,8 @@ export function VideoPage() {
   const videos = [
     {
       id: 1,
-      title: 'Công ty CP DV SX Toàn Cầu TC Group hỗ trợ người dân Thanh Trì chung tay cùng đẩy lùi đại dịch',
-      desc: 'Gần 10 tấn gạo đặc sản Nam Định đã được công ty CP DV SX Toàn Cầu vận chuyển đến 6 xã Tân Triều, Tam Hiệp, Hữu Hòa, Tả Thanh Oai, Thịnh Liệt, Vĩnh Quỳnh, Yên Mỹ trên địa bàn huyện Thanh Trì...',
+      title: 'Công ty CP DV SX HTX Group HTX Group hỗ trợ người dân Thanh Trì chung tay cùng đẩy lùi đại dịch',
+      desc: 'Gần 10 tấn gạo đặc sản Nam Định đã được công ty CP DV SX HTX Group vận chuyển đến 6 xã Tân Triều, Tam Hiệp, Hữu Hòa, Tả Thanh Oai, Thịnh Liệt, Vĩnh Quỳnh, Yên Mỹ trên địa bàn huyện Thanh Trì...',
       embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder or real YouTube embed
       date: '16/09/2021',
     },
@@ -24,7 +24,7 @@ export function VideoPage() {
     <div className="bg-gray-50 py-10 lg:py-14 min-h-[70vh]">
       <SEO
         title="Video Hoạt Động"
-        description="Các video phóng sự, tài liệu hoạt động thu gom xử lý rác thải xây dựng và công tác xã hội vì cộng đồng của TC GROUP."
+        description="Các video phóng sự, tài liệu hoạt động thu gom xử lý rác thải xây dựng và công tác xã hội vì cộng đồng của HTX GROUP."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +48,7 @@ export function VideoPage() {
               <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden mb-4 relative flex items-center justify-center">
                 <div className="text-center p-6 text-white">
                   <PlayCircle className="w-16 h-16 text-[#1c84cd] mx-auto mb-2 opacity-90 hover:scale-110 transition cursor-pointer" />
-                  <p className="text-xs text-gray-400">Xem video trên kênh truyền thông TC GROUP</p>
+                  <p className="text-xs text-gray-400">Xem video trên kênh truyền thông HTX GROUP</p>
                 </div>
               </div>
               <div className="text-xs text-[#1c84cd] font-semibold mb-2">{vid.date}</div>

@@ -1,5 +1,5 @@
 /**
- * Complete Data Module for TC GROUP (Công ty Cổ phần Dịch vụ Sản xuất Toàn Cầu)
+ * Complete Data Module for HTX GROUP (Công ty Cổ phần Dịch vụ Sản xuất HTX Group)
  * 100% clone content from tcgroup.com.vn
  */
 
@@ -10,19 +10,19 @@ export interface NavItem {
 }
 
 export const companyInfo = {
-  name: 'CÔNG TY CỔ PHẦN DỊCH VỤ SẢN XUẤT TOÀN CẦU',
-  shortName: 'TC GROUP',
-  englishName: 'Global production service joint stock company',
-  abbreviation: 'GLOBAL PS.,JSC',
+  name: 'CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP',
+  shortName: 'HTX GROUP',
+  englishName: 'HTX Group Joint Stock Company',
+  abbreviation: 'HTX GROUP.,JSC',
   taxCode: '0106501398',
   licenseDate: '04/04/2014 do Sở Kế Hoạch và Đầu tư TP Hà Nội cấp',
   hotline: '0966 269 956',
   phoneAlt: '0359 028 779',
-  email: 'Toancaunghienvlxd@gmail.com',
-  website: 'https://tcgroup.com.vn',
+  email: 'contact@htxgroup.vn',
+  website: 'https://htxgroup.vn',
   officeAddress: 'Tầng 12, số 164 đường Khuất Duy Tiến, Phường Thanh Xuân, TP Hà Nội',
   yardAddress: 'Khu tiếp nhận 6.5 ha nút giao cao tốc Pháp Vân – Cầu Giẽ với đường vành đai 3 trên cao, Phường Hoàng Liệt, Quận Hoàng Mai, Hà Nội',
-  facebook: 'https://www.facebook.com/To%C3%A0n-c%E1%BA%A7u-X%E1%BB%AD-l%C3%BD-r%C3%A1c-th%E1%BA%A3i-r%E1%BA%AFn-x%C3%A2y-d%E1%BB%B1ng-CTRXD-104729298550365/'
+  facebook: 'https://facebook.com/htxgroup.vn'
 }
 
 export const navigationItems: NavItem[] = [
@@ -45,7 +45,7 @@ export const navigationItems: NavItem[] = [
     title: 'Sản phẩm',
     href: '/san-pham',
     children: [
-      { title: 'Sản phẩm của Toàn Cầu', href: '/san-pham-cua-toan-cau' },
+      { title: 'Sản phẩm của HTX Group', href: '/san-pham-cua-toan-cau' },
       { title: 'Cát san lấp', href: '/cat-san-lap' },
       { title: 'Bê tông vụn', href: '/be-tong-vun' },
       { title: 'Đá tự nhiên', href: '/da-tu-nhien1' },
@@ -100,7 +100,7 @@ export const homeHeroSlides = [
     id: 1,
     image: '/images/slider-1.jpg',
     title: 'Thu gom – xử lý – tái chế CTRXD. Hotline: 0966 269 956',
-    desc: 'Toàn Cầu hướng tới đưa vật liệu tái chế từ chất thải rắn xây dựng ứng dụng rộng rãi vào thi công công trình, san lấp mặt bằng, nguồn vật liệu mới.',
+    desc: 'HTX Group hướng tới đưa vật liệu tái chế từ chất thải rắn xây dựng ứng dụng rộng rãi vào thi công công trình, san lấp mặt bằng, nguồn vật liệu mới.',
     ctaText: 'Xem chi tiết',
     ctaLink: '/xu-ly-chat-thai-ran-xay-dung'
   },
@@ -148,7 +148,7 @@ export const coreServices = [
   {
     id: 'kinh-doanh-vat-lieu-xay-dung',
     title: 'Cung cấp nguyên liệu xây dựng sau tái chế',
-    desc: 'Với quyết tâm “biến phế thải thành tài nguyên” Công ty Toàn Cầu đã mạnh dạn đầu tư hàng loạt máy móc thiết bị hiện đại công nghệ cao.',
+    desc: 'Với quyết tâm “biến phế thải thành tài nguyên” Công ty HTX Group đã mạnh dạn đầu tư hàng loạt máy móc thiết bị hiện đại công nghệ cao.',
     href: '/kinh-doanh-vat-lieu-xay-dung',
     icon: 'PackageCheck'
   }
@@ -179,7 +179,7 @@ export const featuredProjects = [
   {
     id: 'video-hoat-dong',
     title: 'Video Hoạt Động',
-    summary: 'Công ty CP DV SX Toàn Cầu TC Group hỗ trợ người dân Thanh Trì chung tay cùng đẩy lùi đại dịch.',
+    summary: 'Công ty CP DV SX HTX Group HTX Group hỗ trợ người dân Thanh Trì chung tay cùng đẩy lùi đại dịch.',
     href: '/video',
     icon: 'PlayCircle'
   },
@@ -195,9 +195,9 @@ export const featuredProjects = [
 export const productList = [
   {
     id: 'san-pham-cua-toan-cau',
-    title: 'Sản phẩm của toàn cầu',
+    title: 'Sản phẩm của HTX Group',
     image: '/images/prod-toancau.jpg',
-    desc: 'Các sản phẩm của Toàn Cầu: Cát san lấp, Base, Supbase, Cát xây dựng, Cọc tiêu đường...',
+    desc: 'Các sản phẩm của HTX Group: Cát san lấp, Base, Supbase, Cát xây dựng, Cọc tiêu đường...',
     href: '/san-pham-cua-toan-cau'
   },
   {
@@ -247,74 +247,74 @@ export const companyCounters = [
 export const newsArticles = [
   {
     "slug": "ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3",
-    "url": "https://tcgroup.com.vn/ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3/",
+    "url": "https://htxgroup.vn/ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3/",
     "title": "Hà Nội: Kiểm tra, xử lý dứt điểm tình trạng đổ trộm rác trên Vành đai 2 và Vành đai 3",
     "date": "2025",
     "image": "http://tcgroup.com.vn/wp-content/uploads/2025/12/phe-thai-vanh-dai-2.jpg",
     "excerpt": "05 Th12 2025 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">05</span><span class=\"ht-month-year\">Th12 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">05</span><span class=\"ht-month-year\">Th12 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi",
-    "url": "https://tcgroup.com.vn/tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi/",
+    "url": "https://htxgroup.vn/tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi/",
     "title": "Tạo đột phá trong quản lý chất thải rắn xây dựng ở Hà Nội",
     "date": "2025",
     "image": "http://tcgroup.com.vn/wp-content/uploads/2025/06/nguyen-xuan-dai-1.jpg",
     "excerpt": "27 Th6 2025 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">27</span><span class=\"ht-month-year\">Th6 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">27</span><span class=\"ht-month-year\">Th6 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "ha-noi-phat-nang-hanh-vi-san-gat-dat-nong-nghiep",
-    "url": "https://tcgroup.com.vn/ha-noi-phat-nang-hanh-vi-san-gat-dat-nong-nghiep/",
+    "url": "https://htxgroup.vn/ha-noi-phat-nang-hanh-vi-san-gat-dat-nong-nghiep/",
     "title": "Hà Nội phạt nặng hành vi san gạt đất nông nghiệp",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2025/05/datnongnghiep1-1.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2025/05/datnongnghiep1-1.jpg",
     "excerpt": "05 Th5 2025 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">05</span><span class=\"ht-month-year\">Th5 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">05</span><span class=\"ht-month-year\">Th5 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "san-xuat-vat-lieu-xay-dung-tu-phe-thai",
-    "url": "https://tcgroup.com.vn/san-xuat-vat-lieu-xay-dung-tu-phe-thai/",
+    "url": "https://htxgroup.vn/san-xuat-vat-lieu-xay-dung-tu-phe-thai/",
     "title": "Sản xuất vật liệu xây dựng từ phế thải",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2025/03/1.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2025/03/1.jpg",
     "excerpt": "24 Th3 2025 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">24</span><span class=\"ht-month-year\">Th3 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">24</span><span class=\"ht-month-year\">Th3 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "khuyen-khich-dau-tu-tai-che-phe-thai-xay-dung-de-khong-lang-phi-tai-nguyen",
-    "url": "https://tcgroup.com.vn/khuyen-khich-dau-tu-tai-che-phe-thai-xay-dung-de-khong-lang-phi-tai-nguyen/",
+    "url": "https://htxgroup.vn/khuyen-khich-dau-tu-tai-che-phe-thai-xay-dung-de-khong-lang-phi-tai-nguyen/",
     "title": "Khuyến khích đầu tư, tái chế phế thải xây dựng để không lãng phí ‘tài nguyên’",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2025/01/taiche.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2025/01/taiche.jpg",
     "excerpt": "17 Th1 2025 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">17</span><span class=\"ht-month-year\">Th1 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">17</span><span class=\"ht-month-year\">Th1 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "toan-cau-chung-tay-cung-ha-noi-don-dep-moi-truong-sau-bao-yagi",
-    "url": "https://tcgroup.com.vn/toan-cau-chung-tay-cung-ha-noi-don-dep-moi-truong-sau-bao-yagi/",
-    "title": "Toàn Cầu chung tay cùng Hà Nội dọn dẹp môi trường sau bão Yagi",
+    "url": "https://htxgroup.vn/toan-cau-chung-tay-cung-ha-noi-don-dep-moi-truong-sau-bao-yagi/",
+    "title": "HTX Group chung tay cùng Hà Nội dọn dẹp môi trường sau bão Yagi",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2024/09/Bao-so-3-a2.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2024/09/Bao-so-3-a2.jpg",
     "excerpt": "12 Th9 2024 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">12</span><span class=\"ht-month-year\">Th9 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">12</span><span class=\"ht-month-year\">Th9 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "thuc-trang-su-dung-vat-lieu-xanh-tai-viet-nam-hien-nay",
-    "url": "https://tcgroup.com.vn/thuc-trang-su-dung-vat-lieu-xanh-tai-viet-nam-hien-nay/",
+    "url": "https://htxgroup.vn/thuc-trang-su-dung-vat-lieu-xanh-tai-viet-nam-hien-nay/",
     "title": "Thực trạng sử dụng vật liệu xanh tại Việt Nam hiện nay",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2024/08/vlx1.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2024/08/vlx1.jpg",
     "excerpt": "20 Th8 2024 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">20</span><span class=\"ht-month-year\">Th8 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">20</span><span class=\"ht-month-year\">Th8 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
   {
     "slug": "quy-trinh-tai-che-chat-thai-ran-xay-dung-cua-toan-cau",
-    "url": "https://tcgroup.com.vn/quy-trinh-tai-che-chat-thai-ran-xay-dung-cua-toan-cau/",
-    "title": "Quy trình tái chế chất thải rắn xây dựng của Toàn Cầu",
+    "url": "https://htxgroup.vn/quy-trinh-tai-che-chat-thai-ran-xay-dung-cua-toan-cau/",
+    "title": "Quy trình tái chế chất thải rắn xây dựng của HTX Group",
     "date": "2025",
-    "image": "https://tcgroup.com.vn/wp-content/uploads/2024/05/a1.jpg",
+    "image": "https://htxgroup.vn/wp-content/uploads/2024/05/a1.jpg",
     "excerpt": "22 Th5 2024 by admin...",
-    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">22</span><span class=\"ht-month-year\">Th5 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://tcgroup.com.vn/author/admin/\">admin</a></span></span>"
+    "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">22</span><span class=\"ht-month-year\">Th5 2024</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   }
 ]

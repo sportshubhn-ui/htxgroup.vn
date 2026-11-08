@@ -11,10 +11,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Column 1: Company Profile */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-xl text-white tracking-wider">
-                {companyInfo.shortName}
-              </span>
+            <div className="bg-white/95 rounded-lg p-2.5 inline-block shadow-sm">
+              <img src="/images/logo.svg" alt={companyInfo.name} className="h-8 w-auto max-w-[200px]" />
             </div>
             <p className="text-xs uppercase font-bold text-[#1c84cd] tracking-wider">
               {companyInfo.name}
@@ -123,7 +121,7 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>© {currentYear} {companyInfo.name}. Bản quyền thuộc về TC GROUP & HTX Group.</p>
+          <p>© {currentYear} {companyInfo.name}. Bản quyền thuộc về HTX GROUP.</p>
           <div className="flex gap-4">
             <Link to="/gioi-thieu/thong-tin-chung" className="hover:text-white transition">Hồ sơ pháp lý</Link>
             <Link to="/lien-he" className="hover:text-white transition">Hỗ trợ khách hàng</Link>

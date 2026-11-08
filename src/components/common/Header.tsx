@@ -47,22 +47,10 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 shrink-0 py-2">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.svg"
               alt={companyInfo.name}
-              className="h-12 w-auto max-w-[220px] object-contain"
-              onError={(e) => {
-                // Fallback if image fails
-                (e.target as HTMLElement).style.display = 'none'
-              }}
+              className="h-12 w-auto max-w-[260px] object-contain"
             />
-            <div className="hidden sm:block">
-              <span className="block font-black text-xl tracking-tight text-[#1c84cd] leading-none">
-                TC GROUP
-              </span>
-              <span className="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mt-1">
-                Toàn Cầu CTRXD
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav */}

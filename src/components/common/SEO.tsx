@@ -11,7 +11,7 @@ interface SEOProps {
 
 export function SEO({
   title,
-  description = 'TC GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng, phá dỡ công trình dân dụng và công nghiệp, tái chế vật liệu xây dựng.',
+  description = 'HTX GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng, phá dỡ công trình dân dụng và công nghiệp, tái chế vật liệu xây dựng.',
   image = '/images/slider-1.jpg',
   url,
   type = 'website',
@@ -78,7 +78,7 @@ export function SEO({
       name: companyInfo.name,
       alternateName: companyInfo.shortName,
       url: companyInfo.website,
-      logo: `${companyInfo.website}/images/logo.jpg`,
+      logo: `${companyInfo.website}/images/logo.svg`,
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: companyInfo.hotline,

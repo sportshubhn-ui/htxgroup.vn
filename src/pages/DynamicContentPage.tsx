@@ -10,7 +10,7 @@ export function DynamicContentPage() {
 
   const page = pagesContent[cleanPath] || pagesContent[pathname] || {
     title: 'Nội dung chi tiết',
-    desc: 'Thông tin chính thức từ TC GROUP',
+    desc: 'Thông tin chính thức từ HTX GROUP',
     content: 'Nội dung đang được cập nhật...',
   }
 
@@ -90,7 +90,7 @@ export function DynamicContentPage() {
                 Liên hệ hợp tác & Báo giá xử lý CTRXD:
               </h3>
               <p className="text-xs sm:text-sm text-gray-600 mb-4">
-                Toàn Cầu (TC GROUP) cam kết dịch vụ chuyên nghiệp, thi công an toàn và giải pháp xử lý phế thải xây dựng đạt chuẩn cao nhất.
+                HTX Group (HTX GROUP) cam kết dịch vụ chuyên nghiệp, thi công an toàn và giải pháp xử lý phế thải xây dựng đạt chuẩn cao nhất.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold">
                 <a

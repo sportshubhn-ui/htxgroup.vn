@@ -8,7 +8,7 @@ export function NewsPage() {
     <div className="bg-gray-50 py-10 lg:py-14 min-h-[70vh]">
       <SEO
         title="Tin Tức Sự Kiện"
-        description="Tin tức hoạt động, quy định xử lý chất thải rắn xây dựng và công nghệ tái chế bảo vệ môi trường của TC GROUP."
+        description="Tin tức hoạt động, quy định xử lý chất thải rắn xây dựng và công nghệ tái chế bảo vệ môi trường của HTX GROUP."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

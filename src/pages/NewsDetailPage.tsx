@@ -45,7 +45,7 @@ export function NewsDetailPage() {
           </h1>
 
           <div className="flex items-center justify-between text-xs text-gray-500 pb-4 mb-6 border-b border-gray-100">
-            <span>Tác giả: <strong>Ban Truyền Thông TC GROUP</strong></span>
+            <span>Tác giả: <strong>Ban Truyền Thông HTX GROUP</strong></span>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => window.print()}

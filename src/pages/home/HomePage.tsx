@@ -48,7 +48,7 @@ export function HomePage() {
     <div className="bg-white">
       <SEO
         title="Trang Chủ"
-        description="TC GROUP Giải pháp hoàn hảo xử lý chất thải rắn xây dựng. Tiếp nhận, thu gom, vận chuyển rác thải xây dựng, phá dỡ công trình dân dụng và công nghiệp, tái chế và cung cấp vật liệu xây dựng."
+        description="HTX GROUP Giải pháp hoàn hảo xử lý chất thải rắn xây dựng. Tiếp nhận, thu gom, vận chuyển rác thải xây dựng, phá dỡ công trình dân dụng và công nghiệp, tái chế và cung cấp vật liệu xây dựng."
       />
 
       {/* 1. HERO SLIDER */}
@@ -202,7 +202,7 @@ export function HomePage() {
             </h2>
             <div className="w-20 h-1 bg-white mx-auto mt-3" />
             <p className="mt-3 text-sm text-blue-100 max-w-2xl mx-auto">
-              Ba trụ cột hoạt động then chốt định hình năng lực và uy tín vượt trội của Toàn Cầu
+              Ba trụ cột hoạt động then chốt định hình năng lực và uy tín vượt trội của HTX Group
             </p>
           </div>
 
@@ -252,7 +252,7 @@ export function HomePage() {
             </h2>
             <div className="w-20 h-1 bg-[#1c84cd] mx-auto mt-3" />
             <p className="mt-3 text-sm text-gray-600">
-              Các công trình trọng điểm cấp thành phố và dự án kỹ thuật cao do Toàn Cầu thực hiện
+              Các công trình trọng điểm cấp thành phố và dự án kỹ thuật cao do HTX Group thực hiện
             </p>
           </div>
 
@@ -310,7 +310,7 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-              SẢN PHẨM CỦA TOÀN CẦU
+              SẢN PHẨM CỦA HTX GROUP
             </h2>
             <div className="w-20 h-1 bg-[#1c84cd] mx-auto mt-3" />
             <p className="mt-3 text-sm text-gray-600">
@@ -448,7 +448,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 8. ĐỐI TÁC CỦA TOÀN CẦU */}
+      {/* 8. ĐỐI TÁC CỦA HTX GROUP */}
       <section id="ht-logo-section" className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">

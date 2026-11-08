@@ -34,7 +34,7 @@ export function ContactPage() {
     <div className="bg-gray-50 py-10 lg:py-14 min-h-[70vh]">
       <SEO
         title="Liên Hệ"
-        description="Thông tin liên hệ Công ty Cổ phần Dịch vụ Sản xuất Toàn Cầu (TC GROUP) - Địa chỉ, điện thoại, bãi tiếp nhận và mẫu đăng ký tư vấn."
+        description="Thông tin liên hệ Công ty Cổ phần Dịch vụ Sản xuất HTX Group (HTX GROUP) - Địa chỉ, điện thoại, bãi tiếp nhận và mẫu đăng ký tư vấn."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +51,7 @@ export function ContactPage() {
           </h1>
           <div className="w-20 h-1 bg-[#1c84cd] mx-auto mt-3" />
           <p className="mt-3 text-sm text-gray-600 max-w-2xl mx-auto">
-            Vui lòng liên hệ với Toàn Cầu theo thông tin dưới đây hoặc để lại tin nhắn trong biểu mẫu:
+            Vui lòng liên hệ với HTX Group theo thông tin dưới đây hoặc để lại tin nhắn trong biểu mẫu:
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export function ContactPage() {
               </div>
               <div className="w-full h-60 bg-gray-200 rounded overflow-hidden">
                 <iframe
-                  title="Google Maps TC GROUP"
+                  title="Google Maps HTX GROUP"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8!2d105.79!3d20.99!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac97854619b1%3A0x6b44538805f778a4!2zMTY0IEtodeG6pXQgRHV5IFRp4bq_biwgVGhhbmggWHXDom4gQuG6r2MsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1600000000000"
                   className="w-full h-full border-0"
                   loading="lazy"
@@ -130,7 +130,7 @@ export function ContactPage() {
                 GỬI YÊU CẦU CHO CHÚNG TÔI
               </h2>
               <p className="text-xs text-gray-500 mb-6">
-                Quý khách vui lòng điền các thông tin bên dưới, chuyên viên Toàn Cầu sẽ liên hệ lại trong thời gian sớm nhất.
+                Quý khách vui lòng điền các thông tin bên dưới, chuyên viên HTX Group sẽ liên hệ lại trong thời gian sớm nhất.
               </p>
 
               {submitted ? (
@@ -140,7 +140,7 @@ export function ContactPage() {
                     Gửi thông tin thành công!
                   </h3>
                   <p className="text-xs text-green-700">
-                    Cảm ơn Quý khách đã liên hệ với Toàn Cầu (TC GROUP). Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
+                    Cảm ơn Quý khách đã liên hệ với HTX Group (HTX GROUP). Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
