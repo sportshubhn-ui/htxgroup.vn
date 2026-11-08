@@ -194,54 +194,54 @@ export const featuredProjects = [
 
 export const productList = [
   {
+    id: 'san-pham-cua-toan-cau',
+    title: 'Sản phẩm của toàn cầu',
+    image: '/images/prod-toancau.jpg',
+    desc: 'Các sản phẩm của Toàn Cầu: Cát san lấp, Base, Supbase, Cát xây dựng, Cọc tiêu đường...',
+    href: '/san-pham-cua-toan-cau'
+  },
+  {
+    id: 'phe-lieu-thi-cong',
+    title: 'PHẾ LIỆU THI CÔNG',
+    image: '/images/prod-catsanlap.png',
+    desc: 'Quy trình: Gạch đá vụn – Gia công sản phẩm – Cát đã tái chế – Tái sử dụng để lắp mương máng.',
+    href: '/phe-lieu-thi-cong'
+  },
+  {
+    id: 'da-tu-nhien1',
+    title: 'Đá tự nhiên',
+    image: '/images/prod-datunhien.jpg',
+    desc: 'Đá tự nhiên và cốt liệu bê tông nghiền phân loại chất lượng cao phục vụ các công trình xây dựng.',
+    href: '/da-tu-nhien1'
+  },
+  {
+    id: 'nhua-duong-vun',
+    title: 'Nhựa đường vụn',
+    image: '/images/prod-nhuaduong.jpg',
+    desc: 'Quy trình: Nhựa đường vụn – Gia công sản phẩm – Các hạt nhựa đường tái chế làm nền đường chịu tải không nén.',
+    href: '/nhua-duong-vun'
+  },
+  {
     id: 'cat-san-lap',
     title: 'Cát san lấp',
-    image: '/images/product-1.jpg',
+    image: '/images/prod-catsanlap.png',
     desc: 'Cát tái chế từ chất thải rắn xây dựng, dùng cho san lấp mặt bằng, làm mương máng, nền móng vững chắc.',
     href: '/cat-san-lap'
   },
   {
     id: 'be-tong-vun',
     title: 'Bê tông vụn',
-    image: '/images/slider-2.jpg',
-    desc: 'Bê tông vụn đã qua sàng lọc, phân loại theo kích cỡ tiêu chuẩn, thay thế hoàn hảo đá tự nhiên trong nhiều hạng mục.',
+    image: '/images/prod-datunhien.jpg',
+    desc: 'Bê tông vụn đã qua nghiền tuyển chọn kỹ thuật, tái sử dụng hiệu quả và tiết kiệm chi phí xây dựng.',
     href: '/be-tong-vun'
-  },
-  {
-    id: 'da-tu-nhien1',
-    title: 'Đá tự nhiên',
-    image: '/images/about-img.jpg',
-    desc: 'Đá tự nhiên tận thu và chế biến chất lượng cao phục vụ các công trình xây dựng dân dụng và công nghiệp.',
-    href: '/da-tu-nhien1'
-  },
-  {
-    id: 'nhua-duong-vun',
-    title: 'Nhựa đường vụn',
-    image: '/images/slider-1.jpg',
-    desc: 'Quy trình: Nhựa đường vụn -> Gia công -> Hạt nhựa đường tái chế dùng làm nền đường chịu tải không nén.',
-    href: '/nhua-duong-vun'
-  },
-  {
-    id: 'phe-lieu-thi-cong',
-    title: 'Phế liệu thi công',
-    image: '/images/product-1.jpg',
-    desc: 'Gạch đá vụn, sắt thép, cốp pha sau phá dỡ được phân loại kỹ lưỡng tại nguồn để tái sử dụng tối ưu.',
-    href: '/phe-lieu-thi-cong'
-  },
-  {
-    id: 'san-pham-cua-toan-cau',
-    title: 'Sản phẩm của Toàn Cầu',
-    image: '/images/product-1.jpg',
-    desc: 'Hệ thống sản phẩm vật liệu xây dựng tái chế xanh: Base, Subbase, Cát xây dựng, Cọc tiêu đường...',
-    href: '/san-pham-cua-toan-cau'
   }
 ]
 
 export const companyCounters = [
-  { value: '250+', label: 'Công trình hoàn thành' },
-  { value: '1.500.000+', label: 'Tấn CTRXD đã xử lý' },
-  { value: '50+', label: 'Máy móc & thiết bị hiện đại' },
-  { value: '100%', label: 'Đạt chuẩn môi trường' }
+  { value: '37', label: 'ĐỐI TÁC' },
+  { value: '200', label: 'KHÁCH HÀNG' },
+  { value: '150', label: 'DỰ ÁN THAM GIA' },
+  { value: '40', label: 'DỰ ÁN ĐẦU TƯ' }
 ]
 
 export const newsArticles = [

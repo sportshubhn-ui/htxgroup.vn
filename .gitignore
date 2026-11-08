@@ -14,8 +14,11 @@ dist-ssr
 
 # Environment variables & secrets (Never commit tokens to Git!)
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
 
 # Cloudflare Wrangler cache & outputs
 .wrangler/

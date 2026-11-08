@@ -322,35 +322,37 @@ export function HomePage() {
             {productList.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all group"
+                className="relative overflow-hidden rounded-md shadow-md group h-[380px] bg-slate-100"
               >
-                <div className="h-48 overflow-hidden relative">
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#1c84cd] text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">
-                    Vật liệu xanh
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-gray-900 text-base group-hover:text-[#1c84cd] transition">
-                    <Link to={product.href}>{product.title}</Link>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+
+                {/* Bottom title banner by default */}
+                <div className="absolute bottom-0 inset-x-0 bg-[#1c84cd]/95 text-white py-3 px-4 text-center transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+                  <h3 className="font-bold text-sm uppercase tracking-wide truncate">
+                    {product.title}
                   </h3>
-                  <p className="mt-2 text-xs text-gray-600 leading-relaxed line-clamp-2">
+                </div>
+
+                {/* Hover full overlay */}
+                <Link
+                  to={product.href}
+                  className="absolute inset-0 bg-[#1c84cd]/92 text-white p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 className="font-bold text-base uppercase tracking-wider mb-3 border-b border-white/40 pb-2">
+                    {product.title}
+                  </h3>
+                  <p className="text-xs text-white/95 leading-relaxed mb-4">
                     {product.desc}
                   </p>
-                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-                    <Link
-                      to={product.href}
-                      className="text-xs font-semibold text-[#1c84cd] hover:text-[#1977b9] flex items-center gap-1"
-                    >
-                      <span>Xem chi tiết</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
+                  <span className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-[#1c84cd] rounded font-bold text-xs uppercase tracking-wider shadow">
+                    <span>Xem chi tiết</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
               </div>
             ))}
           </div>
@@ -456,12 +458,12 @@ export function HomePage() {
             <div className="w-12 h-0.5 bg-[#1c84cd] mx-auto mt-2" />
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-80 grayscale hover:grayscale-0 transition-all">
-            <img src="/images/partner-1.jpg" alt="Đối tác Toàn Cầu" className="h-14 w-auto object-contain" />
-            <div className="px-4 py-2 border rounded text-xs font-bold text-gray-600">SỞ XÂY DỰNG HÀ NỘI</div>
-            <div className="px-4 py-2 border rounded text-xs font-bold text-gray-600">RUBBLE MASTER (ÁO)</div>
-            <div className="px-4 py-2 border rounded text-xs font-bold text-gray-600">UBND TP HÀ NỘI</div>
-            <div className="px-4 py-2 border rounded text-xs font-bold text-gray-600">TỔNG CÔNG TY VINACONEX</div>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-85 hover:opacity-100 transition-all">
+            <img src="/images/partner-1.jpg" alt="Đối tác 1" className="h-16 w-auto object-contain hover:scale-105 transition" />
+            <img src="/images/partner-2.jpg" alt="Đối tác 2" className="h-16 w-auto object-contain hover:scale-105 transition" />
+            <img src="/images/partner-3.png" alt="Đối tác 3" className="h-16 w-auto object-contain hover:scale-105 transition" />
+            <img src="/images/partner-4.jpg" alt="Đối tác 4" className="h-16 w-auto object-contain hover:scale-105 transition" />
+            <img src="/images/partner-5.gif" alt="Đối tác 5" className="h-16 w-auto object-contain hover:scale-105 transition" />
           </div>
         </div>
       </section>
