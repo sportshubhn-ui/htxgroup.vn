@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from '@/components/common/SEO'
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ChevronRight } from 'lucide-react'
-import { companyInfo } from '@/data/tcgroupData'
+import { companyInfo } from '@/data/htxData'
 import { contactService } from '@/services/contactService'
 
 export function ContactPage() {

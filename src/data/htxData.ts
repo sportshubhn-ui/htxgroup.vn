@@ -1,6 +1,5 @@
 /**
- * Complete Data Module for HTX GROUP (Công ty Cổ phần Dịch vụ Sản xuất HTX Group)
- * 100% clone content from tcgroup.com.vn
+ * Complete Data Module for HTX GROUP (Công ty Cổ phần Tập đoàn HTX Group)
  */
 
 export interface NavItem {
@@ -196,7 +195,7 @@ export const productList = [
   {
     id: 'san-pham-cua-toan-cau',
     title: 'Sản phẩm của HTX Group',
-    image: '/images/prod-toancau.jpg',
+    image: '/images/prod-htxgroup.jpg',
     desc: 'Các sản phẩm của HTX Group: Cát san lấp, Base, Supbase, Cát xây dựng, Cọc tiêu đường...',
     href: '/san-pham-cua-toan-cau'
   },
@@ -250,7 +249,7 @@ export const newsArticles = [
     "url": "https://htxgroup.vn/ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3/",
     "title": "Hà Nội: Kiểm tra, xử lý dứt điểm tình trạng đổ trộm rác trên Vành đai 2 và Vành đai 3",
     "date": "2025",
-    "image": "http://tcgroup.com.vn/wp-content/uploads/2025/12/phe-thai-vanh-dai-2.jpg",
+    "image": "/images/news-vanhdai2.jpg",
     "excerpt": "05 Th12 2025 by admin...",
     "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">05</span><span class=\"ht-month-year\">Th12 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },
@@ -259,7 +258,7 @@ export const newsArticles = [
     "url": "https://htxgroup.vn/tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi/",
     "title": "Tạo đột phá trong quản lý chất thải rắn xây dựng ở Hà Nội",
     "date": "2025",
-    "image": "http://tcgroup.com.vn/wp-content/uploads/2025/06/nguyen-xuan-dai-1.jpg",
+    "image": "/images/news-nguyenxuandai.jpg",
     "excerpt": "27 Th6 2025 by admin...",
     "content": "<div class=\"entry-meta ht-post-info\"> <span class=\"entry-date published updated\"><span class=\"ht-day\">27</span><span class=\"ht-month-year\">Th6 2025</span></span><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"https://htxgroup.vn/author/admin/\">admin</a></span></span>"
   },

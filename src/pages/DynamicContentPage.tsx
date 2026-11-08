@@ -2,7 +2,7 @@ import { useLocation, Link } from 'react-router-dom'
 import { pagesContent } from '@/data/pagesContent'
 import { SEO } from '@/components/common/SEO'
 import { Phone, Mail, MapPin, ChevronRight, Share2, Printer } from 'lucide-react'
-import { companyInfo } from '@/data/tcgroupData'
+import { companyInfo } from '@/data/htxData'
 
 export function DynamicContentPage() {
   const { pathname } = useLocation()

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { newsArticles, companyInfo } from '@/data/tcgroupData'
+import { newsArticles, companyInfo } from '@/data/htxData'
 import { SEO } from '@/components/common/SEO'
 import { Calendar, ChevronRight, Share2, Printer, ArrowLeft } from 'lucide-react'
 

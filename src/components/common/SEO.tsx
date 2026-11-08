@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { companyInfo } from '@/data/tcgroupData'
+import { companyInfo } from '@/data/htxData'
 
 interface SEOProps {
   title?: string

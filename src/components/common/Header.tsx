@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
-import { navigationItems, companyInfo } from '@/data/tcgroupData'
+import { navigationItems, companyInfo } from '@/data/htxData'
 import { cn } from '@/utils/cn'
 
 export function Header() {

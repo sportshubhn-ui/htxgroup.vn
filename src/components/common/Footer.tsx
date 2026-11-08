@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, Globe, ArrowRight, ShieldCheck } from 'lucide-react'
-import { companyInfo, coreServices } from '@/data/tcgroupData'
+import { companyInfo, coreServices } from '@/data/htxData'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()

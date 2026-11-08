@@ -24,7 +24,7 @@ function NotFound() {
   )
 }
 
-// All known path routes from tcgroup.com.vn
+// All known path routes for HTX Group
 const staticPaths = [
   'gioi-thieu',
   'gioi-thieu/thong-tin-chung',
@@ -43,6 +43,7 @@ const staticPaths = [
   'san-pham',
   'category/san-pham',
   'san-pham-cua-toan-cau',
+  'san-pham-cua-htx-group',
   'cat-san-lap',
   'be-tong-vun',
   'da-tu-nhien',

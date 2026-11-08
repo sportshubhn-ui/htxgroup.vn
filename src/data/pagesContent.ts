@@ -85,7 +85,12 @@ export const pagesContent: Record<string, PageData> = {
     "content": "THIẾT BỊ XỬ LÝ TÁI CHẾ PTXD PHỤC VỤ PHÁ DỠ"
   },
   "/san-pham-cua-toan-cau": {
-    "title": "Sản phẩm của toàn cầu – CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP",
+    "title": "Sản phẩm của HTX Group – CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP",
+    "desc": "HTX GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng , HTX GROUP PHÁ DỠ CÔNG TRÌNH DÂN DỤNG VÀ CÔNG NGHIỆP, tái chế và cung cấp vật liệu xây dựng, ctrxd, san lấp, chất thải rắn xây dựng. Bãi tập kết.  vật liệu tái chế. Phân loại chất thải rắn xây dựng. Tái chế chất thải xây dựng. Xử lý chất thải xây dựng ",
+    "content": "Các sản phẩm của HTX Group: Cát san lấp Base, Supbase Cát xây dựng Cọc tiêu đường"
+  },
+  "/san-pham-cua-htx-group": {
+    "title": "Sản phẩm của HTX Group – CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP",
     "desc": "HTX GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng , HTX GROUP PHÁ DỠ CÔNG TRÌNH DÂN DỤNG VÀ CÔNG NGHIỆP, tái chế và cung cấp vật liệu xây dựng, ctrxd, san lấp, chất thải rắn xây dựng. Bãi tập kết.  vật liệu tái chế. Phân loại chất thải rắn xây dựng. Tái chế chất thải xây dựng. Xử lý chất thải xây dựng ",
     "content": "Các sản phẩm của HTX Group: Cát san lấp Base, Supbase Cát xây dựng Cọc tiêu đường"
   },
@@ -132,6 +137,6 @@ export const pagesContent: Record<string, PageData> = {
   "/lien-he": {
     "title": "Liên hệ – CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP",
     "desc": "HTX GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng , HTX GROUP PHÁ DỠ CÔNG TRÌNH DÂN DỤNG VÀ CÔNG NGHIỆP, tái chế và cung cấp vật liệu xây dựng, ctrxd, san lấp, chất thải rắn xây dựng. Bãi tập kết.  vật liệu tái chế. Phân loại chất thải rắn xây dựng. Tái chế chất thải xây dựng. Xử lý chất thải xây dựng ",
-    "content": "Vui lòng liên hệ với HTX Group theo thông tin dưới đây: CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP Địa chỉ: Tầng 12, số 164 đường Khuất Duy Tiến , Phường Thanh Xuân, Thành phố Hà Nội , Việt Nam Điện thoại: 0966 269 956. Email: Toancaunghienvlxd@gmail.com Hoặc Quý vị vui lòng điền thông tin vào form sau đây:"
+    "content": "Vui lòng liên hệ với HTX Group theo thông tin dưới đây: CÔNG TY CỔ PHẦN TẬP ĐOÀN HTX GROUP Địa chỉ: Tầng 12, số 164 đường Khuất Duy Tiến , Phường Thanh Xuân, Thành phố Hà Nội , Việt Nam Điện thoại: 0966 269 956. Email: contact@htxgroup.vn Hoặc Quý vị vui lòng điền thông tin vào form sau đây:"
   }
 };

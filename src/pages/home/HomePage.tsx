@@ -23,7 +23,7 @@ import {
   companyCounters,
   newsArticles,
   companyInfo
-} from '@/data/tcgroupData'
+} from '@/data/htxData'
 import { SEO } from '@/components/common/SEO'
 
 export function HomePage() {
@@ -453,7 +453,7 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-lg font-bold uppercase text-gray-700 tracking-wider">
-              ĐỐI TÁC CỦA TOÀN CẦU
+              ĐỐI TÁC CỦA HTX GROUP
             </h3>
             <div className="w-12 h-0.5 bg-[#1c84cd] mx-auto mt-2" />
           </div>
