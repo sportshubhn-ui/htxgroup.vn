@@ -2,12 +2,47 @@
 
 @layer base {
   :root {
-    --color-primary: #15803d;
-    --color-primary-hover: #166534;
+    --color-primary: #1c84cd;
+    --color-primary-hover: #1977b9;
+    --color-text-main: #2f2d2e;
+    --color-footer-bg: #22252a;
   }
 
   html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2f2d2e;
   }
+
+  body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom styling matching tcgroup.com.vn theme */
+.tc-blue {
+  color: #1c84cd;
+}
+
+.bg-tc-blue {
+  background-color: #1c84cd;
+}
+
+.bg-tc-blue-hover:hover {
+  background-color: #1977b9;
+}
+
+.border-tc-blue {
+  border-color: #1c84cd;
+}
+
+/* Header top accent */
+.tc-masthead {
+  border-top: 3px solid #1c84cd;
+}
+
+/* Submenu dropdown animation */
+.submenu-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }

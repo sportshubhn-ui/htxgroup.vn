@@ -1,117 +1,230 @@
 import { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
-import { Menu, X, PhoneCall, Sprout } from 'lucide-react'
-import { mainNavigation } from '@/config/navigation'
-import { siteConfig } from '@/config/site.config'
-import { Button } from '@/components/ui/Button'
-import { useScroll } from '@/hooks/useScroll'
+import { Link, NavLink } from 'react-router-dom'
+import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
+import { navigationItems, companyInfo } from '@/data/tcgroupData'
 import { cn } from '@/utils/cn'
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const isScrolled = useScroll(20)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
+
+  const toggleSubmenu = (title: string) => {
+    setOpenSubmenu(openSubmenu === title ? null : title)
+  }
 
   return (
-    <header
-      className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3'
-          : 'bg-white py-4 border-b border-gray-100'
-      )}
-    >
+    <header className="tc-masthead bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+      {/* Top bar with contact info */}
+      <div className="hidden lg:block bg-gray-50 border-b border-gray-100 py-1.5 text-xs text-gray-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <div className="flex items-center gap-6">
+            <span className="font-semibold text-gray-800">{companyInfo.name}</span>
+            <span>•</span>
+            <span>MST: {companyInfo.taxCode}</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <a
+              href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
+              className="flex items-center gap-1.5 hover:text-[#1c84cd] transition"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#1c84cd]" />
+              <span>Hotline: <strong>{companyInfo.hotline}</strong></span>
+            </a>
+            <a
+              href={`mailto:${companyInfo.email}`}
+              className="flex items-center gap-1.5 hover:text-[#1c84cd] transition"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#1c84cd]" />
+              <span>{companyInfo.email}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-              <Sprout className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-xl font-bold tracking-tight text-gray-900 group-hover:text-emerald-700 transition">
-                {siteConfig.name}
+          <Link to="/" className="flex items-center gap-3 shrink-0 py-2">
+            <img
+              src="/images/logo.jpg"
+              alt={companyInfo.name}
+              className="h-12 w-auto max-w-[220px] object-contain"
+              onError={(e) => {
+                // Fallback if image fails
+                (e.target as HTMLElement).style.display = 'none'
+              }}
+            />
+            <div className="hidden sm:block">
+              <span className="block font-black text-xl tracking-tight text-[#1c84cd] leading-none">
+                TC GROUP
               </span>
-              <span className="hidden sm:block text-[10px] uppercase font-semibold text-emerald-600 tracking-wider">
-                Hợp Tác Xã Việt Nam
+              <span className="block text-[10px] uppercase font-bold text-gray-500 tracking-wider mt-1">
+                Toàn Cầu CTRXD
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {mainNavigation.map((item) => (
-              <NavLink
-                key={item.href}
-                to={item.href}
-                className={({ isActive }) =>
-                  cn(
-                    'px-3.5 py-2 rounded-lg text-sm font-medium transition-colors',
-                    isActive
-                      ? 'text-emerald-700 bg-emerald-50/80 font-semibold'
-                      : 'text-gray-600 hover:text-emerald-600 hover:bg-gray-50'
-                  )
-                }
-              >
-                {item.title}
-              </NavLink>
-            ))}
+          {/* Desktop Nav */}
+          <nav className="hidden xl:flex items-center space-x-1">
+            {navigationItems.map((item) => {
+              const hasChildren = item.children && item.children.length > 0
+
+              if (!hasChildren) {
+                return (
+                  <NavLink
+                    key={item.href}
+                    to={item.href}
+                    className={({ isActive }) =>
+                      cn(
+                        'px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-150',
+                        isActive
+                          ? 'text-[#1c84cd] border-b-2 border-[#1c84cd]'
+                          : 'text-gray-700 hover:text-[#1c84cd]'
+                      )
+                    }
+                  >
+                    {item.title}
+                  </NavLink>
+                )
+              }
+
+              return (
+                <div key={item.href} className="relative group">
+                  <NavLink
+                    to={item.href}
+                    className={({ isActive }) =>
+                      cn(
+                        'px-3 py-2 text-sm font-semibold uppercase tracking-wider transition-colors flex items-center gap-1',
+                        isActive ? 'text-[#1c84cd]' : 'text-gray-700 group-hover:text-[#1c84cd]'
+                      )
+                    }
+                  >
+                    <span>{item.title}</span>
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+                  </NavLink>
+
+                  {/* Dropdown menu */}
+                  <div className="absolute left-0 top-full pt-1 hidden group-hover:block w-64 z-50">
+                    <div className="bg-white rounded-md shadow-lg border border-gray-100 py-2 submenu-shadow">
+                      {item.children?.map((sub) => (
+                        <NavLink
+                          key={sub.href}
+                          to={sub.href}
+                          className={({ isActive }) =>
+                            cn(
+                              'block px-4 py-2 text-xs font-medium transition-colors border-l-2',
+                              isActive
+                                ? 'text-[#1c84cd] border-[#1c84cd] bg-blue-50/50'
+                                : 'text-gray-700 border-transparent hover:text-[#1c84cd] hover:bg-gray-50 hover:border-[#1c84cd]'
+                            )
+                          }
+                        >
+                          {sub.title}
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </nav>
 
-          {/* Action button */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href={`tel:${siteConfig.contact.hotline.replace(/\s/g, '')}`}
-              className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-emerald-600 transition px-2"
-            >
-              <PhoneCall className="w-4 h-4 text-emerald-600" />
-              <span>{siteConfig.contact.hotline}</span>
-            </a>
-            <Link to="/lien-he">
-              <Button size="sm" variant="primary">
-                Tư vấn ngay
-              </Button>
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
+          {/* Mobile hamburger button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            className="xl:hidden p-2.5 rounded-lg text-gray-700 hover:text-[#1c84cd] hover:bg-gray-100 transition focus:outline-none"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
-
-        {/* Mobile menu dropdown */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-3 pt-3 border-t border-gray-100 pb-4 space-y-1">
-            {mainNavigation.map((item) => (
-              <NavLink
-                key={item.href}
-                to={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) =>
-                  cn(
-                    'block px-3 py-2.5 rounded-md text-base font-medium',
-                    isActive
-                      ? 'text-emerald-700 bg-emerald-50 font-semibold'
-                      : 'text-gray-700 hover:bg-gray-50 hover:text-emerald-600'
-                  )
-                }
-              >
-                {item.title}
-              </NavLink>
-            ))}
-            <div className="pt-3 border-t border-gray-100 px-3">
-              <Link to="/lien-he" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full">Tư vấn ngay</Button>
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Drawer */}
+      {mobileOpen && (
+        <div className="xl:hidden bg-white border-t border-gray-100 shadow-xl max-h-[80vh] overflow-y-auto px-4 py-4 space-y-2">
+          {navigationItems.map((item) => {
+            const hasChildren = item.children && item.children.length > 0
+
+            if (!hasChildren) {
+              return (
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={({ isActive }) =>
+                    cn(
+                      'block px-3 py-2.5 text-sm font-semibold uppercase rounded-md transition',
+                      isActive ? 'bg-blue-50 text-[#1c84cd]' : 'text-gray-800 hover:bg-gray-50'
+                    )
+                  }
+                >
+                  {item.title}
+                </NavLink>
+              )
+            }
+
+            const isOpen = openSubmenu === item.title
+
+            return (
+              <div key={item.href} className="border-b border-gray-50 pb-1">
+                <div className="flex items-center justify-between">
+                  <NavLink
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex-grow px-3 py-2.5 text-sm font-semibold uppercase text-gray-800 hover:text-[#1c84cd]"
+                  >
+                    {item.title}
+                  </NavLink>
+                  <button
+                    type="button"
+                    onClick={() => toggleSubmenu(item.title)}
+                    className="p-2 text-gray-500 hover:text-[#1c84cd]"
+                    aria-label={`Toggle ${item.title}`}
+                  >
+                    <ChevronDown
+                      className={cn('w-4 h-4 transition-transform', isOpen && 'rotate-180')}
+                    />
+                  </button>
+                </div>
+
+                {isOpen && (
+                  <div className="pl-4 pr-2 py-1 space-y-1 bg-gray-50 rounded-lg my-1">
+                    {item.children?.map((sub) => (
+                      <NavLink
+                        key={sub.href}
+                        to={sub.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={({ isActive }) =>
+                          cn(
+                            'block px-3 py-2 text-xs font-medium rounded transition',
+                            isActive ? 'text-[#1c84cd] font-bold bg-white' : 'text-gray-600 hover:text-[#1c84cd]'
+                          )
+                        }
+                      >
+                        {sub.title}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+
+          {/* Quick contact on mobile */}
+          <div className="pt-4 mt-4 border-t border-gray-100 flex flex-col gap-2 text-sm text-gray-700">
+            <a
+              href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
+              className="flex items-center justify-center gap-2 py-2.5 bg-[#1c84cd] text-white rounded-lg font-semibold shadow-sm"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Gọi ngay: {companyInfo.hotline}</span>
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   )
 }

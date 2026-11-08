@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "tsc -b && vite build && wrangler pages deploy dist --project-name=htxgroup-vn --branch=main",
+    "deploy:quick": "wrangler pages deploy dist --project-name=htxgroup-vn --branch=main"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -26,6 +28,7 @@
     "oxlint": "^1.90.0",
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
-    "vite": "^8.3.6"
+    "vite": "^8.3.6",
+    "wrangler": "^4.158.0"
   }
 }

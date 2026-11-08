@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Environment variables & secrets (Never commit tokens to Git!)
+.env
+.env.local
+.env.*.local
+
+# Cloudflare Wrangler cache & outputs
+.wrangler/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
