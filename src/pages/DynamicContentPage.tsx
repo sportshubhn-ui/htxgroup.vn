@@ -1,7 +1,7 @@
 import { useLocation, Link } from 'react-router-dom'
 import { pagesContent } from '@/data/pagesContent'
 import { SEO } from '@/components/common/SEO'
-import { Phone, Mail, MapPin, ChevronRight, Share2, Printer } from 'lucide-react'
+import { Phone, Mail, MapPin, ChevronRight, Share2, Printer, Sprout } from 'lucide-react'
 import { companyInfo } from '@/data/htxData'
 
 export function DynamicContentPage() {
@@ -10,7 +10,7 @@ export function DynamicContentPage() {
 
   const page = pagesContent[cleanPath] || pagesContent[pathname] || {
     title: 'Nội dung chi tiết',
-    desc: 'Thông tin chính thức từ HTX GROUP',
+    desc: 'Thông tin chính thức từ Hành Tinh Xanh',
     content: 'Nội dung đang được cập nhật...',
   }
 
@@ -27,25 +27,25 @@ export function DynamicContentPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="flex items-center text-xs text-gray-500 mb-6 flex-wrap gap-2">
-          <Link to="/" className="hover:text-[#1c84cd]">Trang Chủ</Link>
+          <Link to="/" className="hover:text-emerald-700">Trang Chủ</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-gray-900 font-medium truncate max-w-xs">{page.title}</span>
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main content article */}
-          <article className="lg:col-span-8 bg-white rounded-lg p-6 sm:p-10 shadow-sm border border-gray-100">
+          <article className="lg:col-span-8 bg-white rounded-xl p-6 sm:p-10 shadow-sm border border-gray-100">
             <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight border-b border-gray-100 pb-5 mb-6">
               {page.title}
             </h1>
 
             {/* Quick action bar */}
             <div className="flex items-center justify-between text-xs text-gray-500 mb-8 pb-4 border-b border-gray-100">
-              <span className="italic">{companyInfo.name}</span>
+              <span className="font-semibold text-emerald-800">{companyInfo.name}</span>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => window.print()}
-                  className="flex items-center gap-1 hover:text-[#1c84cd] transition"
+                  className="flex items-center gap-1 hover:text-emerald-700 transition cursor-pointer"
                   aria-label="In trang này"
                 >
                   <Printer className="w-3.5 h-3.5" />
@@ -56,7 +56,7 @@ export function DynamicContentPage() {
                     navigator.clipboard.writeText(window.location.href)
                     alert('Đã sao chép liên kết vào bộ nhớ tạm!')
                   }}
-                  className="flex items-center gap-1 hover:text-[#1c84cd] transition"
+                  className="flex items-center gap-1 hover:text-emerald-700 transition cursor-pointer"
                   aria-label="Chia sẻ liên kết"
                 >
                   <Share2 className="w-3.5 h-3.5" />
@@ -71,7 +71,7 @@ export function DynamicContentPage() {
                 // Check if paragraph is a heading or key point
                 if (p.startsWith('THÔNG TIN CÔNG TY') || p.startsWith('TẦM NHÌN') || p.startsWith('SỨ MỆNH') || p.startsWith('GIÁ TRỊ CỐT LÕI') || p.startsWith('LĨNH VỰC HOẠT ĐỘNG')) {
                   return (
-                    <h2 key={index} className="text-lg font-bold uppercase text-[#1c84cd] pt-4 border-b pb-1">
+                    <h2 key={index} className="text-lg font-bold uppercase text-emerald-800 pt-4 border-b border-emerald-100 pb-1">
                       {p}
                     </h2>
                   )
@@ -85,23 +85,23 @@ export function DynamicContentPage() {
             </div>
 
             {/* Contact callout box */}
-            <div className="mt-10 p-6 bg-blue-50/70 border border-blue-100 rounded-lg">
-              <h3 className="font-bold text-gray-900 text-base mb-2">
-                Liên hệ hợp tác & Báo giá xử lý CTRXD:
+            <div className="mt-10 p-6 bg-emerald-50/70 border border-emerald-200/60 rounded-xl">
+              <h3 className="font-bold text-emerald-950 text-base mb-2">
+                Liên hệ hợp tác & Báo giá tiếp nhận CTRXD:
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 mb-4">
-                HTX Group (HTX GROUP) cam kết dịch vụ chuyên nghiệp, thi công an toàn và giải pháp xử lý phế thải xây dựng đạt chuẩn cao nhất.
+              <p className="text-xs sm:text-sm text-emerald-800 mb-4">
+                {companyInfo.name} cam kết dịch vụ chuyên nghiệp, thi công an toàn và bãi tiếp nhận quy chuẩn môi trường tại Thượng Cát.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold">
                 <a
                   href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-                  className="px-4 py-2 bg-[#1c84cd] text-white rounded hover:bg-[#1977b9] transition"
+                  className="px-5 py-2.5 bg-emerald-700 text-white rounded-lg hover:bg-emerald-800 transition"
                 >
                   Hotline: {companyInfo.hotline}
                 </a>
                 <Link
                   to="/lien-he"
-                  className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded hover:border-[#1c84cd] transition"
+                  className="px-5 py-2.5 bg-white text-emerald-800 border border-emerald-300 rounded-lg hover:bg-emerald-50 transition"
                 >
                   Gửi yêu cầu báo giá
                 </Link>
@@ -112,50 +112,60 @@ export function DynamicContentPage() {
           {/* Right sidebar */}
           <aside className="lg:col-span-4 space-y-6">
             {/* Quick Contact Box */}
-            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 border-b-2 border-[#1c84cd] pb-2 mb-4">
-                Thông Tin Liên Hệ
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 border-b-2 border-emerald-600 pb-2 mb-4">
+                Thông Tin Doanh Nghiệp
               </h3>
-              <ul className="space-y-3 text-xs text-gray-600">
+              <ul className="space-y-3.5 text-xs text-gray-600">
                 <li className="flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#1c84cd] shrink-0 mt-0.5" />
-                  <span>{companyInfo.officeAddress}</span>
+                  <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-gray-900 block">Trụ sở:</strong>
+                    <span>{companyInfo.officeAddress}</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Sprout className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-emerald-900 block">Bãi tập kết CTRXD:</strong>
+                    <span>{companyInfo.yardAddress}</span>
+                  </div>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-[#1c84cd] shrink-0" />
-                  <span>Hotline: <strong>{companyInfo.hotline}</strong></span>
+                  <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Hotline: <strong className="text-emerald-700">{companyInfo.hotline}</strong></span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-[#1c84cd] shrink-0" />
+                  <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>{companyInfo.email}</span>
                 </li>
               </ul>
             </div>
 
             {/* Quick links to core services */}
-            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 border-b-2 border-[#1c84cd] pb-2 mb-4">
-                Lĩnh Vực Hoạt Động
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900 border-b-2 border-emerald-600 pb-2 mb-4">
+                Dịch Vụ Nổi Bật
               </h3>
               <ul className="space-y-2 text-xs">
                 <li>
-                  <Link to="/pha-do-cong-trinh-dan-dung-va-cong-nghiep" className="hover:text-[#1c84cd] text-gray-700 block py-1 border-b border-gray-50">
+                  <Link to="/pha-do-cong-trinh-dan-dung-va-cong-nghiep" className="hover:text-emerald-700 text-gray-700 block py-1.5 border-b border-gray-50">
                     Phá dỡ công trình dân dụng & CN
                   </Link>
                 </li>
                 <li>
-                  <Link to="/xu-ly-chat-thai-ran-xay-dung" className="hover:text-[#1c84cd] text-gray-700 block py-1 border-b border-gray-50">
+                  <Link to="/xu-ly-chat-thai-ran-xay-dung" className="hover:text-emerald-700 text-gray-700 block py-1.5 border-b border-gray-50">
                     Thu gom - Xử lý chất thải rắn xây dựng
                   </Link>
                 </li>
                 <li>
-                  <Link to="/kinh-doanh-vat-lieu-xay-dung" className="hover:text-[#1c84cd] text-gray-700 block py-1 border-b border-gray-50">
+                  <Link to="/kinh-doanh-vat-lieu-xay-dung" className="hover:text-emerald-700 text-gray-700 block py-1.5 border-b border-gray-50">
                     Cung cấp nguyên liệu sau tái chế
                   </Link>
                 </li>
                 <li>
-                  <Link to="/thu-gom-taiche" className="hover:text-[#1c84cd] text-gray-700 block py-1">
-                    Thu gom tái chế phế thải
+                  <Link to="/thu-gom-taiche" className="hover:text-emerald-700 text-gray-700 block py-1.5">
+                    Bãi tập kết & Xử lý tại Thượng Cát
                   </Link>
                 </li>
               </ul>

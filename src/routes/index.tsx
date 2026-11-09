@@ -11,12 +11,12 @@ import { Link } from 'react-router-dom'
 function NotFound() {
   return (
     <div className="py-24 text-center bg-gray-50 min-h-[60vh] flex flex-col items-center justify-center">
-      <h1 className="text-6xl font-black text-[#1c84cd]">404</h1>
+      <h1 className="text-6xl font-black text-emerald-700">404</h1>
       <p className="text-xl font-bold text-gray-800 mt-4">Không tìm thấy trang yêu cầu</p>
       <p className="text-sm text-gray-500 mt-2">Trang bạn đang tìm kiếm không tồn tại hoặc đã được chuyển sang địa chỉ mới.</p>
       <Link
         to="/"
-        className="mt-6 px-6 py-2.5 bg-[#1c84cd] text-white text-xs font-bold uppercase rounded tracking-wider hover:bg-[#1977b9] transition"
+        className="mt-6 px-6 py-2.5 bg-emerald-700 text-white text-xs font-bold uppercase rounded-lg tracking-wider hover:bg-emerald-800 transition"
       >
         Về trang chủ
       </Link>
@@ -24,7 +24,7 @@ function NotFound() {
   )
 }
 
-// All known path routes for HTX Group
+// All known path routes for Hành Tinh Xanh
 const staticPaths = [
   'gioi-thieu',
   'gioi-thieu/thong-tin-chung',

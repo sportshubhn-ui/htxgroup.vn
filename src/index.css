@@ -2,16 +2,16 @@
 
 @layer base {
   :root {
-    --color-primary: #1c84cd;
-    --color-primary-hover: #1977b9;
-    --color-text-main: #2f2d2e;
-    --color-footer-bg: #22252a;
+    --color-primary: #15803d;
+    --color-primary-hover: #166534;
+    --color-text-main: #1f2937;
+    --color-footer-bg: #092317;
   }
 
   html {
     scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #2f2d2e;
+    color: #1f2937;
   }
 
   body {
@@ -20,29 +20,29 @@
   }
 }
 
-/* Custom styling matching tcgroup.com.vn theme */
+/* Brand Theme: Hành Tinh Xanh (Green Planet) */
 .tc-blue {
-  color: #1c84cd;
+  color: #15803d;
 }
 
 .bg-tc-blue {
-  background-color: #1c84cd;
+  background-color: #15803d;
 }
 
 .bg-tc-blue-hover:hover {
-  background-color: #1977b9;
+  background-color: #166534;
 }
 
 .border-tc-blue {
-  border-color: #1c84cd;
+  border-color: #15803d;
 }
 
 /* Header top accent */
 .tc-masthead {
-  border-top: 3px solid #1c84cd;
+  border-top: 3px solid #15803d;
 }
 
 /* Submenu dropdown animation */
 .submenu-shadow {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(21, 128, 61, 0.12);
 }

@@ -11,14 +11,14 @@ interface SEOProps {
 
 export function SEO({
   title,
-  description = 'HTX GROUP Tiếp nhận xử lý chất thải rắn xây dựng. Thu gom, vận chuyển rác thải xây dựng, phá dỡ công trình dân dụng và công nghiệp, tái chế vật liệu xây dựng.',
-  image = '/images/slider-1.jpg',
+  description = 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Tiếp nhận, thu gom, vận chuyển và tái chế chất thải rắn xây dựng (CTRXD) tại Ngõ 46 Liên Mạc, Thượng Cát, Bắc Từ Liêm. Trụ sở Tầng 4 Grandeur Palace 138 Giảng Võ, Ba Đình. Hotline 0707 155 666.',
+  image = '/images/logo.png',
   url,
   type = 'website',
 }: SEOProps) {
   const fullTitle = title
     ? `${title} | ${companyInfo.shortName}`
-    : `${companyInfo.name} – Đơn vị chuyên thu gom, xử lý phế thải xây dựng`
+    : `${companyInfo.name} – ${companyInfo.slogan}`
 
   const currentUrl = url || window.location.href
 
@@ -76,9 +76,10 @@ export function SEO({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: companyInfo.name,
-      alternateName: companyInfo.shortName,
+      alternateName: [companyInfo.shortName, companyInfo.brandName, companyInfo.abbreviation],
       url: companyInfo.website,
-      logo: `${companyInfo.website}/images/logo.svg`,
+      logo: `${companyInfo.website}/images/logo.png`,
+      slogan: companyInfo.slogan,
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: companyInfo.hotline,
@@ -86,12 +87,20 @@ export function SEO({
         areaServed: 'VN',
         availableLanguage: 'Vietnamese',
       },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: companyInfo.officeAddress,
-        addressLocality: 'Hà Nội',
-        addressCountry: 'VN',
-      },
+      address: [
+        {
+          '@type': 'PostalAddress',
+          streetAddress: companyInfo.officeAddress,
+          addressLocality: 'Ba Đình, Hà Nội',
+          addressCountry: 'VN',
+        },
+        {
+          '@type': 'PostalAddress',
+          streetAddress: companyInfo.yardAddress,
+          addressLocality: 'Bắc Từ Liêm, Hà Nội',
+          addressCountry: 'VN',
+        },
+      ],
     }
 
     script.textContent = JSON.stringify(schemaData)

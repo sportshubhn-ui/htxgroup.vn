@@ -1,4 +1,5 @@
 # Hướng Dẫn Triển Khai & Tự Động Deploy Lên Cloudflare Pages
+## Dự án: CÔNG TY TNHH TM&DV GIẢI PHÁP HÀNH TINH XANH (GREEN PLANET) - htxgroup.vn
 
 Tài liệu hướng dẫn chi tiết cách cấu hình tự động triển khai (Auto Deploy / CI-CD) mỗi khi bạn **commit & push code** lên Git, cùng với các bước trỏ tên miền chính thức **`htxgroup.vn`** vào Cloudflare Pages.
 

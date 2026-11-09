@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from '@/components/common/SEO'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ChevronRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, ChevronRight, ShieldCheck, Sprout } from 'lucide-react'
 import { companyInfo } from '@/data/htxData'
 import { contactService } from '@/services/contactService'
 
@@ -24,7 +24,7 @@ export function ContactPage() {
       setSubmitted(true)
       setFormData({ fullName: '', email: '', phone: '', subject: '', message: '' })
     } catch {
-      alert('Đã có lỗi xảy ra. Vui lòng thử lại qua số hotline: ' + companyInfo.hotline)
+      alert('Đã có lỗi xảy ra. Vui lòng liên hệ trực tiếp hotline: ' + companyInfo.hotline)
     } finally {
       setSubmitting(false)
     }
@@ -33,118 +33,118 @@ export function ContactPage() {
   return (
     <div className="bg-gray-50 py-10 lg:py-14 min-h-[70vh]">
       <SEO
-        title="Liên Hệ"
-        description="Thông tin liên hệ Công ty Cổ phần Dịch vụ Sản xuất HTX Group (HTX GROUP) - Địa chỉ, điện thoại, bãi tiếp nhận và mẫu đăng ký tư vấn."
+        title="Liên Hệ & Công Bố Bãi Tiếp Nhận CTRXD"
+        description="Thông tin liên hệ Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Bãi tập kết CTRXD Ngõ 46 Liên Mạc, Thượng Cát, Bắc Từ Liêm. Trụ sở 138 Giảng Võ, Ba Đình. Hotline 0707 155 666."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="flex items-center text-xs text-gray-500 mb-6 gap-2">
-          <Link to="/" className="hover:text-[#1c84cd]">Trang Chủ</Link>
+          <Link to="/" className="hover:text-emerald-700">Trang Chủ</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-gray-900 font-medium">Liên Hệ</span>
         </nav>
 
         <div className="mb-12 text-center">
           <h1 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-            THÔNG TIN LIÊN HỆ
+            THÔNG TIN LIÊN HỆ & BÃI TIẾP NHẬN CTRXD
           </h1>
-          <div className="w-20 h-1 bg-[#1c84cd] mx-auto mt-3" />
+          <div className="w-20 h-1 bg-emerald-600 mx-auto mt-3" />
           <p className="mt-3 text-sm text-gray-600 max-w-2xl mx-auto">
-            Vui lòng liên hệ với HTX Group theo thông tin dưới đây hoặc để lại tin nhắn trong biểu mẫu:
+            Hành Tinh Xanh sẵn sàng đồng hành cùng các chủ đầu tư, nhà thầu xây dựng trong việc tiếp nhận xử lý phế thải và cung ứng vật liệu tái chế.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left: Contact Info */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-100 space-y-6">
-              <h2 className="text-lg font-bold uppercase text-gray-900 border-b border-gray-100 pb-3">
-                {companyInfo.name}
-              </h2>
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100 space-y-6">
+              <div>
+                <h2 className="text-base font-extrabold uppercase text-emerald-900">
+                  {companyInfo.name}
+                </h2>
+                <p className="text-xs text-emerald-700 font-medium italic mt-0.5">"{companyInfo.slogan}"</p>
+              </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-gray-600">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#1c84cd] shrink-0 mt-0.5" />
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700">
+                <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg border border-gray-100">
+                  <MapPin className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-gray-900 block">Trụ sở chính:</strong>
+                    <strong className="text-gray-900 block font-bold">Văn phòng trụ sở:</strong>
                     <span>{companyInfo.officeAddress}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#1c84cd] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-3 bg-emerald-50/70 rounded-lg border border-emerald-200/60">
+                  <Sprout className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-gray-900 block">Khu vực tiếp nhận & xử lý CTRXD (6.5 ha):</strong>
-                    <span>{companyInfo.yardAddress}</span>
+                    <strong className="text-emerald-950 block font-bold">Bãi tập kết & Xử lý CTRXD:</strong>
+                    <span className="text-emerald-900 font-medium">{companyInfo.yardAddress}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-[#1c84cd] shrink-0" />
+                <div className="flex items-center gap-3 px-3 py-2 bg-gray-50 rounded-lg">
+                  <Phone className="w-5 h-5 text-emerald-700 shrink-0" />
                   <div>
-                    <strong className="text-gray-900 block">Điện thoại / Hotline:</strong>
-                    <span>{companyInfo.hotline} / {companyInfo.phoneAlt}</span>
+                    <strong className="text-gray-900 block font-bold">Hotline tiếp nhận 24/7:</strong>
+                    <a href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`} className="text-emerald-700 font-extrabold text-base hover:underline">
+                      {companyInfo.hotline}
+                    </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-[#1c84cd] shrink-0" />
+                <div className="flex items-center gap-3 px-3 py-2 bg-gray-50 rounded-lg">
+                  <Mail className="w-5 h-5 text-emerald-700 shrink-0" />
                   <div>
-                    <strong className="text-gray-900 block">Email:</strong>
+                    <strong className="text-gray-900 block font-bold">Email chính thức:</strong>
                     <span>{companyInfo.email}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-[#1c84cd] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 px-3 py-2 bg-gray-50 rounded-lg">
+                  <Clock className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-gray-900 block">Thời gian làm việc:</strong>
-                    <span>Thứ Hai – Thứ Bảy: 07:30 – 17:30 (Trực hotline 24/7)</span>
+                    <strong className="text-gray-900 block font-bold">Thời gian làm việc:</strong>
+                    <span>Thứ Hai – Thứ Bảy: 07:00 – 18:00 (Trực hotline tiếp nhận xe 24/7)</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Google Map Box */}
-            <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 overflow-hidden">
-              <div className="text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">
-                Bản đồ vị trí văn phòng
+            {/* Environmental Commitment Card */}
+            <div className="p-5 bg-gradient-to-br from-emerald-800 to-teal-900 text-white rounded-xl shadow-sm space-y-3">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-emerald-300" />
+                <h3 className="font-bold text-sm uppercase tracking-wide">Cam kết vì môi trường</h3>
               </div>
-              <div className="w-full h-60 bg-gray-200 rounded overflow-hidden">
-                <iframe
-                  title="Google Maps HTX GROUP"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.8!2d105.79!3d20.99!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac97854619b1%3A0x6b44538805f778a4!2zMTY0IEtodeG6pXQgRHV5IFRp4bq_biwgVGhhbmggWHXDom4gQuG6r2MsIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1600000000000"
-                  className="w-full h-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <p className="text-xs text-emerald-100 leading-relaxed">
+                Chúng tôi cam kết cấp đầy đủ hóa đơn, hợp đồng vận chuyển và biên bản bàn giao - xử lý chất thải rắn xây dựng (CTRXD) theo đúng quy định hiện hành của UBND TP Hà Nội và Sở TN&MT.
+              </p>
             </div>
           </div>
 
           {/* Right: Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm border border-gray-100">
-              <h2 className="text-lg font-bold uppercase text-gray-900 mb-2">
-                GỬI YÊU CẦU CHO CHÚNG TÔI
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100">
+              <h2 className="text-lg font-bold uppercase text-gray-900 mb-1">
+                GỬI YÊU CẦU TIẾP NHẬN & BÁO GIÁ
               </h2>
               <p className="text-xs text-gray-500 mb-6">
-                Quý khách vui lòng điền các thông tin bên dưới, chuyên viên HTX Group sẽ liên hệ lại trong thời gian sớm nhất.
+                Quý khách vui lòng cung cấp thông tin công trình hoặc nhu cầu vật liệu tái sinh:
               </p>
 
               {submitted ? (
-                <div className="p-6 bg-green-50 border border-green-200 rounded-lg text-center space-y-3">
-                  <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto" />
-                  <h3 className="text-base font-bold text-green-900">
-                    Gửi thông tin thành công!
+                <div className="p-8 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-3">
+                  <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
+                  <h3 className="text-lg font-bold text-emerald-950">
+                    Gửi yêu cầu thành công!
                   </h3>
-                  <p className="text-xs text-green-700">
-                    Cảm ơn Quý khách đã liên hệ với HTX Group (HTX GROUP). Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
+                  <p className="text-xs text-emerald-800 leading-relaxed">
+                    Cảm ơn Quý khách đã liên hệ với <strong>Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh</strong>. Bộ phận điều phối bãi tập kết sẽ liên hệ lại qua số điện thoại của Quý khách trong thời gian sớm nhất.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-4 py-2 bg-green-600 text-white rounded text-xs font-semibold hover:bg-green-700"
+                    className="mt-4 px-5 py-2.5 bg-emerald-600 text-white rounded-lg text-xs font-bold uppercase hover:bg-emerald-700 cursor-pointer"
                   >
                     Gửi biểu mẫu khác
                   </button>
@@ -154,15 +154,15 @@ export function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 mb-1">
-                        Họ và tên <span className="text-red-500">*</span>
+                        Họ và tên / Đơn vị <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
                         required
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        placeholder="Nguyễn Văn A"
-                        className="w-full h-10 px-3 text-xs sm:text-sm border border-gray-300 rounded focus:ring-2 focus:ring-[#1c84cd] focus:outline-none"
+                        placeholder="Nguyễn Văn A / Công ty CP Xây Dựng..."
+                        className="w-full h-11 px-3.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none"
                       />
                     </div>
                     <div>
@@ -175,7 +175,7 @@ export function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="0912 345 678"
-                        className="w-full h-10 px-3 text-xs sm:text-sm border border-gray-300 rounded focus:ring-2 focus:ring-[#1c84cd] focus:outline-none"
+                        className="w-full h-11 px-3.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -190,23 +190,24 @@ export function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="email@example.com"
-                        className="w-full h-10 px-3 text-xs sm:text-sm border border-gray-300 rounded focus:ring-2 focus:ring-[#1c84cd] focus:outline-none"
+                        className="w-full h-11 px-3.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 mb-1">
-                        Chủ đề / Dịch vụ quan tâm
+                        Dịch vụ cần tư vấn
                       </label>
                       <select
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full h-10 px-3 text-xs sm:text-sm border border-gray-300 rounded focus:ring-2 focus:ring-[#1c84cd] focus:outline-none bg-white"
+                        className="w-full h-11 px-3.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none bg-white"
                       >
                         <option value="">-- Chọn dịch vụ --</option>
-                        <option value="Xử lý chất thải rắn xây dựng">Xử lý chất thải rắn xây dựng</option>
-                        <option value="Phá dỡ công trình">Phá dỡ công trình dân dụng & CN</option>
-                        <option value="Mua vật liệu xây dựng tái chế">Mua vật liệu xây dựng tái chế</option>
-                        <option value="Thuê máy nghiền RM 70GO!">Thuê máy nghiền RM 70GO!</option>
+                        <option value="Tiếp nhận CTRXD tại bãi Thượng Cát">Tiếp nhận CTRXD tại bãi Thượng Cát</option>
+                        <option value="Thu gom & Vận chuyển phế thải xây dựng">Thu gom & Vận chuyển phế thải xây dựng</option>
+                        <option value="Phá dỡ công trình dân dụng & công nghiệp">Phá dỡ công trình dân dụng & công nghiệp</option>
+                        <option value="Mua cát san lấp & Bê tông nghiền tái chế">Mua cát san lấp & Bê tông nghiền tái chế</option>
+                        <option value="Thuê máy nghiền di động công suất lớn">Thuê máy nghiền di động công suất lớn</option>
                         <option value="Hợp tác khác">Hợp tác khác</option>
                       </select>
                     </div>
@@ -214,25 +215,25 @@ export function ContactPage() {
 
                   <div>
                     <label className="block text-xs font-semibold text-gray-700 mb-1">
-                      Nội dung tin nhắn <span className="text-red-500">*</span>
+                      Nội dung yêu cầu / Địa điểm công trình <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       required
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Mô tả yêu cầu, địa điểm công trình, khối lượng dự kiến..."
-                      className="w-full p-3 text-xs sm:text-sm border border-gray-300 rounded focus:ring-2 focus:ring-[#1c84cd] focus:outline-none"
+                      placeholder="Mô tả chi tiết công trình, địa chỉ phát sinh CTRXD, khối lượng dự kiến (tấn/m3), loại phương tiện vận tải..."
+                      className="w-full p-3.5 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:outline-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full sm:w-auto px-8 py-3 bg-[#1c84cd] hover:bg-[#1977b9] text-white font-bold text-xs uppercase tracking-wider rounded transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 shadow-md"
                   >
                     <Send className="w-4 h-4" />
-                    <span>{submitting ? 'Đang gửi...' : 'Gửi liên hệ'}</span>
+                    <span>{submitting ? 'Đang gửi...' : 'Gửi yêu cầu'}</span>
                   </button>
                 </form>
               )}
