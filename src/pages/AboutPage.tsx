@@ -8,7 +8,7 @@ export function AboutPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Giới Thiệu Doanh Nghiệp – Hành Tinh Xanh"
-        description="Tổng quan Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh. Trụ sở Tầng 4 Grandeur Palace 138 Giảng Võ. Bãi tập kết Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ. Slogan: Cho hành tinh nhẹ gánh hơn."
+        description="Tổng quan Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh. Trụ sở Tầng 4 Grandeur Palace 138 Giảng Võ. Bãi tập kết Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Slogan: Cho hành tinh nhẹ gánh hơn."
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

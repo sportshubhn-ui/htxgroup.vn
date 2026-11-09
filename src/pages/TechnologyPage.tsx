@@ -7,7 +7,7 @@ export function TechnologyPage() {
     {
       step: '01',
       title: 'Tiếp nhận & Kiểm tra phân loại đầu vào',
-      desc: 'Phương tiện chở bê tông tháo dỡ và trạc thải qua trạm cân 80T tại bãi Liên Mạc (Tây Hồ). Cán bộ kỹ thuật kiểm tra và loại bỏ rác thải sinh hoạt, gỗ mục trước khi tập kết.',
+      desc: 'Phương tiện chở bê tông tháo dỡ và trạc thải qua trạm cân 80T tại bãi Liên Mạc - Thượng Cát. Cán bộ kỹ thuật kiểm tra và loại bỏ rác thải sinh hoạt, gỗ mục trước khi tập kết.',
       icon: 'Scale'
     },
     {
@@ -46,7 +46,7 @@ export function TechnologyPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Công Nghệ Tái Chế CTRXD – Giải Pháp Tuần Hoàn Xanh"
-        description="Quy trình công nghệ nghiền sàng tái chế bê tông và chất thải rắn xây dựng khép kín tại bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ. Tiết kiệm tài nguyên và bảo vệ môi trường."
+        description="Quy trình công nghệ nghiền sàng tái chế bê tông và chất thải rắn xây dựng khép kín tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Tiết kiệm tài nguyên và bảo vệ môi trường."
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

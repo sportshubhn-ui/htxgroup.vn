@@ -26,7 +26,7 @@ export function FaqPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Câu Hỏi Thường Gặp (FAQ) – Hành Tinh Xanh"
-        description="Giải đáp các câu hỏi thường gặp về thủ tục đổ phế thải tại bãi Ngõ 46 Liên Mạc Thượng Cát Tây Hồ, quy trình thu gom, xe ben vận chuyển và báo giá vật liệu."
+        description="Giải đáp các câu hỏi thường gặp về thủ tục đổ phế thải tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, quy trình thu gom, xe ben vận chuyển và báo giá vật liệu."
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export function FaqPage() {
             CÂU HỎI THƯỜNG GẶP (FAQ)
           </h1>
           <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-            Các câu hỏi phổ biến nhất về thủ tục tiếp nhận chất thải rắn xây dựng, điều kiện vào bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ và chính sách cung cấp vật liệu.
+            Các câu hỏi phổ biến nhất về thủ tục tiếp nhận chất thải rắn xây dựng, điều kiện vào bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội và chính sách cung cấp vật liệu.
           </p>
         </div>
 

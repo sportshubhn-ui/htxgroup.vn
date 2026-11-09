@@ -13,12 +13,12 @@ export function MediaLibraryPage() {
     { title: 'Đoàn xe ben 3 chân 4 chân vận chuyển', category: 'fleet', image: '/images/fleet-trucks.jpg' },
     { title: 'Trạm cân điện tử tự động 80T đón xe', category: 'fleet', image: '/images/weighbridge-truck.jpg' },
     { title: 'Mặt bằng bãi tập kết Ngõ 46 Liên Mạc', category: 'facility', image: '/images/facility-lienmac.jpg' },
-    { title: 'Kho bãi cốt liệu và trạm nghiền liên hoàn', category: 'facility', image: '/images/slider-1.jpg' },
-    { title: 'Cốt liệu bê tông tái chế (RCA) 10-25mm', category: 'materials', image: '/images/prod-cotlieutaiche.jpg' },
-    { title: 'Đá 1x2 xây dựng tiêu chuẩn', category: 'materials', image: '/images/prod-da1x2.jpg' },
-    { title: 'Cát bê tông vàng rửa sạch', category: 'materials', image: '/images/prod-catbetong.jpg' },
-    { title: 'Cát san lấp mặt bằng móng', category: 'materials', image: '/images/prod-catsanlap.jpg' },
-    { title: 'Cấp phối đá dăm loại 1 và loại 2', category: 'materials', image: '/images/prod-capphoida.jpg' },
+    { title: 'Đội ngũ kỹ sư hiện trường và trạm nghiền hiện đại', category: 'facility', image: '/images/banner-htx-engineers-crusher.jpg' },
+    { title: 'Cốt liệu bê tông tái chế (RCA) 10-25mm', category: 'materials', image: '/images/prod-htx-cotlieutaiche.jpg' },
+    { title: 'Đá 1x2 xây dựng tiêu chuẩn', category: 'materials', image: '/images/prod-htx-da1x2.jpg' },
+    { title: 'Cát bê tông vàng rửa sạch', category: 'materials', image: '/images/prod-htx-catbetong.jpg' },
+    { title: 'Cát san lấp mặt bằng móng', category: 'materials', image: '/images/prod-htx-catsanlap.jpg' },
+    { title: 'Cấp phối đá dăm loại 1 và loại 2', category: 'materials', image: '/images/prod-htx-capphoida.jpg' },
   ]
 
   const filtered = activeFilter === 'all'
@@ -29,7 +29,7 @@ export function MediaLibraryPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Thư Viện Hình Ảnh & Hoạt Động – Hành Tinh Xanh"
-        description="Thư viện hình ảnh hoạt động bãi tập kết Ngõ 46 Liên Mạc Thượng Cát Tây Hồ, dây chuyền máy nghiền, đội xe ben và cốt liệu xây dựng."
+        description="Thư viện hình ảnh hoạt động bãi tập kết Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, dây chuyền máy nghiền, đội ngũ kỹ sư và cốt liệu xây dựng."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

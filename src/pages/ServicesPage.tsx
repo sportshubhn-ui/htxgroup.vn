@@ -8,7 +8,7 @@ export function ServicesPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Dịch Vụ Thu Gom & Tái Chế Chất Thải Rắn Xây Dựng"
-        description="Các dịch vụ cốt lõi của Hành Tinh Xanh: Thu gom tại công trình, vận chuyển xe ben chuyên dụng, tiếp nhận tại bãi Ngõ 46 Liên Mạc Tây Hồ, và phân loại nghiền sàng tái chế."
+        description="Các dịch vụ cốt lõi của Hành Tinh Xanh: Thu gom tại công trình, vận chuyển xe ben chuyên dụng, tiếp nhận tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, và phân loại nghiền sàng tái chế."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +29,7 @@ export function ServicesPage() {
             DỊCH VỤ XỬ LÝ & TÁI CHẾ CTRXD
           </h1>
           <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-            Hành Tinh Xanh cung cấp chuỗi dịch vụ khép kín từ khâu thu gom tại chân công trình, vận chuyển xe ben chuyên dụng, tiếp nhận tại bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ đến nghiền sàng tái sinh thành cốt liệu xây dựng đạt chuẩn.
+            Hành Tinh Xanh cung cấp chuỗi dịch vụ khép kín từ khâu thu gom tại chân công trình, vận chuyển xe ben chuyên dụng, tiếp nhận tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội đến nghiền sàng tái sinh thành cốt liệu xây dựng đạt chuẩn.
           </p>
         </div>
 

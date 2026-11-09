@@ -62,7 +62,7 @@ export function AdminPage() {
             companyName: 'Đội xe vận tải 36',
             phone: '0988 776 554',
             email: '',
-            projectLocation: 'Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ',
+            projectLocation: 'Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội',
             wasteType: 'Trạc gạch vỡ công trình',
             estimatedVolume: '3 xe 4 chân',
             notes: 'Xe đến lúc 15:00',

@@ -16,7 +16,7 @@ export function CapabilityPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Hồ Sơ Năng Lực & Năng Lực Thực Thi – Hành Tinh Xanh"
-        description="Tổng quan năng lực cơ sở bãi tập kết Ngõ 46 Liên Mạc Thượng Cát Tây Hồ, dây chuyền nghiền sàng tái chế, đội xe ben và hồ sơ pháp nhân Hành Tinh Xanh."
+        description="Tổng quan năng lực cơ sở bãi tập kết Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, dây chuyền nghiền sàng tái chế, đội xe ben và hồ sơ pháp nhân Hành Tinh Xanh."
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export function CapabilityPage() {
               <h3 className="font-bold text-base uppercase">Cơ sở bãi tập kết & xử lý</h3>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Bãi tiếp nhận tại <strong>Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, Hà Nội</strong>. Mặt bằng rộng rãi, trạm cân điện tử 80T, tiếp nhận phương tiện 24/7 không gây ùn tắc giao thông.
+              Bãi tiếp nhận tại <strong>Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội</strong>. Mặt bằng rộng rãi, trạm cân điện tử 80T, tiếp nhận phương tiện 24/7 không gây ùn tắc giao thông.
             </p>
             <div className="pt-2">
               <Link

@@ -30,43 +30,45 @@ export function Header() {
       </div>
 
       {/* 2. Top contact bar */}
-      <div className="hidden lg:block bg-emerald-50/70 border-b border-emerald-100 py-1.5 text-xs text-[#172D24]">
+      <div className="hidden lg:block bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-b border-emerald-200/80 py-2.5 text-xs text-[#172D24]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <span className="font-extrabold text-[#064D35] uppercase tracking-wide">
+            <span className="font-black text-[#064D35] uppercase tracking-wider text-[13px]">
               {companyInfo.name}
             </span>
-            <span className="text-emerald-400">•</span>
-            <span className="text-emerald-800 italic font-medium">"{companyInfo.slogan}"</span>
+            <span className="text-emerald-500 font-bold">•</span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#064D35] text-white font-bold text-[12px] tracking-wide shadow-xs">
+              "{companyInfo.slogan}"
+            </span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 text-xs text-gray-600">
+          <div className="flex items-center gap-5">
+            <span className="flex items-center gap-1.5 text-xs text-gray-800 font-semibold">
               <MapPin className="w-3.5 h-3.5 text-[#064D35]" />
-              <span>Bãi tiếp nhận: Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ</span>
+              <span>Bãi tiếp nhận: <strong className="text-[#064D35]">{companyInfo.yardAddress}</strong></span>
             </span>
             <a
               href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-              className="flex items-center gap-1.5 text-[#064D35] hover:text-emerald-700 font-bold transition"
+              className="flex items-center gap-1.5 bg-[#064D35] hover:bg-[#043826] text-white px-3 py-1 rounded-full text-xs font-black transition shadow-xs"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Hotline 24/7: <strong>{companyInfo.hotline}</strong></span>
+              <Phone className="w-3.5 h-3.5 text-[#B2E5C0]" />
+              <span>Hotline 24/7: {companyInfo.hotline}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* 3. Main Navigation Bar */}
+      {/* 3. Main Navigation Bar with ENLARGED LOGO & SLOGAN */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0 py-2 group">
+        <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28">
+          {/* Logo & Slogan area - Enlarged per user feedback */}
+          <Link to="/" className="flex items-center gap-4 shrink-0 py-1 group" title={companyInfo.name}>
             <picture>
               <source srcSet="/brand/logo-glass.webp" type="image/webp" />
               <img
                 src="/brand/logo-glass.png"
                 alt={companyInfo.name}
-                className="h-14 sm:h-16 w-auto max-w-[280px] sm:max-w-[340px] object-contain group-hover:scale-[1.02] transition-transform"
+                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[280px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[480px] object-contain group-hover:scale-[1.02] transition-transform drop-shadow-sm"
               />
             </picture>
           </Link>
@@ -83,10 +85,10 @@ export function Header() {
                     to={item.href}
                     className={({ isActive }) =>
                       cn(
-                        'px-3.5 py-2 text-xs font-bold uppercase tracking-wider transition-colors duration-150 rounded-md',
+                        'px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors duration-150 rounded-md',
                         isActive
-                          ? 'text-[#064D35] bg-emerald-100/60 font-extrabold'
-                          : 'text-[#172D24] hover:text-[#064D35] hover:bg-emerald-50/50'
+                          ? 'text-[#064D35] bg-emerald-100/70 font-black'
+                          : 'text-[#172D24] hover:text-[#064D35] hover:bg-emerald-50/60'
                       )
                     }
                   >
@@ -103,8 +105,8 @@ export function Header() {
                       cn(
                         'px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1 rounded-md',
                         isActive
-                          ? 'text-[#064D35] bg-emerald-100/60 font-extrabold'
-                          : 'text-[#172D24] group-hover:text-[#064D35] group-hover:bg-emerald-50/50'
+                          ? 'text-[#064D35] bg-emerald-100/70 font-black'
+                          : 'text-[#172D24] group-hover:text-[#064D35] group-hover:bg-emerald-50/60'
                       )
                     }
                   >
@@ -143,7 +145,7 @@ export function Header() {
             {/* Quote Cart Button */}
             <button
               onClick={() => setCartDrawerOpen(!cartDrawerOpen)}
-              className="relative p-2.5 rounded-lg border border-emerald-900/15 text-[#064D35] hover:bg-emerald-100/50 transition cursor-pointer"
+              className="relative p-2.5 rounded-xl border border-emerald-900/15 text-[#064D35] hover:bg-emerald-100/50 transition cursor-pointer"
               title="Giỏ yêu cầu báo giá vật liệu"
               aria-label="Giỏ báo giá"
             >
@@ -158,7 +160,7 @@ export function Header() {
             {/* CTA Button */}
             <Link
               to="/yeu-cau-bao-gia"
-              className="px-4 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-sm transition flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-sm transition flex items-center gap-2 cursor-pointer border border-[#B2E5C0]/30"
             >
               <Send className="w-3.5 h-3.5 text-[#B2E5C0]" />
               <span>Yêu cầu báo giá</span>
@@ -204,7 +206,7 @@ export function Header() {
               </div>
               <button
                 onClick={() => setCartDrawerOpen(false)}
-                className="p-1.5 text-gray-500 hover:text-gray-800 rounded-lg"
+                className="p-1.5 text-gray-500 hover:text-gray-800 rounded-lg cursor-pointer"
                 aria-label="Đóng"
               >
                 <X className="w-5 h-5" />
@@ -228,16 +230,16 @@ export function Header() {
                 </div>
               ) : (
                 items.map((item) => (
-                  <div key={item.slug} className="p-3 bg-white rounded-lg border border-emerald-900/10 flex items-center justify-between gap-3 shadow-2xs">
+                  <div key={item.slug} className="p-3 bg-white rounded-xl border border-emerald-900/10 flex items-center justify-between gap-3 shadow-2xs">
                     <div className="min-w-0">
                       <h4 className="text-xs font-bold text-gray-900 truncate">{item.name}</h4>
                       <p className="text-[11px] text-gray-500">{item.category} • Đơn vị: {item.unit}</p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      <div className="flex items-center border border-gray-200 rounded-md">
+                      <div className="flex items-center border border-gray-200 rounded-lg">
                         <button
                           onClick={() => updateQuantity(item.slug, item.quantity - 5)}
-                          className="px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-100 cursor-pointer"
                         >
                           -
                         </button>
@@ -246,14 +248,14 @@ export function Header() {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.slug, item.quantity + 5)}
-                          className="px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-0.5 text-xs text-gray-600 hover:bg-gray-100 cursor-pointer"
                         >
                           +
                         </button>
                       </div>
                       <button
                         onClick={() => removeItem(item.slug)}
-                        className="text-red-500 hover:text-red-700 text-xs p-1"
+                        className="text-red-500 hover:text-red-700 text-xs p-1 cursor-pointer"
                         title="Xóa"
                       >
                         <X className="w-4 h-4" />
@@ -273,7 +275,7 @@ export function Header() {
                 </div>
                 <button
                   onClick={handleProceedQuote}
-                  className="w-full py-3 bg-[#064D35] hover:bg-[#043826] text-white rounded-lg text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  className="w-full py-3.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <Send className="w-4 h-4 text-[#B2E5C0]" />
                   <span>Điền thông tin & Nhận báo giá</span>
@@ -360,14 +362,14 @@ export function Header() {
             <Link
               to="/yeu-cau-bao-gia"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center gap-2 py-3 bg-[#064D35] text-white rounded-lg font-bold shadow-md tracking-wider uppercase text-xs"
+              className="flex items-center justify-center gap-2 py-3 bg-[#064D35] text-white rounded-xl font-bold shadow-md tracking-wider uppercase text-xs"
             >
               <Send className="w-4 h-4 text-[#B2E5C0]" />
               <span>Yêu cầu báo giá trực tuyến</span>
             </Link>
             <a
               href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-              className="flex items-center justify-center gap-2 py-3 bg-emerald-100 text-[#064D35] rounded-lg font-bold tracking-wider uppercase text-xs"
+              className="flex items-center justify-center gap-2 py-3 bg-emerald-100 text-[#064D35] rounded-xl font-bold tracking-wider uppercase text-xs"
             >
               <Phone className="w-4 h-4" />
               <span>Hotline 24/7: {companyInfo.hotline}</span>

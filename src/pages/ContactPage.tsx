@@ -63,7 +63,7 @@ export function ContactPage() {
     <div className="bg-[#FFFCF6] py-10 lg:py-14 min-h-[75vh]">
       <SEO
         title="Liên Hệ & Công Bố Bãi Tiếp Nhận CTRXD"
-        description="Thông tin liên hệ Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Bãi tập kết CTRXD Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Trụ sở 138 Giảng Võ, Ba Đình. Hotline 0707 155 666."
+        description="Thông tin liên hệ Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Bãi tập kết CTRXD Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Trụ sở 138 Giảng Võ, Ba Đình. Hotline 0707 155 666."
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ export function ContactPage() {
                   Vị trí ghim định vị Google Maps – Bãi tập kết xử lý CTRXD Hành Tinh Xanh
                 </h3>
                 <p className="text-xs text-gray-500">
-                  Địa chỉ: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội
+                  Địa chỉ: {companyInfo.yardAddress}
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export function ContactPage() {
           <div className="relative w-full h-[360px] sm:h-[440px] rounded-2xl overflow-hidden border border-gray-200">
             <iframe
               src={companyInfo.mapEmbedUrl}
-              title="Định vị bãi tập kết Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ"
+              title={`Định vị bãi tập kết ${companyInfo.yardAddress}`}
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -278,7 +278,7 @@ export function ContactPage() {
                         className="w-full h-11 px-3.5 text-xs sm:text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#064D35] focus:outline-none bg-white"
                       >
                         <option value="">-- Chọn dịch vụ --</option>
-                        <option value="Tiếp nhận CTRXD tại bãi Liên Mạc Tây Hồ">Tiếp nhận CTRXD tại bãi Liên Mạc Tây Hồ</option>
+                        <option value="Tiếp nhận CTRXD tại bãi Liên Mạc - Thượng Cát">Tiếp nhận CTRXD tại bãi Liên Mạc - Thượng Cát</option>
                         <option value="Thu gom & Vận chuyển phế thải công trình">Thu gom & Vận chuyển phế thải công trình</option>
                         <option value="Mua cốt liệu tái chế (RCA) & Cát đá">Mua cốt liệu tái chế (RCA) & Cát đá</option>
                         <option value="Thuê máy nghiền kẹp hàm công suất lớn">Thuê máy nghiền kẹp hàm công suất lớn</option>

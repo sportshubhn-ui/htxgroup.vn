@@ -114,7 +114,7 @@ export function Footer() {
               Bãi tiếp nhận Liên Mạc
             </h4>
             <div className="bg-emerald-950/70 rounded-xl p-3.5 text-xs border border-emerald-800/60 space-y-2">
-              <p className="font-semibold text-white">Điểm tập kết Thượng Cát, Tây Hồ:</p>
+              <p className="font-semibold text-white">Điểm tập kết Thượng Cát - Hà Nội:</p>
               <p className="text-emerald-200/80 leading-relaxed text-[11px]">
                 Tiếp nhận chất thải rắn xây dựng (CTRXD) từ các công trình phá dỡ và cải tạo đô thị. Cấp biên bản giao nhận và phiếu cân minh bạch.
               </p>

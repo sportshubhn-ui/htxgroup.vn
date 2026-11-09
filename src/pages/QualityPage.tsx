@@ -71,7 +71,7 @@ export function QualityPage() {
             Cam kết an toàn môi trường & pháp lý
           </h3>
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-            Hành Tinh Xanh cam kết mọi hoạt động trung chuyển, xử lý và nghiền sàng chất thải rắn xây dựng tại bãi Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ đều có hệ thống phun sương dập bụi, rãnh thu gom nước mưa lắng đọng, đảm bảo vệ sinh môi trường khu vực dân cư xung quanh.
+            Hành Tinh Xanh cam kết mọi hoạt động trung chuyển, xử lý và nghiền sàng chất thải rắn xây dựng tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội đều có hệ thống phun sương dập bụi, rãnh thu gom nước mưa lắng đọng, đảm bảo vệ sinh môi trường khu vực dân cư xung quanh.
           </p>
           <div className="pt-2 flex flex-wrap gap-3">
             <Link

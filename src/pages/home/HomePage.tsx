@@ -150,7 +150,7 @@ export function HomePage() {
                 Bạn cần thu gom phế thải công trình hoặc đưa xe vào bãi?
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận xe vào đổ tại Bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ qua trạm cân 80 tấn.
+                Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận xe vào đổ tại Bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội qua trạm cân 80 tấn.
               </p>
             </div>
             <div className="pt-6 flex flex-wrap gap-3">
@@ -394,11 +394,11 @@ export function HomePage() {
                 <p className="text-xs sm:text-sm text-gray-800 flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#064D35] shrink-0" />
                   <span>
-                    Địa chỉ tiếp nhận: <strong>Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội</strong>
+                    Địa chỉ tiếp nhận: <strong>{companyInfo.yardAddress}</strong>
                   </span>
                 </p>
                 <p className="text-xs text-emerald-800 italic">
-                  * Địa bàn tiếp nhận: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội.
+                  * Địa bàn tiếp nhận: {companyInfo.yardAddress}
                 </p>
               </div>
 
@@ -428,7 +428,7 @@ export function HomePage() {
               <div className="flex items-center justify-between pb-3 px-2 border-b border-gray-100 text-xs">
                 <span className="font-bold text-[#064D35] flex items-center gap-1.5">
                   <MapPin className="w-4 h-4" />
-                  <span>Định vị Google Maps: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ</span>
+                  <span>Định vị Google Maps: {companyInfo.yardAddress}</span>
                 </span>
                 <a
                   href={companyInfo.googleMapsDirectUrl}
@@ -443,7 +443,7 @@ export function HomePage() {
               <div className="h-[360px] sm:h-[420px] rounded-2xl overflow-hidden mt-3 border border-gray-200">
                 <iframe
                   src={companyInfo.mapEmbedUrl}
-                  title="Bản đồ Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ"
+                  title={`Bản đồ định vị ${companyInfo.yardAddress}`}
                   className="w-full h-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

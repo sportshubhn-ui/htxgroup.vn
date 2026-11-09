@@ -19,8 +19,8 @@ export function FacilityDetailPage() {
   return (
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
-        title="Bãi Tập Kết & Xử Lý CTRXD Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ"
-        description="Thông tin chi tiết bãi tập kết và xử lý chất thải rắn xây dựng tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Định vị Google Maps, trạm cân 80T, tiếp nhận 24/7."
+        title="Bãi Tập Kết & Xử Lý CTRXD Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội"
+        description="Thông tin chi tiết bãi tập kết và xử lý chất thải rắn xây dựng tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Định vị Google Maps, trạm cân 80T, tiếp nhận 24/7."
         image={facility.image}
       />
 
@@ -58,7 +58,7 @@ export function FacilityDetailPage() {
             <div className="flex items-center gap-2">
               <Navigation className="w-5 h-5 text-[#064D35]" />
               <h2 className="text-sm sm:text-base font-bold text-gray-900 uppercase">
-                Định vị vệ tinh Google Maps – Ngõ 46 Liên Mạc, P. Thượng Cát, Q. Tây Hồ
+                Định vị vệ tinh Google Maps – {companyInfo.yardAddress}
               </h2>
             </div>
             <a
@@ -76,7 +76,7 @@ export function FacilityDetailPage() {
           <div className="relative w-full h-[380px] sm:h-[450px] rounded-2xl overflow-hidden border border-gray-200">
             <iframe
               src={companyInfo.mapEmbedUrl}
-              title="Định vị bãi tập kết Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ"
+              title={`Định vị bãi tập kết ${companyInfo.yardAddress}`}
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

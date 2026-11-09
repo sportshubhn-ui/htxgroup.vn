@@ -9,7 +9,7 @@ export function NewsDetailPage() {
   const article = newsArticles.find((a: typeof newsArticles[0]) => a.slug === slug) || {
     title: 'Bài viết không tìm thấy',
     date: '',
-    image: '/images/slider-1.jpg',
+    image: '/images/banner-htx-engineers-crusher.jpg',
     excerpt: 'Bài viết bạn yêu cầu hiện không tồn tại hoặc đã bị di chuyển.',
     content: '<p>Xin lỗi, bài viết bạn đang tìm kiếm không tồn tại.</p>',
     slug: '',

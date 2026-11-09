@@ -142,7 +142,7 @@ export function QuoteRequestPage() {
     <div className="bg-[#FFFCF6] min-h-[85vh] py-10 lg:py-14">
       <SEO
         title="Yêu Cầu Báo Giá Trực Tuyến"
-        description="Gửi yêu cầu báo giá thu gom phế thải công trình, đăng ký đưa xe vào bãi Ngõ 46 Liên Mạc Tây Hồ, hoặc đặt mua cát đá cốt liệu tái chế từ Hành Tinh Xanh."
+        description="Gửi yêu cầu báo giá thu gom phế thải công trình, đăng ký đưa xe vào bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, hoặc đặt mua cát đá cốt liệu tái chế từ Hành Tinh Xanh."
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +192,7 @@ export function QuoteRequestPage() {
               </p>
               {quoteSuccess.type === 'dua-vao-bai' && (
                 <p className="font-semibold text-emerald-800 text-[11px] bg-white p-2 rounded-lg border border-emerald-300">
-                  ⚠️ Lưu ý: Đây là lịch đề nghị, chờ nhân viên bãi xác nhận trước khi phương tiện xuất phát vào Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ.
+                  ⚠️ Lưu ý: Đây là lịch đề nghị, chờ nhân viên bãi xác nhận trước khi phương tiện xuất phát vào Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội.
                 </p>
               )}
             </div>
@@ -275,7 +275,7 @@ export function QuoteRequestPage() {
                 <div className="p-3.5 bg-amber-50 rounded-xl text-xs text-amber-900 flex items-center gap-2.5 border border-amber-200">
                   <AlertCircle className="w-5 h-5 text-amber-700 shrink-0" />
                   <span>
-                    <strong>Điểm đổ:</strong> Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Giờ làm việc: 24/7. Trạm cân 80 tấn. "Lịch đề nghị — Chờ nhân viên điều phối xác nhận slot trước khi xe đến".
+                    <strong>Điểm đổ:</strong> Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Giờ làm việc: 24/7. Trạm cân 80 tấn. "Lịch đề nghị — Chờ nhân viên điều phối xác nhận slot trước khi xe đến".
                   </span>
                 </div>
               )}
@@ -465,7 +465,7 @@ export function QuoteRequestPage() {
                     <input
                       type="text"
                       readOnly
-                      value="Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, Hà Nội"
+                      value="Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội"
                       className="w-full h-11 px-3.5 text-xs bg-gray-100 text-gray-700 border border-gray-300 rounded-xl cursor-not-allowed"
                     />
                   </div>

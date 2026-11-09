@@ -81,7 +81,7 @@ export function PolicyPage() {
               <section className="space-y-2">
                 <h3 className="font-bold text-gray-900 text-sm uppercase">1. Quy định về chủng loại phế thải đưa vào bãi</h3>
                 <p>
-                  Bãi tập kết tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ chỉ tiếp nhận chất thải rắn xây dựng thông thường (bê tông, trạc gạch vữa, đất đào sạch). Tuyệt đối không tiếp nhận chất thải nguy hại, bùn độc hại hoặc rác sinh hoạt.
+                  Bãi tập kết tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội chỉ tiếp nhận chất thải rắn xây dựng thông thường (bê tông, trạc gạch vữa, đất đào sạch). Tuyệt đối không tiếp nhận chất thải nguy hại, bùn độc hại hoặc rác sinh hoạt.
                 </p>
               </section>
 
