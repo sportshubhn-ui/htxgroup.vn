@@ -45,28 +45,28 @@
       "slug": "thu-gom",
       "name": "Thu gom chất thải rắn xây dựng tại công trình",
       "shortDesc": "Khảo sát hiện trường, điều phối nhân công máy xúc thu gom toàn diện phế thải tháo dỡ tại chân công trình.",
-      "image": "/images/service-thugom.jpg"
+      "image": "/images/service-htx-thugom.jpg"
     },
     {
       "id": "van-chuyen",
       "slug": "van-chuyen",
       "name": "Vận chuyển chất thải xây dựng chuyên dụng",
       "shortDesc": "Đội xe ben 3 chân, 4 chân phủ bạt kín chống bụi, đăng kiểm tiêu chuẩn, vận chuyển nhanh chóng an toàn.",
-      "image": "/images/service-vanchuyen.jpg"
+      "image": "/images/service-htx-vanchuyen.jpg"
     },
     {
       "id": "tiep-nhan-tap-ket",
       "slug": "tiep-nhan-tap-ket",
       "name": "Tiếp nhận & Tập kết chất thải rắn tại bãi Liên Mạc",
-      "shortDesc": "Bãi tập kết hợp pháp tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ. Trạm cân 80 tấn, tiếp nhận 24/7.",
-      "image": "/images/service-tiepnhan.jpg"
+      "shortDesc": "Bãi tập kết hợp pháp tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Trạm cân 80 tấn, tiếp nhận 24/7.",
+      "image": "/images/service-htx-tiepnhan.jpg"
     },
     {
       "id": "phan-loai-tai-che",
       "slug": "phan-loai-tai-che",
       "name": "Phân loại, xử lý & nghiền sàng tái chế",
       "shortDesc": "Ứng dụng công nghệ nghiền kẹp hàm sàng lọc tái sinh thành cốt liệu xây dựng đạt chuẩn kinh tế tuần hoàn.",
-      "image": "/images/service-taiche.jpg"
+      "image": "/images/service-htx-taiche.jpg"
     }
   ]
 }
