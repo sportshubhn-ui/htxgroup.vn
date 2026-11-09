@@ -4,32 +4,28 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowRight,
-  Building,
-  Recycle,
-  PackageCheck,
-  CheckCircle,
-  Truck,
-  Wrench,
-  Calendar,
-  Layers,
-  MapPin,
   ShieldCheck,
-  Sparkles
+  Truck,
+  MapPin,
+  Phone,
+  Send,
+  Layers,
+  Sparkles,
+  ExternalLink
 } from 'lucide-react'
 import {
   homeHeroSlides,
-  homeProgressBars,
-  coreServices,
-  featuredProjects,
-  productList,
-  companyCounters,
-  newsArticles,
+  servicesData,
+  productsData,
+  equipmentData,
   companyInfo
 } from '@/data/htxData'
 import { SEO } from '@/components/common/SEO'
+import { useQuoteCart } from '@/context/QuoteCartContext'
 
 export function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const { addItem } = useQuoteCart()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -47,14 +43,14 @@ export function HomePage() {
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#FFFCF6] text-[#172D24]">
       <SEO
-        title="Trang Chủ"
-        description="Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Tiếp nhận, thu gom, vận chuyển và tái chế chất thải rắn xây dựng (CTRXD) tại Ngõ 46 Liên Mạc, Thượng Cát. Trụ sở tại 138 Giảng Võ. Hotline 0707 155 666."
+        title="Trang Chủ – Giải Pháp Hành Tinh Xanh"
+        description="Giải pháp thu gom, vận chuyển, tiếp nhận và tái chế chất thải xây dựng, kết nối nguồn vật liệu với nhu cầu công trình tại Hà Nội. Hotline: 0707 155 666."
       />
 
       {/* 1. HERO SLIDER */}
-      <section className="relative h-[480px] sm:h-[560px] lg:h-[620px] overflow-hidden bg-slate-900">
+      <section className="relative h-[500px] sm:h-[580px] lg:h-[640px] overflow-hidden bg-slate-950">
         {homeHeroSlides.map((slide, index) => (
           <div
             key={slide.id}
@@ -62,21 +58,20 @@ export function HomePage() {
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
-            {/* Background image */}
             <img
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover object-center"
             />
             {/* Dark green overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/85 via-slate-950/70 to-emerald-950/80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#03271B]/95 via-[#064D35]/80 to-transparent" />
 
             {/* Slide caption */}
             <div className="absolute inset-0 flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="max-w-3xl space-y-4 text-white">
-                  <div className="inline-flex items-center gap-2 bg-emerald-600/90 text-white px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md backdrop-blur-sm">
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-200" />
+                  <div className="inline-flex items-center gap-2 bg-[#B2E5C0]/20 text-[#B2E5C0] border border-[#B2E5C0]/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
+                    <Sparkles className="w-3.5 h-3.5 text-[#B2E5C0]" />
                     <span>{companyInfo.slogan}</span>
                   </div>
 
@@ -84,24 +79,25 @@ export function HomePage() {
                     {slide.title}
                   </h1>
 
-                  <p className="text-sm sm:text-base lg:text-lg text-emerald-100/90 bg-emerald-950/60 p-4 rounded-lg backdrop-blur-sm max-w-2xl leading-relaxed border border-emerald-500/30">
+                  <p className="text-xs sm:text-base text-emerald-100/90 bg-[#03271B]/70 p-4 rounded-xl backdrop-blur-xs max-w-2xl leading-relaxed border border-emerald-500/20">
                     {slide.desc}
                   </p>
 
                   <div className="pt-2 flex flex-wrap gap-3">
                     <Link
-                      to={slide.ctaLink}
-                      className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3.5 rounded-lg font-bold uppercase text-xs tracking-wider transition shadow-lg shadow-emerald-900/40 cursor-pointer"
+                      to={slide.primaryCtaLink}
+                      className="inline-flex items-center gap-2 bg-[#064D35] hover:bg-[#043826] text-white px-6 py-3.5 rounded-xl font-bold uppercase text-xs tracking-wider transition shadow-lg shadow-emerald-950/40 cursor-pointer border border-[#B2E5C0]/40"
                     >
-                      <span>{slide.ctaText}</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <span>{slide.primaryCtaText}</span>
+                      <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
                     </Link>
-                    <a
-                      href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-                      className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider backdrop-blur-sm border border-white/20 transition cursor-pointer"
+
+                    <Link
+                      to={slide.secondaryCtaLink}
+                      className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider backdrop-blur-xs border border-white/20 transition cursor-pointer"
                     >
-                      <span>Hotline: {companyInfo.hotline}</span>
-                    </a>
+                      <span>{slide.secondaryCtaText}</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -109,400 +105,456 @@ export function HomePage() {
           </div>
         ))}
 
-        {/* Slider arrow controls */}
+        {/* Slider Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-emerald-600 text-white flex items-center justify-center transition focus:outline-none backdrop-blur-xs cursor-pointer"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
           aria-label="Previous Slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-emerald-600 text-white flex items-center justify-center transition focus:outline-none backdrop-blur-xs cursor-pointer"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
           aria-label="Next Slide"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
-        {/* Slide indicators */}
+        {/* Indicators */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {homeHeroSlides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                idx === currentSlide ? 'bg-emerald-500 w-8' : 'bg-white/50 hover:bg-white w-2.5'
+                idx === currentSlide ? 'bg-[#B2E5C0] w-8' : 'bg-white/50 hover:bg-white w-2.5'
               }`}
-              aria-label={`Go to slide ${idx + 1}`}
+              aria-label={`Slide ${idx + 1}`}
             />
           ))}
         </div>
       </section>
 
-      {/* 2. CÔNG BỐ BÃI TẬP KẾT & GIỚI THIỆU */}
-      <section id="ht-about-us-section" className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Announcement Callout Banner */}
-          <div className="mb-14 p-6 sm:p-8 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-2 border-emerald-500/40 rounded-2xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-600 text-white text-[11px] font-extrabold uppercase rounded-md tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Công bố chính thức</span>
+      {/* 2. HAI THẺ NHU CẦU CHÍNH (MASTER_BRIEF Section 5 Item 2) */}
+      <section className="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Journey 1: Cần thu gom / đổ thải */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-[#064D35] text-xs font-bold uppercase rounded-full">
+                <Truck className="w-3.5 h-3.5" />
+                <span>Hành trình 1 • Quản lý chất thải</span>
               </div>
-              <h3 className="text-lg sm:text-xl font-extrabold text-emerald-950">
-                Bãi tập kết & Xử lý chất thải rắn xây dựng (CTRXD) tại Thượng Cát
-              </h3>
-              <p className="text-xs sm:text-sm text-emerald-800 flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Địa chỉ bãi tiếp nhận: <strong>Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Bắc Từ Liêm, Hà Nội</strong></span>
+              <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
+                Bạn cần thu gom phế thải công trình hoặc đưa xe vào bãi?
+              </h2>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận xe vào đổ tại Bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ qua trạm cân 80 tấn.
               </p>
             </div>
-            <div className="shrink-0 flex gap-3">
+            <div className="pt-6 flex flex-wrap gap-3">
               <Link
-                to="/lien-he"
-                className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition shadow-sm"
+                to="/yeu-cau-bao-gia?type=thu-gom"
+                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center gap-1.5 shadow-xs"
               >
-                Đăng ký tiếp nhận CTRXD
+                <span>Yêu cầu thu gom</span>
+                <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
+              </Link>
+              <Link
+                to="/yeu-cau-bao-gia?type=dua-vao-bai"
+                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition"
+              >
+                Đăng ký vào bãi Liên Mạc
               </Link>
             </div>
           </div>
 
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-              Giới Thiệu Về <span className="text-emerald-700">{companyInfo.name}</span>
-            </h2>
-            <div className="w-20 h-1 bg-emerald-600 mx-auto mt-3" />
-            <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
-              Trụ sở đặt tại <strong>Tầng 4 tòa nhà Grandeur Palace, 138 Giảng Võ, Ba Đình, Hà Nội</strong>. Hành Tinh Xanh là đơn vị chuyên nghiệp hàng đầu trong lĩnh vực phá dỡ công trình, thu gom vận chuyển và tái chế phế thải xây dựng theo mô hình kinh tế tuần hoàn.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left: Progress Bars */}
-            <div className="lg:col-span-7 space-y-6">
-              {homeProgressBars.map((item, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="flex justify-between items-center text-sm font-bold text-gray-800">
-                    <span>{item.label}</span>
-                    <span className="text-emerald-700 font-extrabold">{item.percent}%</span>
-                  </div>
-                  <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-emerald-600 to-teal-500 rounded-full transition-all duration-1000"
-                      style={{ width: `${item.percent}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-
-              <div className="pt-4 flex flex-wrap gap-4">
-                <Link
-                  to="/gioi-thieu/thong-tin-chung"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs uppercase tracking-wider rounded-lg transition shadow-sm"
-                >
-                  <span>Hồ sơ năng lực</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/lien-he"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 hover:border-emerald-600 text-gray-700 hover:text-emerald-700 font-semibold text-xs uppercase tracking-wider rounded-lg transition"
-                >
-                  <span>Liên hệ báo giá</span>
-                </Link>
+          {/* Journey 2: Cần mua vật liệu xây dựng & tái chế */}
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-[#064D35] text-xs font-bold uppercase rounded-full">
+                <Layers className="w-3.5 h-3.5" />
+                <span>Hành trình 2 • Cung ứng vật tư</span>
               </div>
+              <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
+                Bạn cần tìm vật liệu xây dựng hoặc cốt liệu tái chế (RCA)?
+              </h2>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Cung cấp đá 1x2, cấp phối đá dăm, cát bê tông, cát xây tô, cát san lấp và cốt liệu bê tông tái chế (RCA) đạt chuẩn kỹ thuật, tối ưu chi phí và thân thiện môi trường.
+              </p>
             </div>
-
-            {/* Right: Featured image */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
-                <img
-                  src="/images/about-img.jpg"
-                  alt="Trạm xử lý chất thải rắn xây dựng Hành Tinh Xanh"
-                  className="w-full h-[380px] object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/85 via-emerald-950/30 to-transparent flex items-end p-6">
-                  <div className="text-white space-y-1">
-                    <span className="text-xs uppercase font-extrabold tracking-wider text-emerald-300">Công nghệ hiện đại</span>
-                    <h3 className="text-lg font-bold">Quy trình xử lý & Tái chế phế thải xanh</h3>
-                    <p className="text-xs text-emerald-200">Bãi tiếp nhận Ngõ 46 Liên Mạc, P. Thượng Cát, Bắc Từ Liêm</p>
-                  </div>
-                </div>
-              </div>
+            <div className="pt-6 flex flex-wrap gap-3">
+              <Link
+                to="/vat-lieu"
+                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center gap-1.5 shadow-xs"
+              >
+                <span>Xem catalog vật liệu</span>
+                <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
+              </Link>
+              <Link
+                to="/yeu-cau-bao-gia?type=mua-vat-lieu"
+                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition"
+              >
+                Nhận báo giá theo khối lượng
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. LĨNH VỰC HOẠT ĐỘNG */}
-      <section id="ht-featured-post-section" className="py-16 bg-gradient-to-b from-emerald-800 to-emerald-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-white">
-              LĨNH VỰC HOẠT ĐỘNG CỐT LÕI
-            </h2>
-            <div className="w-20 h-1 bg-white mx-auto mt-3" />
-            <p className="mt-3 text-sm text-emerald-100 max-w-2xl mx-auto">
-              Ba trụ cột dịch vụ chuyên sâu bảo vệ môi trường và phát triển kinh tế tuần hoàn
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {coreServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-white text-gray-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-sm">
-                    {service.icon === 'Building' && <Building className="w-7 h-7" />}
-                    {service.icon === 'Recycle' && <Recycle className="w-7 h-7" />}
-                    {service.icon === 'PackageCheck' && <PackageCheck className="w-7 h-7" />}
-                  </div>
-                  <h3 className="text-lg font-bold uppercase text-gray-900 group-hover:text-emerald-700 transition leading-snug">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-
-                <div className="pt-6 mt-6 border-t border-gray-100">
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 hover:text-emerald-800 transition"
-                  >
-                    <span>Chi tiết dịch vụ</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. DỰ ÁN TIÊU BIỂU */}
-      <section id="ht-service-post-section" className="py-16 lg:py-20 bg-gray-50">
+      {/* 3. BỐN DỊCH VỤ CỐT LÕI */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-              DỰ ÁN & HẠNG MỤC TIÊU BIỂU
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
+              Dịch vụ trọn gói
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+              CHUỖI DỊCH VỤ XỬ LÝ CHẤT THẢI RẮN XÂY DỰNG
             </h2>
-            <div className="w-20 h-1 bg-emerald-600 mx-auto mt-3" />
-            <p className="mt-3 text-sm text-gray-600">
-              Các công trình giải phóng mặt bằng, vận chuyển và trạm xử lý CTRXD trọng điểm
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              Quy trình khép kín từ chân công trình đến nhà máy tái chế, bảo đảm pháp lý minh bạch 100% cho chủ đầu tư và nhà thầu.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProjects.map((project) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {servicesData.map((svc, i) => (
               <div
-                key={project.id}
-                className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                key={svc.slug}
+                className="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-xs hover:shadow-lg transition flex flex-col group"
               >
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-                      {project.icon === 'CheckSquare' && <CheckCircle className="w-5 h-5" />}
-                      {project.icon === 'Truck' && <Truck className="w-5 h-5" />}
-                      {project.icon === 'Wrench' && <Wrench className="w-5 h-5" />}
-                      {project.icon === 'ArrowRight' && <Layers className="w-5 h-5" />}
-                    </div>
-                    <h3 className="text-sm font-bold text-gray-900 hover:text-emerald-700 transition line-clamp-2">
-                      <Link to={project.href}>{project.title}</Link>
+                <div className="relative h-48 bg-gray-100 overflow-hidden">
+                  <img
+                    src={svc.image}
+                    alt={svc.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 text-white text-[10px] rounded backdrop-blur-xs">
+                    Hình minh họa
+                  </span>
+                  <span className="w-8 h-8 rounded-full bg-[#064D35] text-[#B2E5C0] text-xs font-bold flex items-center justify-center absolute top-3 left-3 shadow-sm">
+                    0{i + 1}
+                  </span>
+                </div>
+
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#064D35] transition leading-snug">
+                      {svc.name}
                     </h3>
+                    <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                      {svc.shortDesc}
+                    </p>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed line-clamp-3">
-                    {project.summary}
-                  </p>
-                </div>
 
-                <div className="pt-4 mt-4 border-t border-gray-50">
-                  <Link
-                    to={project.href}
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800"
-                  >
-                    <span>Xem chi tiết</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  <div className="pt-2 border-t border-gray-100">
+                    <Link
+                      to={`/dich-vu/${svc.slug}`}
+                      className="text-xs font-bold uppercase text-[#064D35] hover:text-emerald-700 flex items-center gap-1 group-hover:gap-2 transition-all"
+                    >
+                      <span>Xem chi tiết</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="mt-10 text-center">
-            <Link
-              to="/cac-du-an-tieu-bieu"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs uppercase tracking-wider rounded-lg transition shadow-sm"
-            >
-              <span>Xem tất cả dự án</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* 5. SẢN PHẨM VẬT LIỆU XANH TÁI CHẾ */}
-      <section id="ht-team-section" className="py-16 bg-white">
+      {/* 4. VẬT LIỆU XÂY DỰNG & CỐT LIỆU TÁI CHẾ */}
+      <section className="py-16 bg-white border-y border-emerald-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-              SẢN PHẨM VẬT LIỆU TÁI CHẾ HÀNH TINH XANH
-            </h2>
-            <div className="w-20 h-1 bg-emerald-600 mx-auto mt-3" />
-            <p className="mt-3 text-sm text-gray-600">
-              Vật liệu xây dựng tái sinh đạt chuẩn kỹ thuật, tối ưu chi phí và thân thiện môi trường
-            </p>
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-4 mb-12">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
+                Sản phẩm hạt nhân
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+                DANH MỤC VẬT LIỆU XÂY DỰNG & CỐT LIỆU TÁI CHẾ
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                Đá 1x2, cấp phối đá dăm, cát xây tô, cát bê tông, cát san lấp và cốt liệu tái sinh (RCA).
+              </p>
+            </div>
+
+            <Link
+              to="/vat-lieu"
+              className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#064D35] text-[#064D35] hover:bg-emerald-50 rounded-xl text-xs font-bold uppercase tracking-wider transition"
+            >
+              <span>Xem toàn bộ catalog</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productList.map((product) => (
+            {productsData.map((p) => (
               <div
-                key={product.id}
-                className="relative overflow-hidden rounded-xl shadow-md group h-[380px] bg-slate-100 border border-gray-100"
+                key={p.slug}
+                className="bg-[#FFFCF6] rounded-2xl overflow-hidden border border-emerald-900/10 shadow-2xs hover:shadow-md transition flex flex-col group"
               >
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-
-                {/* Bottom title banner by default */}
-                <div className="absolute bottom-0 inset-x-0 bg-emerald-800/95 text-white py-3.5 px-4 text-center transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                  <h3 className="font-bold text-sm uppercase tracking-wide truncate">
-                    {product.title}
-                  </h3>
-                </div>
-
-                {/* Hover full overlay */}
-                <Link
-                  to={product.href}
-                  className="absolute inset-0 bg-emerald-900/92 text-white p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >
-                  <h3 className="font-bold text-base uppercase tracking-wider mb-3 border-b border-emerald-400/50 pb-2">
-                    {product.title}
-                  </h3>
-                  <p className="text-xs text-emerald-100 leading-relaxed mb-5">
-                    {product.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-emerald-800 rounded-lg font-bold text-xs uppercase tracking-wider shadow">
-                    <span>Xem thông số kỹ thuật</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                <div className="relative h-48 bg-gray-100 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  />
+                  <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 text-white text-[10px] rounded backdrop-blur-xs">
+                    Hình minh họa
                   </span>
-                </Link>
+                  {p.isRecycled && (
+                    <span className="absolute top-2 right-2 px-2 py-0.5 bg-[#064D35] text-[#B2E5C0] text-[10px] font-bold rounded uppercase">
+                      Tái chế sinh thái
+                    </span>
+                  )}
+                </div>
+
+                <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] font-semibold text-emerald-800">{p.category}</span>
+                    <h3 className="text-sm font-bold text-gray-900 group-hover:text-[#064D35] transition">
+                      {p.name}
+                    </h3>
+                    <p className="text-xs text-gray-600 line-clamp-2">{p.specification}</p>
+                  </div>
+
+                  <div className="pt-2 border-t border-gray-200 flex items-center justify-between text-xs">
+                    <span className="font-semibold text-gray-500">Đơn vị: {p.unit}</span>
+                    <button
+                      onClick={() => addItem({
+                        slug: p.slug,
+                        name: p.name,
+                        category: p.category,
+                        unit: p.unit,
+                        isRecycled: p.isRecycled,
+                        image: p.image
+                      }, 10)}
+                      className="px-3 py-1.5 bg-[#064D35] text-white rounded-lg text-xs font-bold uppercase hover:bg-[#043826] transition cursor-pointer"
+                    >
+                      + Thêm vào giỏ
+                    </button>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 6. BỘ ĐẾM THÀNH TỰU */}
-      <section
-        id="ht-counter-section"
-        className="py-16 bg-slate-900 text-white relative bg-cover bg-center"
-        style={{ backgroundImage: `url('/images/slider-1.jpg')` }}
-      >
-        <div className="absolute inset-0 bg-emerald-950/90" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {companyCounters.map((counter, idx) => (
-              <div key={idx} className="p-4">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-emerald-300 tracking-tight">
-                  {counter.value}
-                </div>
-                <div className="mt-2 text-xs sm:text-sm uppercase font-bold text-emerald-100 tracking-wider">
-                  {counter.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. TIN TỨC SỰ KIỆN */}
-      <section id="ht-blog-section" className="py-16 bg-gray-50">
+      {/* 5. QUY TRÌNH GIAO DỊCH 5 BƯỚC */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-gray-900 tracking-tight">
-              TIN TỨC & CHÍNH SÁCH MÔI TRƯỜNG
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
+              Quy trình minh bạch
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+              QUY TRÌNH GIAO DỊCH TIÊU CHUẨN 5 BƯỚC
             </h2>
-            <div className="w-20 h-1 bg-emerald-600 mx-auto mt-3" />
-            <p className="mt-3 text-sm text-gray-600">
-              Quy định quản lý chất thải rắn xây dựng và thông báo tiếp nhận vật liệu mới nhất
+            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+              Từ tiếp nhận yêu cầu ban đầu đến bàn giao mặt bằng và nghiệm thu khối lượng.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {newsArticles.map((post) => (
-              <article
-                key={post.slug}
-                className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between"
-              >
-                <div>
-                  <div className="h-44 overflow-hidden relative">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 font-semibold mb-2">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{post.date}</span>
-                    </div>
-                    <h3 className="font-bold text-sm text-gray-900 hover:text-emerald-700 transition line-clamp-2 leading-snug">
-                      <Link to={`/${post.slug}`}>{post.title}</Link>
-                    </h3>
-                    <p className="mt-2 text-xs text-gray-600 line-clamp-3 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 pt-0">
-                  <Link
-                    to={`/${post.slug}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:text-emerald-800"
-                  >
-                    <span>Đọc tiếp</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </article>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { step: '01', title: 'Tiếp nhận nhu cầu', desc: 'Qua hotline 0707 155 666 hoặc form trực tuyến trên website.' },
+              { step: '02', title: 'Khảo sát & Xác nhận', desc: 'Cán bộ kỹ thuật kiểm tra vị trí công trình, điều kiện tiếp cận xe và mẫu phế thải.' },
+              { step: '03', title: 'Báo giá & Hợp đồng', desc: 'Gửi bảng báo giá chi tiết, phương án xe và ký kết hợp đồng vận chuyển xử lý.' },
+              { step: '04', title: 'Triển khai thi công', desc: 'Bốc xúc, vận chuyển xe ben phủ bạt hoặc đón xe vào bãi cân điện tử 80T.' },
+              { step: '05', title: 'Bàn giao & Đối soát', desc: 'Ký biên bản bàn giao mặt bằng sạch và cung cấp đầy đủ phiếu cân tịnh.' },
+            ].map((s) => (
+              <div key={s.step} className="bg-white p-5 rounded-2xl border border-emerald-900/10 shadow-xs space-y-2">
+                <span className="w-8 h-8 rounded-full bg-emerald-100 text-[#064D35] font-black text-xs flex items-center justify-center">
+                  {s.step}
+                </span>
+                <h4 className="font-bold text-xs sm:text-sm text-gray-900">{s.title}</h4>
+                <p className="text-[11px] text-gray-600 leading-relaxed">{s.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 8. ĐỐI TÁC ĐỒNG HÀNH */}
-      <section id="ht-logo-section" className="py-12 bg-white border-t border-gray-100">
+      {/* 6 & 7. CƠ SỞ BÃI LIÊN MẠC & GOOGLE MAPS GHIM TÂM (CRITICAL REQUEST) */}
+      <section className="py-16 bg-white border-t border-emerald-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className="text-base font-bold uppercase text-gray-700 tracking-wider">
-              ĐỐI TÁC ĐỒNG HÀNH CÙNG HÀNH TINH XANH
-            </h3>
-            <div className="w-12 h-0.5 bg-emerald-600 mx-auto mt-2" />
+          <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-3xl p-6 sm:p-10 border-2 border-emerald-600/30 mb-10">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-2 max-w-3xl">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#064D35] text-white text-[11px] font-extrabold uppercase rounded-md tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#B2E5C0]" />
+                  <span>Công bố điểm tập kết chính thức</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#064D35]">
+                  BÃI TẬP KẾT & XỬ LÝ CHẤT THẢI RẮN XÂY DỰNG HÀNH TINH XANH
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-800 flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#064D35] shrink-0" />
+                  <span>
+                    Địa chỉ tiếp nhận: <strong>Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội</strong>
+                  </span>
+                </p>
+                <p className="text-xs text-emerald-800 italic">
+                  * Địa bàn tiếp nhận: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội.
+                </p>
+              </div>
+
+              <div className="shrink-0 flex flex-wrap gap-3">
+                <Link
+                  to="/yeu-cau-bao-gia?type=dua-vao-bai"
+                  className="px-5 py-3 bg-[#064D35] hover:bg-[#043826] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md flex items-center gap-2"
+                >
+                  <Send className="w-4 h-4 text-[#B2E5C0]" />
+                  <span>Đăng ký đưa xe vào bãi</span>
+                </Link>
+                <a
+                  href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
+                  className="px-4 py-3 bg-white border border-[#064D35] text-[#064D35] font-bold text-xs uppercase rounded-xl transition hover:bg-emerald-50 flex items-center gap-1.5"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>{companyInfo.hotline}</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
-            <div className="px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 text-xs font-bold text-gray-700 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>SỞ XÂY DỰNG HÀ NỘI</span>
+          {/* Map interactive section */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Map iframe */}
+            <div className="lg:col-span-8 bg-white rounded-3xl p-4 border border-emerald-900/10 shadow-md">
+              <div className="flex items-center justify-between pb-3 px-2 border-b border-gray-100 text-xs">
+                <span className="font-bold text-[#064D35] flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4" />
+                  <span>Định vị Google Maps: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ</span>
+                </span>
+                <a
+                  href={companyInfo.googleMapsDirectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#064D35] hover:underline font-bold flex items-center gap-1"
+                >
+                  <span>Mở Google Maps</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+              <div className="h-[360px] sm:h-[420px] rounded-2xl overflow-hidden mt-3 border border-gray-200">
+                <iframe
+                  src={companyInfo.mapEmbedUrl}
+                  title="Bản đồ Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
-            <div className="px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 text-xs font-bold text-gray-700 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>SỞ TÀI NGUYÊN & MÔI TRƯỜNG</span>
+
+            {/* Yard specifications */}
+            <div className="lg:col-span-4 space-y-4">
+              <div className="bg-[#FFFCF6] p-6 rounded-3xl border border-emerald-900/10 space-y-4 shadow-2xs">
+                <h4 className="font-bold text-sm text-[#064D35] uppercase border-b border-gray-200 pb-2">
+                  Thông số vận hành bãi tiếp nhận
+                </h4>
+                <div className="space-y-3 text-xs text-gray-700">
+                  <div>
+                    <span className="text-gray-500 block">Thời gian tiếp nhận:</span>
+                    <strong className="text-gray-900">24/7 (Cả Thứ Bảy, Chủ Nhật & Ngày Lễ)</strong>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 block">Trọng tải trạm cân:</span>
+                    <strong className="text-gray-900">Cân điện tử kỹ thuật số 80 Tấn</strong>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 block">Tiếp cận phương tiện:</span>
+                    <strong className="text-gray-900">Xe ben 2.5T, xe 3 chân, 4 chân, xe đầu kéo</strong>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 block">Trụ sở công ty:</span>
+                    <span className="text-gray-900">{companyInfo.officeAddress}</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    to="/co-so/bai-tap-ket-lien-mac"
+                    className="w-full py-2.5 bg-emerald-100 hover:bg-emerald-200 text-[#064D35] font-bold text-xs uppercase rounded-xl transition flex items-center justify-center gap-1.5"
+                  >
+                    <span>Xem hướng dẫn chi tiết</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 text-xs font-bold text-gray-700 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>UBND QUẬN BẮC TỪ LIÊM</span>
-            </div>
-            <div className="px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 text-xs font-bold text-gray-700 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              <span>HỘI MÔI TRƯỜNG XÂY DỰNG VIỆT NAM</span>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. NĂNG LỰC THIẾT BỊ MÁY MÓC */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
+              Trang thiết bị
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+              NĂNG LỰC MÁY MÓC & ĐỘI XE CHUYÊN DỤNG
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+              Đầu tư hệ thống cơ giới công suất cao đáp ứng yêu cầu xử lý phế thải khối lượng lớn.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {equipmentData.map((eq) => (
+              <div key={eq.slug} className="bg-white rounded-2xl overflow-hidden border border-emerald-900/10 shadow-xs group">
+                <div className="relative h-44 bg-gray-100 overflow-hidden">
+                  <img src={eq.image} alt={eq.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  <span className="absolute bottom-2 left-2 px-2 py-0.5 bg-black/60 text-white text-[10px] rounded backdrop-blur-xs">
+                    Hình minh họa
+                  </span>
+                </div>
+                <div className="p-4 space-y-1.5">
+                  <h4 className="font-bold text-xs sm:text-sm text-gray-900 group-hover:text-[#064D35] transition">{eq.name}</h4>
+                  <p className="text-[11px] text-gray-600 line-clamp-2">{eq.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FORM BÁO GIÁ NHANH & CAM KẾT */}
+      <section className="py-16 bg-gradient-to-br from-[#064D35] to-[#03271B] text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#B2E5C0]/20 text-[#B2E5C0] border border-[#B2E5C0]/40 rounded-full text-xs font-bold uppercase">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Đồng hành cùng công trình thủ đô</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            LIÊN HỆ KHẢO SÁT & NHẬN BÁO GIÁ TRONG 30 PHÚT
+          </h2>
+          <p className="text-xs sm:text-sm text-emerald-100 max-w-xl mx-auto leading-relaxed">
+            Hành Tinh Xanh sẵn sàng phục vụ Quý khách 24/7. Hỗ trợ đầy đủ thủ tục hóa đơn, biên bản xử lý chất thải rắn xây dựng theo đúng quy chuẩn pháp luật.
+          </p>
+
+          <div className="pt-4 flex flex-wrap justify-center gap-4">
+            <Link
+              to="/yeu-cau-bao-gia"
+              className="px-8 py-3.5 bg-[#B2E5C0] hover:bg-emerald-200 text-[#064D35] font-extrabold text-xs uppercase tracking-wider rounded-xl transition shadow-lg flex items-center gap-2 cursor-pointer"
+            >
+              <Send className="w-4 h-4" />
+              <span>Gửi yêu cầu báo giá trực tuyến</span>
+            </Link>
+
+            <a
+              href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
+              className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition border border-white/20 flex items-center gap-2 cursor-pointer"
+            >
+              <Phone className="w-4 h-4 text-[#B2E5C0]" />
+              <span>Hotline 24/7: {companyInfo.hotline}</span>
+            </a>
           </div>
         </div>
       </section>

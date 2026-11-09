@@ -6,7 +6,7 @@ import { Calendar, ChevronRight, Share2, Printer, ArrowLeft } from 'lucide-react
 export function NewsDetailPage() {
   const { slug } = useParams<{ slug: string }>()
 
-  const article = newsArticles.find((a) => a.slug === slug) || {
+  const article = newsArticles.find((a: typeof newsArticles[0]) => a.slug === slug) || {
     title: 'Bài viết không tìm thấy',
     date: '',
     image: '/images/slider-1.jpg',

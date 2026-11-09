@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "description": "Danh mục tài nguyên hình ảnh có gắn nhãn nguồn minh họa theo Master Brief",
+  "generatedAt": "2026-11-09T05:24:39.774Z",
+  "assets": [
+    {
+      "path": "/images/slider-1.jpg",
+      "label": "Bãi tập kết và dây chuyền nghiền sàng tái chế",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/slider-2.jpg",
+      "label": "Đoàn xe ben chuyên dụng vận chuyển phế thải",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/slider-3.jpg",
+      "label": "Cơ sở bãi tập kết vật liệu và cốt liệu",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/facility-lienmac.jpg",
+      "label": "Mô phỏng mặt bằng bãi tập kết Ngõ 46 Liên Mạc, Tây Hồ",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/service-thugom.jpg",
+      "label": "Thu gom phế thải công trình xây dựng",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/service-vanchuyen.jpg",
+      "label": "Đội xe vận chuyển chất thải xây dựng",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/service-tiepnhan.jpg",
+      "label": "Trạm cân điện tử tiếp nhận xe phế thải vào bãi",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/service-taiche.jpg",
+      "label": "Dây chuyền xử lý, nghiền sàng cốt liệu tái chế",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-da1x2.jpg",
+      "label": "Đá 1x2 xây dựng tiêu chuẩn",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-capphoida.jpg",
+      "label": "Cấp phối đá dăm loại 1 và loại 2",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-catbetong.jpg",
+      "label": "Cát vàng hạt lớn đổ bê tông",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-catxayto.jpg",
+      "label": "Cát xây tô sạch mịn",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-catsanlap.jpg",
+      "label": "Cát đen san lấp nền móng",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    },
+    {
+      "path": "/images/prod-cotlieutaiche.jpg",
+      "label": "Cốt liệu bê tông tái chế (Recycled Concrete Aggregate)",
+      "isIllustration": true,
+      "source": "Unsplash Unsplash License"
+    }
+  ]
+}

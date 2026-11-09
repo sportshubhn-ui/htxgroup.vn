@@ -27,7 +27,7 @@ export function NewsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {newsArticles.map((article) => (
+          {newsArticles.map((article: typeof newsArticles[0]) => (
             <article
               key={article.slug}
               className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition flex flex-col justify-between group"

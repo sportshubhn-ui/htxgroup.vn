@@ -1,0 +1,72 @@
+{
+  "legalName": "Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh",
+  "brandName": "Hành Tinh Xanh",
+  "englishBrand": "Green Planet",
+  "slogan": "Cho hành tinh nhẹ gánh hơn.",
+  "locale": "vi-VN",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "siteMode": "preview",
+  "taxCode": null,
+  "headOffice": "Tầng 4, Tòa nhà Grandeur Palace, 138 Giảng Võ, Phường Kim Mã, Quận Ba Đình, TP. Hà Nội",
+  "phone": "0707 155 666",
+  "email": "info@htxgroup.vn",
+  "zalo": "0707155666",
+  "domain": "htxgroup.vn",
+  "representative": null,
+  "facilities": [
+    {
+      "id": "bai-lien-mac",
+      "slug": "bai-tap-ket-lien-mac",
+      "name": "Bãi tập kết & Xử lý chất thải rắn xây dựng Hành Tinh Xanh",
+      "address": "Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội",
+      "note": "Địa chỉ hành chính: Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ (không còn thuộc Tây Hồ)",
+      "lat": 21.0963,
+      "lng": 105.7485,
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14891.802319202157!2d105.740889!3d21.096317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134552b9b71e16b%3A0x6bbfec5eb1081518!2zTmfDtSA0NiBMacOqbiBN4bqhYywgVGjGsOG7o25nIEPDoXQsIFTDonkgSOG7kywgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1709971200000!5m2!1svi!2s",
+      "googleMapsDirectUrl": "https://maps.google.com/?q=Ngõ+46+Liên+Mạc,+Thượng+Cát,+Tây+Hồ,+Hà+Nội",
+      "capacity": "Tiếp nhận xe tải ben 2.5T - 30T, xe 3 chân, 4 chân 24/7",
+      "acceptedMaterials": [
+        "Trạc thải xây dựng, gạch ngói vỡ vụn",
+        "Bê tông phế thải từ tháo dỡ công trình",
+        "Vữa xi măng thừa, đá dăm thừa",
+        "Đất đào móng, bùn đất phong hóa đạt chuẩn"
+      ],
+      "equipmentOnSite": [
+        "Dây chuyền trạm nghiền kẹp hàm di động",
+        "Máy sàng rung phân loại cốt liệu 3 tầng",
+        "Máy xúc bánh xích gầu kẹp phân tách thép & bê tông",
+        "Trạm cân điện tử tự động 80 tấn kiểm soát tải trọng"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "thu-gom",
+      "slug": "thu-gom",
+      "name": "Thu gom chất thải rắn xây dựng tại công trình",
+      "shortDesc": "Khảo sát hiện trường, điều phối nhân công máy xúc thu gom toàn diện phế thải tháo dỡ tại chân công trình.",
+      "image": "/images/service-thugom.jpg"
+    },
+    {
+      "id": "van-chuyen",
+      "slug": "van-chuyen",
+      "name": "Vận chuyển chất thải xây dựng chuyên dụng",
+      "shortDesc": "Đội xe ben 3 chân, 4 chân phủ bạt kín chống bụi, đăng kiểm tiêu chuẩn, vận chuyển nhanh chóng an toàn.",
+      "image": "/images/service-vanchuyen.jpg"
+    },
+    {
+      "id": "tiep-nhan-tap-ket",
+      "slug": "tiep-nhan-tap-ket",
+      "name": "Tiếp nhận & Tập kết chất thải rắn tại bãi Liên Mạc",
+      "shortDesc": "Bãi tập kết hợp pháp tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ. Trạm cân 80 tấn, tiếp nhận 24/7.",
+      "image": "/images/service-tiepnhan.jpg"
+    },
+    {
+      "id": "phan-loai-tai-che",
+      "slug": "phan-loai-tai-che",
+      "name": "Phân loại, xử lý & nghiền sàng tái chế",
+      "shortDesc": "Ứng dụng công nghệ nghiền kẹp hàm sàng lọc tái sinh thành cốt liệu xây dựng đạt chuẩn kinh tế tuần hoàn.",
+      "image": "/images/service-taiche.jpg"
+    }
+  ]
+}

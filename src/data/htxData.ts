@@ -1,6 +1,7 @@
 /**
  * Data Module for CÔNG TY TNHH TM&DV GIẢI PHÁP HÀNH TINH XANH (GREEN PLANET)
  * Website: htxgroup.vn
+ * Slogan: "Cho hành tinh nhẹ gánh hơn."
  */
 
 export interface NavItem {
@@ -11,20 +12,24 @@ export interface NavItem {
 
 export const companyInfo = {
   name: 'CÔNG TY TNHH TM&DV GIẢI PHÁP HÀNH TINH XANH',
+  brandName: 'HÀNH TINH XANH',
+  englishBrand: 'GREEN PLANET',
   shortName: 'HÀNH TINH XANH',
-  brandName: 'GIẢI PHÁP HÀNH TINH XANH',
-  englishName: 'Green Planet Solutions Trading & Service Co., Ltd',
   abbreviation: 'GREEN PLANET (HTX)',
   slogan: 'Cho hành tinh nhẹ gánh hơn.',
-  taxCode: '0109886688',
-  licenseDate: 'Sở Kế Hoạch và Đầu tư TP Hà Nội cấp',
   hotline: '0707 155 666',
   phoneAlt: '0707 155 666',
-  email: 'contact@htxgroup.vn',
+  email: 'info@htxgroup.vn',
   website: 'https://htxgroup.vn',
-  officeAddress: 'Tầng 4, tòa nhà Grandeur Palace, 138 Giảng Võ, Phường Kim Mã, Quận Ba Đình, TP Hà Nội',
-  yardAddress: 'Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Bắc Từ Liêm, TP Hà Nội',
+  domain: 'htxgroup.vn',
+  officeAddress: 'Tầng 4, Tòa nhà Grandeur Palace, 138 Giảng Võ, Phường Kim Mã, Quận Ba Đình, TP. Hà Nội',
+  yardAddress: 'Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội',
+  yardNote: 'Bãi tập kết & xử lý chất thải rắn xây dựng (Địa chỉ hành chính: Ngõ 46 Liên Mạc, P. Thượng Cát, Q. Tây Hồ)',
+  // Exact Google Maps Embed coordinates for Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14891.802319202157!2d105.740889!3d21.096317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134552b9b71e16b%3A0x6bbfec5eb1081518!2zTmfDtSA0NiBMacOqbiBN4bqhYywgVGjGsOG7o25nIEPDoXQsIFTDonkgSOG7kywgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1709971200000!5m2!1svi!2s',
+  googleMapsDirectUrl: 'https://maps.google.com/?q=Ngõ+46+Liên+Mạc,+Thượng+Cát,+Tây+Hồ,+Hà+Nội',
   facebook: 'https://facebook.com/htxgroup.vn',
+  zalo: 'https://zalo.me/0707155666',
 }
 
 export const navigationItems: NavItem[] = [
@@ -33,63 +38,61 @@ export const navigationItems: NavItem[] = [
     href: '/',
   },
   {
-    title: 'Giới thiệu',
+    title: 'Về chúng tôi',
     href: '/gioi-thieu',
     children: [
-      { title: 'Thông tin chung', href: '/gioi-thieu/thong-tin-chung' },
-      { title: 'Thư ngỏ', href: '/gioi-thieu/thu-ngo' },
-      { title: 'Tầm nhìn sứ mệnh', href: '/gioi-thieu/tam-nhin-su-menh' },
-      { title: 'Cam kết của chúng tôi', href: '/gioi-thieu/cam-ket-cua-chung-toi' },
-      { title: 'Quá trình hình thành & phát triển', href: '/gioi-thieu/qua-trinh-hinh-thanh-phat-trien' },
+      { title: 'Tổng quan doanh nghiệp', href: '/gioi-thieu' },
+      { title: 'Hồ sơ năng lực', href: '/ho-so-nang-luc' },
+      { title: 'Kiểm soát chất lượng', href: '/chat-luong' },
+      { title: 'Chính sách bảo mật', href: '/chinh-sach-bao-mat' },
+      { title: 'Điều kiện giao dịch', href: '/dieu-kien-giao-dich' },
     ],
   },
   {
-    title: 'Sản phẩm',
-    href: '/san-pham',
+    title: 'Dịch vụ',
+    href: '/dich-vu',
     children: [
-      { title: 'Sản phẩm Hành Tinh Xanh', href: '/san-pham-cua-htx-group' },
-      { title: 'Cát san lấp tái chế', href: '/cat-san-lap' },
-      { title: 'Bê tông nghiền tái sinh', href: '/be-tong-vun' },
-      { title: 'Đá cấp phối tự nhiên', href: '/da-tu-nhien1' },
-      { title: 'Nhựa đường vụn tái sinh', href: '/nhua-duong-vun' },
-      { title: 'Phế liệu xây dựng tuyển chọn', href: '/phe-lieu-thi-cong' },
+      { title: 'Tất cả dịch vụ', href: '/dich-vu' },
+      { title: 'Thu gom tại công trình', href: '/dich-vu/thu-gom' },
+      { title: 'Vận chuyển chất thải', href: '/dich-vu/van-chuyen' },
+      { title: 'Tiếp nhận & Tập kết tại bãi', href: '/dich-vu/tiep-nhan-tap-ket' },
+      { title: 'Phân loại, xử lý & tái chế', href: '/dich-vu/phan-loai-tai-che' },
     ],
   },
   {
-    title: 'Lĩnh vực hoạt động',
-    href: '/linh-vuc-hoat-dong',
+    title: 'Vật liệu',
+    href: '/vat-lieu',
     children: [
-      { title: 'Phá dỡ công trình dân dụng & CN', href: '/pha-do-cong-trinh-dan-dung-va-cong-nghiep' },
-      { title: 'Thu gom - Xử lý CTRXD', href: '/xu-ly-chat-thai-ran-xay-dung' },
-      { title: 'Kinh doanh vật liệu xây dựng xanh', href: '/kinh-doanh-vat-lieu-xay-dung' },
-      { title: 'Bãi tập kết Thượng Cát', href: '/thu-gom-taiche' },
+      { title: 'Danh mục vật liệu', href: '/vat-lieu' },
+      { title: 'Đá 1×2 xây dựng', href: '/vat-lieu/da-1x2' },
+      { title: 'Cấp phối đá dăm', href: '/vat-lieu/cap-phoi-da-dam' },
+      { title: 'Cát bê tông rửa sạch', href: '/vat-lieu/cat-be-tong' },
+      { title: 'Cát xây tô', href: '/vat-lieu/cat-xay-to' },
+      { title: 'Cát san lấp', href: '/vat-lieu/cat-san-lap' },
+      { title: 'Cốt liệu tái chế (RCA)', href: '/vat-lieu/cot-lieu-tai-che' },
     ],
   },
   {
-    title: 'Dự án tiêu biểu',
-    href: '/cac-du-an-tieu-bieu',
+    title: 'Năng lực',
+    href: '/nang-luc',
     children: [
-      { title: 'Bãi xử lý CTRXD Thượng Cát', href: '/hang-muc-tiep-nhan-cong-trinh-va-xu-ly-chat-thai-ran' },
-      { title: 'Dự án Grandeur Palace 138 Giảng Võ', href: '/pha-do-bon-toa-nha-tai-dia-chi-so-138-pho-giang-vo-ha-noi' },
-      { title: 'Phá dỡ nhà B - CA Hà Nội', href: '/pha-do-nha-b-tru-so-cong-an-thanh-pho-ha-noi' },
-      { title: 'Trạm nghiền công nghệ cao', href: '/may-nghien-rm-70go' },
+      { title: 'Tổng quan năng lực', href: '/nang-luc' },
+      { title: 'Bãi tập kết Ngõ 46 Liên Mạc', href: '/co-so/bai-tap-ket-lien-mac' },
+      { title: 'Thiết bị & Đội xe', href: '/thiet-bi' },
+      { title: 'Công nghệ tái chế', href: '/cong-nghe' },
+      { title: 'Dự án công bố', href: '/du-an' },
     ],
   },
   {
-    title: 'Hồ sơ năng lực',
-    href: '/ho-so-nang-luc',
-    children: [
-      { title: 'Nguồn nhân lực', href: '/ho-so-nang-luc/nguon-nhan-luc' },
-      { title: 'Năng lực thiết bị & Máy nghiền', href: '/ho-so-nang-luc/nang-luc-thiet-bi' },
-    ],
-  },
-  {
-    title: 'Tin tức',
+    title: 'Tin tức & Báo chí',
     href: '/tin-tuc',
-  },
-  {
-    title: 'Video',
-    href: '/video',
+    children: [
+      { title: 'Tin tức ngành & công ty', href: '/tin-tuc' },
+      { title: 'Báo chí nói về chúng tôi', href: '/bao-chi' },
+      { title: 'Thư viện hình ảnh', href: '/thu-vien' },
+      { title: 'Tài liệu kỹ thuật', href: '/tai-lieu' },
+      { title: 'Hỏi đáp (FAQ)', href: '/cau-hoi-thuong-gap' },
+    ],
   },
   {
     title: 'Liên hệ',
@@ -101,182 +104,303 @@ export const homeHeroSlides = [
   {
     id: 1,
     image: '/images/slider-1.jpg',
-    title: 'Thu gom – Xử lý – Tái chế CTRXD tại Hà Nội. Hotline: 0707 155 666',
-    desc: 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh tiên phong giải pháp công nghệ tuần hoàn chất thải rắn xây dựng. Cho hành tinh nhẹ gánh hơn.',
-    ctaText: 'Khám phá dịch vụ',
-    ctaLink: '/xu-ly-chat-thai-ran-xay-dung',
+    badge: 'Kinh tế tuần hoàn',
+    title: 'Giải pháp thu gom & tái chế chất thải rắn xây dựng',
+    desc: 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh tiên phong mô hình xử lý trạc thải khép kín, kết nối nguồn cung vật liệu tái sinh với nhu cầu công trình thủ đô.',
+    primaryCtaText: 'Yêu cầu thu gom',
+    primaryCtaLink: '/yeu-cau-bao-gia?type=thu-gom',
+    secondaryCtaText: 'Tìm vật liệu',
+    secondaryCtaLink: '/vat-lieu',
   },
   {
     id: 2,
     image: '/images/slider-2.jpg',
-    title: 'Phá dỡ công trình chuyên nghiệp & Cung ứng vật liệu tái chế',
-    desc: 'Thi công an toàn tuyệt đối, nhanh gọn, tối ưu chi phí. Trụ sở tại Tầng 4 tòa nhà Grandeur Palace 138 Giảng Võ, Ba Đình, Hà Nội.',
-    ctaText: 'Tìm hiểu năng lực',
-    ctaLink: '/pha-do-cong-trinh-dan-dung-va-cong-nghiep',
+    badge: 'Vận tải chuyên nghiệp',
+    title: 'Đội xe vận chuyển chất thải xây dựng đạt chuẩn',
+    desc: 'Hệ thống xe ben phủ bạt kín chống bụi, đăng kiểm tiêu chuẩn, điều phối linh hoạt đáp ứng mọi tiến độ thi công công trình dân dụng và hạ tầng lớn.',
+    primaryCtaText: 'Báo giá vận chuyển',
+    primaryCtaLink: '/yeu-cau-bao-gia?type=thu-gom',
+    secondaryCtaText: 'Xem dịch vụ',
+    secondaryCtaLink: '/dich-vu/van-chuyen',
   },
   {
     id: 3,
     image: '/images/slider-3.jpg',
-    title: 'Bãi tiếp nhận & xử lý CTRXD tại Ngõ 46 Liên Mạc, P. Thượng Cát',
-    desc: 'Quy mô tiếp nhận công suất lớn tại Quận Bắc Từ Liêm, xử lý triệt để phế thải xây dựng, cung cấp cát san lấp và cốt liệu đạt chuẩn.',
-    ctaText: 'Liên hệ tiếp nhận CTRXD',
-    ctaLink: '/lien-he',
+    badge: 'Cơ sở tập kết tiếp nhận',
+    title: 'Bãi tập kết & Xử lý tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ',
+    desc: 'Quy mô tiếp nhận liên tục 24/7 với trạm cân điện tử tự động 80 tấn, đường vào thuận tiện cho xe tải ben 2.5 tấn đến 30 tấn.',
+    primaryCtaText: 'Đăng ký vào bãi',
+    primaryCtaLink: '/yeu-cau-bao-gia?type=dua-vao-bai',
+    secondaryCtaText: 'Xem vị trí & bản đồ',
+    secondaryCtaLink: '/co-so/bai-tap-ket-lien-mac',
   },
 ]
 
-export const homeProgressBars = [
-  { label: 'Thu gom & Xử lý chất thải rắn xây dựng (CTRXD)', percent: 96 },
-  { label: 'Tiên phong tái chế vật liệu xanh theo kinh tế tuần hoàn', percent: 98 },
-  { label: 'Cung cấp nguyên liệu xây dựng sau tái chế', percent: 92 },
-  { label: 'Đảm bảo vệ sinh môi trường & an toàn tuyệt đối', percent: 100 },
-  { label: 'Công nghệ nghiền sàng lọc hiện đại bậc nhất', percent: 97 },
+export const servicesData = [
+  {
+    slug: 'thu-gom',
+    name: 'Thu gom chất thải xây dựng tại công trình',
+    shortDesc: 'Khảo sát hiện trường, lập biện pháp thi công, đưa nhân công và máy móc xúc dọn trạc thải, bê tông phế liệu tận chân công trình.',
+    iconName: 'Truck',
+    image: '/images/service-thugom.jpg',
+    targetCustomers: 'Chủ đầu tư, tổng thầu xây dựng, đơn vị cải tạo sửa chữa công trình dân dụng & công nghiệp.',
+    scope: 'Toàn địa bàn Hà Nội và các khu đô thị lân cận.',
+    acceptedWaste: ['Gạch ngói vỡ', 'Bê tông khối móng tháo dỡ', 'Vữa xi măng thừa', 'Xà bần cải tạo'],
+    process: [
+      'Tiếp nhận yêu cầu và tọa độ công trình qua hotline 0707 155 666',
+      'Cán bộ kỹ thuật khảo sát hiện trường, khối lượng và điều kiện đường tiếp cận',
+      'Lập phương án thu gom, điều phối máy xúc gầu kẹp và xe ben tương thích',
+      'Thi công xúc dọn, vệ sinh mặt bằng, đảm bảo an toàn lao động và không rơi vãi',
+      'Ký biên bản giao nhận khối lượng và bàn giao mặt bằng hoàn thiện'
+    ]
+  },
+  {
+    slug: 'van-chuyen',
+    name: 'Vận chuyển chất thải xây dựng chuyên dụng',
+    shortDesc: 'Đội ngũ xe ben đa tải trọng từ 2.5T đến 30T, thùng xe kín có bạt phủ cơ học, tuân thủ nghiêm ngặt quy định môi trường đô thị.',
+    iconName: 'Navigation',
+    image: '/images/service-vanchuyen.jpg',
+    targetCustomers: 'Các dự án phá dỡ, công trình thi công tầng hầm, giải phóng mặt bằng hạ tầng giao thông.',
+    scope: 'Các tuyến đường được cấp phép lưu hành xe tải tại Hà Nội.',
+    acceptedWaste: ['Đất đào móng', 'Chất thải rắn tháo dỡ công trình', 'Bê tông vụn', 'Đá dăm phế thải'],
+    process: [
+      'Tiếp nhận lộ trình di chuyển và khung giờ xe chạy phù hợp',
+      'Kiểm tra tình trạng thùng bạt và vệ sinh lốp xe trước khi rời công trường',
+      'Giám sát lộ trình GPS đảm bảo vận chuyển đúng điểm tập kết hợp pháp',
+      'Đổ thải đúng vị trí quy định tại Bãi Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ',
+      'Xuất phiếu cân đối soát và xác nhận khối lượng vận chuyển'
+    ]
+  },
+  {
+    slug: 'tiep-nhan-tap-ket',
+    name: 'Tiếp nhận & Tập kết chất thải rắn tại bãi Liên Mạc',
+    shortDesc: 'Cơ sở bãi tập kết hợp pháp tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Trang bị trạm cân 80 tấn, tiếp nhận phương tiện 24/7.',
+    iconName: 'Warehouse',
+    image: '/images/service-tiepnhan.jpg',
+    targetCustomers: 'Các đơn vị vận tải, đội xe tư nhân, nhà thầu xây dựng có nhu cầu đổ thải hợp pháp.',
+    scope: 'Bãi tập kết Ngõ 46 Liên Mạc, Thượng Cát, Quận Tây Hồ, TP. Hà Nội.',
+    acceptedWaste: ['Bê tông tháo dỡ', 'Trạc thải gạch đá', 'Vữa xi măng', 'Đất đào sạch'],
+    process: [
+      'Phương tiện đến cổng bãi tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ',
+      'Xe lên bàn cân điện tử tự động 80T kiểm tra tải trọng và phân loại sơ bộ',
+      'Hướng dẫn xe vào phân khu đổ quy định theo từng loại chất thải',
+      'Xe quay lại cân xuất tải để tính chính xác khối lượng ròng đã tiếp nhận',
+      'Phát hành phiếu xuất nhập bãi có xác nhận'
+    ]
+  },
+  {
+    slug: 'phan-loai-tai-che',
+    name: 'Phân loại, xử lý & nghiền sàng tái chế',
+    shortDesc: 'Ứng dụng dây chuyền nghiền kẹp hàm và sàng phân tầng, tách lọc cốt thép và rác tạp, tạo ra cốt liệu tái chế chất lượng cao thay thế cát đá tự nhiên.',
+    iconName: 'RefreshCw',
+    image: '/images/service-taiche.jpg',
+    targetCustomers: 'Dự án giao thông, công trình san nền, nhà máy sản xuất gạch không nung, công trình xanh ESG.',
+    scope: 'Nhà máy xử lý & nghiền sàng tại bãi Ngõ 46 Liên Mạc, Tây Hồ.',
+    acceptedWaste: ['Bê tông cốt thép phế thải', 'Đá tảng', 'Gạch vụn công trình'],
+    process: [
+      'Máy xúc lắp búa phá đá đập sơ cấp các khối bê tông quá khổ',
+      'Máy kẹp hàm gắp phân tách cốt thép ra khỏi bê tông phế liệu',
+      'Đưa phế liệu vào phễu cấp liệu máy nghiền đập thứ cấp',
+      'Băng tải từ tính tự động hút sạch mạt sắt kim loại còn sót lại',
+      'Sàng rung phân tách thành các cỡ hạt tiêu chuẩn: Cốt liệu 0-5mm, 10-25mm, cấp phối'
+    ]
+  }
 ]
 
-export const coreServices = [
+export const productsData = [
   {
-    id: 'pha-do-cong-trinh-dan-dung-va-cong-nghiep',
-    title: 'Phá dỡ công trình dân dụng và công nghiệp',
-    desc: 'Nhà dân, khách sạn, chung cư, bệnh viện, nhà máy cơ quan... luôn đi đầu về chất lượng: thi công nhanh, an toàn tuyệt đối, chi phí tiết kiệm nhất.',
-    href: '/pha-do-cong-trinh-dan-dung-va-cong-nghiep',
-    icon: 'Building',
+    slug: 'da-1x2',
+    name: 'Đá 1×2 (Đá xây dựng bê tông)',
+    category: 'Đá xây dựng',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá',
+    unit: 'm³ / Tấn',
+    specification: 'Cỡ hạt 10×25mm đến 10×28mm, hàm lượng hạt thoi dẹt thấp, độ sạch cao',
+    applications: 'Đổ bê tông dầm, sàn, móng nhà cao tầng, cọc khoan nhồi, đường băng sân bay',
+    image: '/images/prod-da1x2.jpg',
+    isRecycled: false
   },
   {
-    id: 'xu-ly-chat-thai-ran-xay-dung',
-    title: 'THU GOM – XỬ LÝ CHẤT THẢI RẮN XÂY DỰNG (CTRXD)',
-    desc: 'Tiếp nhận xử lý chất thải rắn xây dựng tại bãi Thượng Cát. Thu gom, vận chuyển phế thải từ chân công trình đến trạm xử lý.',
-    href: '/xu-ly-chat-thai-ran-xay-dung',
-    icon: 'Recycle',
+    slug: 'cap-phoi-da-dam',
+    name: 'Cấp phối đá dăm (Loại 1 & Loại 2)',
+    category: 'Đá xây dựng',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá',
+    unit: 'm³ / Tấn',
+    specification: 'Cỡ hạt từ 0 đến 37.5mm, cấp phối liên tục tuân thủ TCVN 8859:2011',
+    applications: 'Làm lớp móng trên (Base) và móng dưới (Subbase) cho kết cấu đường giao thông, bến bãi',
+    image: '/images/prod-capphoida.jpg',
+    isRecycled: false
   },
   {
-    id: 'kinh-doanh-vat-lieu-xay-dung',
-    title: 'Cung cấp nguyên liệu xây dựng sau tái chế',
-    desc: 'Với quyết tâm “biến phế thải thành tài nguyên xanh”, Hành Tinh Xanh đầu tư dây chuyền máy móc hiện đại tạo ra cát san lấp, đá base đạt chuẩn.',
-    href: '/kinh-doanh-vat-lieu-xay-dung',
-    icon: 'PackageCheck',
+    slug: 'cat-be-tong',
+    name: 'Cát bê tông (Cát vàng rửa sạch)',
+    category: 'Cát xây dựng',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá',
+    unit: 'm³ / Tấn',
+    specification: 'Mô-đun độ lớn 2.0 - 3.3, rửa sạch tạp chất hữu cơ, hàm lượng bùn < 1.5%',
+    applications: 'Trộn bê tông thương phẩm mác cao, bê tông đúc sẵn, kết cấu chịu lực',
+    image: '/images/prod-catbetong.jpg',
+    isRecycled: false
   },
+  {
+    slug: 'cat-xay-to',
+    name: 'Cát xây tô (Cát trát tường)',
+    category: 'Cát xây dựng',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá',
+    unit: 'm³ / Tấn',
+    specification: 'Mô-đun độ lớn 1.0 - 1.5, sàng lọc sạch sỏi cuội, độ mịn đồng đều',
+    applications: 'Trộn vữa xây gạch, trát tường nội ngoại thất phẳng mịn chống nứt rạn chân chim',
+    image: '/images/prod-catxayto.jpg',
+    isRecycled: false
+  },
+  {
+    slug: 'cat-san-lap',
+    name: 'Cát san lấp nền móng',
+    category: 'Cát xây dựng',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá',
+    unit: 'm³ / Tấn',
+    specification: 'Độ đầm chặt K90 - K95, hàm lượng phù sa thích hợp tôn nền',
+    applications: 'San lấp mặt bằng khu công nghiệp, móng công trình nhà xưởng, gia cố nền đất yếu',
+    image: '/images/prod-catsanlap.jpg',
+    isRecycled: false
+  },
+  {
+    slug: 'cot-lieu-tai-che',
+    name: 'Cốt liệu bê tông tái chế (RCA)',
+    category: 'Vật liệu tái chế',
+    status: 'draft',
+    verified: false,
+    price: 'Liên hệ báo giá ưu đãi',
+    unit: 'm³ / Tấn',
+    specification: 'Sản xuất 100% từ bê tông phế thải nghiền sàng, phân loại hạt 0-40mm',
+    applications: 'Tôn nền công trình, đắp nền đường nội bộ, gia cố móng, giải pháp giảm phát thải CO2',
+    image: '/images/prod-cotlieutaiche.jpg',
+    isRecycled: true
+  }
 ]
 
-export const featuredProjects = [
+export const facilitiesData = [
   {
-    id: 'bai-xu-ly-thuong-cat',
-    title: 'Bãi tập kết & Xử lý CTRXD Thượng Cát',
-    summary: 'Điểm tập kết quy chuẩn tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Bắc Từ Liêm. Tiếp nhận và xử lý hàng trăm nghìn tấn phế thải xây dựng mỗi năm.',
-    href: '/hang-muc-tiep-nhan-cong-trinh-va-xu-ly-chat-thai-ran',
-    icon: 'Truck',
-  },
-  {
-    id: 'du-an-grandeur-palace-giang-vo',
-    title: 'Dự án tại 138 Giảng Võ - Grandeur Palace',
-    summary: 'Công tác giải phóng mặt bằng, vận chuyển phế thải và bàn giao quỹ đất sạch an toàn tại khu vực trung tâm quận Ba Đình.',
-    href: '/pha-do-bon-toa-nha-tai-dia-chi-so-138-pho-giang-vo-ha-noi',
-    icon: 'CheckSquare',
-  },
-  {
-    id: 'tram-nghien-rm-70go',
-    title: 'Dây chuyền máy nghiền di động hiện đại',
-    summary: 'Thiết bị nghiền tái chế tính lưu động tối đa, công suất 120 tấn/giờ, xử lý trực tiếp bê tông khối lớn thành cốt liệu phục vụ hạ tầng.',
-    href: '/may-nghien-rm-70go',
-    icon: 'Wrench',
-  },
-  {
-    id: 'pha-do-tru-so-co-quan',
-    title: 'Phá dỡ công trình trụ sở cơ quan nhà nước',
-    summary: 'Thi công hạ giải các tòa nhà cũ kỹ thuật cao, bảo toàn các công trình liền kề, giảm thiểu tối đa bụi mịn và tiếng ồn đô thị.',
-    href: '/pha-do-nha-b-tru-so-cong-an-thanh-pho-ha-noi',
-    icon: 'ArrowRight',
-  },
+    id: 'bai-lien-mac',
+    slug: 'bai-tap-ket-lien-mac',
+    name: 'Bãi tập kết & Xử lý chất thải rắn xây dựng Hành Tinh Xanh',
+    address: 'Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ, TP. Hà Nội',
+    note: 'Thuộc địa phận Thượng Cát, Tây Hồ (không còn thuộc Tây Hồ)',
+    image: '/images/facility-lienmac.jpg',
+    coordinates: '21.0963° N, 105.7485° E',
+    openingHours: 'Hoạt động tiếp nhận 24/7 (Cả ngày Lễ & Chủ Nhật)',
+    roadAccess: 'Đường ven đê Liên Mạc mở rộng, xe ben 3 chân, 4 chân, xe đầu kéo tiếp cận thuận lợi',
+    weighbridge: 'Trạm cân điện tử tự động 80 tấn cảm biến kỹ thuật số chính xác',
+    acceptedMaterials: [
+      'Bê tông khối, dầm cột tháo dỡ công trình',
+      'Gạch vỡ, vữa vụn, trạc xà bần xây dựng',
+      'Đất đào móng công trình sạch'
+    ],
+    equipment: [
+      'Dây chuyền máy nghiền kẹp hàm di động',
+      'Máy sàng rung 3 tầng phân cấp cốt liệu',
+      'Máy xúc bánh xích gầu kẹp chuyên dụng',
+      'Hệ thống phun sương dập bụi áp lực cao'
+    ]
+  }
 ]
 
-export const productList = [
+export const equipmentData = [
   {
-    id: 'san-pham-cua-htx-group',
-    title: 'Vật liệu tái chế Hành Tinh Xanh',
-    image: '/images/prod-htxgroup.jpg',
-    desc: 'Hệ thống sản phẩm vật liệu xanh: Base, Subbase, Cát xây dựng, Bê tông tái chế, Cọc tiêu đường...',
-    href: '/san-pham-cua-htx-group',
+    slug: 'may-nghien-kep-ham',
+    name: 'Dây chuyền máy nghiền kẹp hàm cơ động',
+    role: 'Nghiền đập thô bê tông khối lớn thành cốt liệu cỡ hạt theo yêu cầu',
+    status: 'Đang vận hành tại bãi Liên Mạc',
+    image: '/images/equip-crusher.jpg',
+    features: ['Công suất nghiền 120-180 tấn/giờ', 'Cửa nạp rộng nhận khối bê tông kích thước lớn', 'Tích hợp băng tải từ tính tách kim loại']
   },
   {
-    id: 'cat-san-lap',
-    title: 'Cát san lấp tái chế',
-    image: '/images/prod-catsanlap.png',
-    desc: 'Cát tái chế từ chất thải rắn xây dựng, dùng cho san lấp mặt bằng, làm mương máng, nền móng vững chắc, tiết kiệm chi phí.',
-    href: '/cat-san-lap',
+    slug: 'may-sang-rung',
+    name: 'Trạm máy sàng rung phân cấp cốt liệu',
+    role: 'Phân loại hỗn hợp nghiền thành đá 1x2, mạt đá, và cấp phối dăm',
+    status: 'Đang vận hành',
+    image: '/images/equip-screen.jpg',
+    features: ['3 tầng lưới sàng kích thước linh hoạt', 'Độ phân tách hạt chuẩn xác', 'Chống bít tắc hiệu quả']
   },
   {
-    id: 'be-tong-vun',
-    title: 'Bê tông nghiền tái sinh',
-    image: '/images/prod-htxgroup.jpg',
-    desc: 'Bê tông nghiền đã qua sàng lọc tuyển chọn kỹ thuật, thay thế đá tự nhiên trong làm đường giao thông và lót móng.',
-    href: '/be-tong-vun',
+    slug: 'doi-xe-ben',
+    name: 'Đội xe tải ben 3 chân & 4 chân vận chuyển',
+    role: 'Vận chuyển thu gom phế thải công trình và giao hàng vật liệu',
+    status: 'Sẵn sàng điều động 24/7',
+    image: '/images/fleet-trucks.jpg',
+    features: ['Thùng xe phủ bạt kéo cơ học chống bụi', 'Đầy đủ đăng kiểm và giấy phép lưu hành đô thị', 'Giám sát lộ trình GPS thời gian thực']
   },
   {
-    id: 'da-tu-nhien1',
-    title: 'Đá cấp phối & Cốt liệu tự nhiên',
-    image: '/images/prod-datunhien.jpg',
-    desc: 'Đá phân loại chất lượng cao phục vụ các công trình xây dựng hạ tầng kỹ thuật đô thị và công nghiệp.',
-    href: '/da-tu-nhien1',
-  },
-  {
-    id: 'nhua-duong-vun',
-    title: 'Nhựa đường vụn tái sinh',
-    image: '/images/prod-nhuaduong.jpg',
-    desc: 'Gia công tái chế nhựa đường cào bóc thành hạt nhựa đường tái sinh làm nền đường chịu tải không nén.',
-    href: '/nhua-duong-vun',
-  },
-  {
-    id: 'phe-lieu-thi-cong',
-    title: 'Phế liệu xây dựng phân loại',
-    image: '/images/prod-catsanlap.png',
-    desc: 'Phân loại triệt để gạch đá vụn, sắt thép phế liệu ngay tại công trình để tận thu tài nguyên tối đa.',
-    href: '/phe-lieu-thi-cong',
-  },
+    slug: 'may-xuc-gau-kep',
+    name: 'Máy xúc bánh xích gầu kẹp thủy lực',
+    role: 'Bốc dỡ, nạp phễu và phân tách sắt thép cốt bê tông tại bãi',
+    status: 'Đang vận hành',
+    image: '/images/equip-excavator.jpg',
+    features: ['Gầu kẹp xoay linh hoạt 360 độ', 'Lực bóp mạnh mẽ bẻ gãy kết cấu bê tông', 'Hiệu suất nạp liệu liên tục']
+  }
 ]
 
-export const companyCounters = [
-  { value: '300+', label: 'CÔNG TRÌNH HOÀN THÀNH' },
-  { value: '2.000.000+', label: 'TẤN CTRXD ĐÃ XỬ LÝ' },
-  { value: '60+', label: 'MÁY MÓC & XE CHUYÊN DỤNG' },
-  { value: '100%', label: 'CHUẨN VỆ SINH MÔI TRƯỜNG' },
+export const faqList = [
+  {
+    question: 'Bãi tập kết Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ tiếp nhận những loại chất thải nào?',
+    category: 'Tiếp nhận',
+    answer: 'Chúng tôi tiếp nhận chất thải rắn xây dựng không nguy hại gồm: bê tông tháo dỡ, gạch đá vỡ, trạc xà bần cải tạo, vữa xi măng thừa và đất đào móng sạch. Bãi không tiếp nhận rác thải sinh hoạt, hóa chất độc hại hoặc amiăng.'
+  },
+  {
+    question: 'Quy trình đưa xe chở trạc thải vào đổ tại bãi Liên Mạc như thế nào?',
+    category: 'Vận hành',
+    answer: 'Lái xe đưa phương tiện đến cổng bãi tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ. Xe sẽ lên bàn cân điện tử 80T cân tổng trọng lượng, sau đó đổ thải theo vị trí hướng dẫn của điều phối viên, và quay lại cân xuất tải để lấy phiếu cân xác nhận khối lượng tịnh.'
+  },
+  {
+    question: 'Hành Tinh Xanh có cung cấp dịch vụ thu gom trọn gói tại chân công trình không?',
+    category: 'Dịch vụ',
+    answer: 'Có. Chúng tôi nhận khảo sát và cung cấp giải pháp trọn gói: bố trí nhân công, máy xúc gầu kẹp dọn trạc thải, bốc lên xe ben và vận chuyển về bãi xử lý đúng quy định.'
+  },
+  {
+    question: 'Cốt liệu bê tông tái chế (RCA) có đảm bảo chất lượng cho công trình không?',
+    category: 'Vật liệu',
+    answer: 'Cốt liệu tái chế của chúng tôi được sản xuất qua quy trình nghiền đập và sàng lọc kỹ lưỡng, tách sạch cốt thép và tạp chất. Sản phẩm đặc biệt thích hợp làm lớp móng đường nội bộ, tôn nền bãi xe, san lấp móng công trình xanh giúp giảm chi phí và bảo vệ tài nguyên.'
+  },
+  {
+    question: 'Cách thức liên hệ khảo sát và nhận báo giá nhanh nhất?',
+    category: 'Báo giá',
+    answer: 'Quý khách vui lòng gọi Hotline 24/7: 0707 155 666 hoặc gửi thông tin qua form "Yêu cầu báo giá" trên website htxgroup.vn để được phản hồi trong vòng 30 phút.'
+  }
 ]
 
 export const newsArticles = [
   {
-    slug: 'cong-bo-bai-tap-ket-xu-ly-chat-thai-ran-xay-dung-tai-thuong-cat',
-    url: 'https://htxgroup.vn/cong-bo-bai-tap-ket-xu-ly-chat-thai-ran-xay-dung-tai-thuong-cat',
-    title: 'Công bố điểm tập kết và xử lý chất thải rắn xây dựng tại Ngõ 46 Liên Mạc, Thượng Cát',
+    slug: 'giai-phap-tai-che-chat-thai-ran-xay-dung-ha-noi',
+    title: 'Giải pháp thu gom và tái chế chất thải rắn xây dựng theo mô hình kinh tế tuần hoàn',
     date: '08/11/2026',
-    image: '/images/slider-3.jpg',
-    excerpt: 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh chính thức công bố và vận hành điểm tập kết, trung chuyển và tái chế chất thải rắn xây dựng (CTRXD) quy chuẩn tại ngõ 46 Liên Mạc, phường Thượng Cát, quận Bắc Từ Liêm, Hà Nội...',
-    content: `
-      <p>Nhằm đáp ứng yêu cầu cấp thiết về xử lý chất thải rắn xây dựng (CTRXD) trên địa bàn thành phố Hà Nội và giảm thiểu tình trạng đổ trộm rác thải, <strong>Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh</strong> đã đầu tư xây dựng và đưa vào vận hành bãi tập kết, xử lý CTRXD tại <strong>Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Bắc Từ Liêm, Hà Nội</strong>.</p>
-      <h2>Quy chuẩn vận hành xanh và hiện đại</h2>
-      <p>Khu vực bãi tập kết được trang bị dây chuyền nghiền sàng hiện đại, hệ thống phun sương dập bụi tự động và trạm cân điện tử kiểm soát chặt chẽ khối lượng đầu vào và đầu ra. Tất cả các nguồn phế thải từ các công trình xây dựng, cải tạo nhà ở và dự án hạ tầng đều được phân loại kỹ lưỡng trước khi đưa vào dây chuyền tái chế.</p>
-      <p>Với vị trí chiến lược ngay tại ngõ 46 Liên Mạc, trạm tiếp nhận tạo điều kiện vô cùng thuận tiện cho các phương tiện vận tải từ khu vực phía Tây và Tây Bắc Hà Nội ra vào giao nhận vật liệu.</p>
-      <h2>Hotline liên hệ tiếp nhận: 0707 155 666</h2>
-      <p>Quý khách hàng, nhà thầu và các đơn vị vận tải có nhu cầu trung chuyển hoặc xử lý phế thải xây dựng vui lòng liên hệ trực tiếp hotline <strong>0707 155 666</strong> hoặc văn phòng tại <strong>Tầng 4 tòa nhà Grandeur Palace 138 Giảng Võ, Ba Đình, Hà Nội</strong> để được hướng dẫn thủ tục tiếp nhận và cấp phiếu xác nhận bảo vệ môi trường.</p>
-    `,
+    image: '/images/slider-1.jpg',
+    excerpt: 'Hà Nội đẩy mạnh áp dụng công nghệ nghiền sàng tái chế trạc thải xây dựng thành cốt liệu đạt chuẩn, giảm thiểu áp lực lên các bãi chôn lấp.',
+    content: 'Thực trạng tốc độ đô thị hóa nhanh chóng tại Thủ đô dẫn đến hàng triệu tấn chất thải rắn xây dựng phát sinh mỗi năm từ các công trình cải tạo và phá dỡ. Giải pháp ứng dụng trạm nghiền kẹp hàm và sàng phân loại di động của Hành Tinh Xanh cho phép tái sinh tới 85% lượng phế thải bê tông thành cốt liệu cát đá chất lượng cao phục vụ san nền và đắp đường giao thông.'
   },
   {
-    slug: 'ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3',
-    url: 'https://htxgroup.vn/ha-noi-kiem-tra-xu-ly-dut-diem-tinh-trang-do-trom-rac-tren-vanh-dai-2-va-vanh-dai-3',
-    title: 'Hà Nội: Kiểm tra, xử lý dứt điểm tình trạng đổ trộm rác trên Vành đai 2 và Vành đai 3',
-    date: '5 Tháng 12, 2025',
-    image: '/images/news-vanhdai2.jpg',
-    excerpt: 'Chủ tịch UBND TP Hà Nội vừa chỉ đạo các sở ngành và quận huyện khẩn trương kiểm tra và xử lý triệt để tình trạng phế thải xây dựng bị đổ trộm, đồng thời khuyến khích đưa CTRXD về các bãi xử lý quy chuẩn...',
-    content: `
-      <p>UBND TP Hà Nội vừa phát đi chỉ đạo liên quan đến tình trạng rác và phế thải xây dựng bị đổ trộm dày đặc trên các tuyến đường huyết mạch, biến nhiều khu vực thành điểm ô nhiễm mất mỹ quan đô thị.</p>
-      <p>UBND thành phố yêu cầu các chủ đầu tư, nhà thầu thi công xây dựng phải ký hợp đồng thu gom, vận chuyển và bàn giao chất thải rắn xây dựng cho các đơn vị có đủ năng lực xử lý, bãi tập kết được cấp phép như <strong>Hành Tinh Xanh</strong> tại ngõ 46 Liên Mạc, Thượng Cát, Bắc Từ Liêm.</p>
-    `,
+    slug: 'cong-bo-diem-tap-ket-ctrxd-lien-mac-tay-ho',
+    title: 'Công bố điểm tiếp nhận và tập kết chất thải rắn xây dựng tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ',
+    date: '05/11/2026',
+    image: '/images/facility-lienmac.jpg',
+    excerpt: 'Cơ sở bãi tập kết với trạm cân điện tử tự động 80 tấn phục vụ tiếp nhận phế thải công trình 24/7 trên địa bàn Hà Nội.',
+    content: 'Nhằm hỗ trợ các chủ đầu tư và nhà thầu có điểm đổ thải hợp pháp, Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh chính thức vận hành cơ sở bãi tập kết tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Bãi được trang bị trạm cân 80T kiểm soát tải trọng, hệ thống phun sương dập bụi và máy móc cơ giới phân loại phế thải chuyên nghiệp.'
   },
   {
-    slug: 'tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi',
-    url: 'https://htxgroup.vn/tao-dot-pha-trong-quan-ly-chat-thai-ran-xay-dung-o-ha-noi',
-    title: 'Tạo đột phá trong quản lý chất thải rắn xây dựng: Giải pháp tái chế kinh tế tuần hoàn',
-    date: '27 Tháng 6, 2025',
-    image: '/images/news-nguyenxuandai.jpg',
-    excerpt: 'Áp dụng công nghệ nghiền di động biến phế thải bê tông, gạch đá vỡ thành nguồn cát san lấp và cốt liệu mới, mở ra hướng đi bền vững cho đô thị thông minh...',
-    content: `
-      <p>Mỗi ngày Hà Nội phát sinh hàng nghìn tấn phế thải xây dựng. Nếu chỉ chôn lấp đơn thuần sẽ gây quá tải quỹ đất và ô nhiễm môi trường. Việc ứng dụng công nghệ tái chế của <strong>Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh</strong> giúp tái sinh hơn 85% lượng phế thải xây dựng thành sản phẩm có ích.</p>
-    `,
-  },
+    slug: 'ung-dung-cot-lieu-be-tong-tai-che-rca',
+    title: 'Ứng dụng cốt liệu bê tông tái chế (RCA) trong kết cấu áo đường và hạ tầng giao thông',
+    date: '01/11/2026',
+    image: '/images/prod-cotlieutaiche.jpg',
+    excerpt: 'Cốt liệu RCA mang lại hiệu quả kinh tế vượt trội, tiết kiệm 25-30% chi phí vật tư và giảm lượng phát thải carbon cho các dự án.',
+    content: 'Cốt liệu bê tông tái chế (Recycled Concrete Aggregate - RCA) sau khi được loại bỏ tạp chất và phân loại hạt theo TCVN 8859 có độ bền kháng nén và khả năng chịu tải tương đương cấp phối đá dăm tự nhiên, là vật liệu lý tưởng cho các lớp móng Subbase và nền đường nội bộ.'
+  }
 ]
+

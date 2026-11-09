@@ -11,8 +11,8 @@ interface SEOProps {
 
 export function SEO({
   title,
-  description = 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Tiếp nhận, thu gom, vận chuyển và tái chế chất thải rắn xây dựng (CTRXD) tại Ngõ 46 Liên Mạc, Thượng Cát, Bắc Từ Liêm. Trụ sở Tầng 4 Grandeur Palace 138 Giảng Võ, Ba Đình. Hotline 0707 155 666.',
-  image = '/images/logo.png',
+  description = 'Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh - Tiếp nhận, thu gom, vận chuyển và tái chế chất thải rắn xây dựng (CTRXD) tại Ngõ 46 Liên Mạc, Phường Thượng Cát, Quận Tây Hồ. Trụ sở: Tầng 4, Tòa nhà Grandeur Palace, 138 Giảng Võ, Ba Đình. Hotline: 0707 155 666.',
+  image = '/brand/logo-glass.png',
   url,
   type = 'website',
 }: SEOProps) {
@@ -97,7 +97,7 @@ export function SEO({
         {
           '@type': 'PostalAddress',
           streetAddress: companyInfo.yardAddress,
-          addressLocality: 'Bắc Từ Liêm, Hà Nội',
+          addressLocality: 'Tây Hồ, Hà Nội',
           addressCountry: 'VN',
         },
       ],

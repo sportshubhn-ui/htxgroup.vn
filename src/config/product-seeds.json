@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "da-1x2",
+    "name": "Đá 1×2 (Đá xây dựng bê tông)",
+    "category": "Đá xây dựng",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá",
+    "unit": "m³ / Tấn",
+    "specification": "Cỡ hạt 10×25mm đến 10×28mm, độ sạch cao, không lẫn bùn sét",
+    "applications": "Đổ bê tông dầm, sàn, cột nhà cao tầng, đường băng, cầu cống",
+    "image": "/images/prod-da1x2.jpg",
+    "isRecycled": false
+  },
+  {
+    "slug": "cap-phoi-da-dam",
+    "name": "Cấp phối đá dăm (Loại 1 & Loại 2)",
+    "category": "Đá xây dựng",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá",
+    "unit": "m³ / Tấn",
+    "specification": "Thành phần hạt phân bố liên tục theo TCVN 8859:2011",
+    "applications": "Lớp móng trên (Base) và móng dưới (Subbase) kết cấu áo đường giao thông",
+    "image": "/images/prod-capphoida.jpg",
+    "isRecycled": false
+  },
+  {
+    "slug": "cat-be-tong",
+    "name": "Cát bê tông (Cát vàng rửa sạch)",
+    "category": "Cát xây dựng",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá",
+    "unit": "m³ / Tấn",
+    "specification": "Mô-đun độ lớn 2.0 - 3.3, hàm lượng bùn bụi < 1.5%",
+    "applications": "Trộn bê tông tươi mác cao, bê tông đúc sẵn, cấu kiện đúc khuôn",
+    "image": "/images/prod-catbetong.jpg",
+    "isRecycled": false
+  },
+  {
+    "slug": "cat-xay-to",
+    "name": "Cát xây tô (Cát xây trát)",
+    "category": "Cát xây dựng",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá",
+    "unit": "m³ / Tấn",
+    "specification": "Mô-đun độ lớn 1.0 - 1.5, sàng sạch tạp chất và sỏi cuội",
+    "applications": "Vữa xây gạch, trát tường trong nhà và ngoài trời phẳng mịn",
+    "image": "/images/prod-catxayto.jpg",
+    "isRecycled": false
+  },
+  {
+    "slug": "cat-san-lap",
+    "name": "Cát san lấp mặt bằng",
+    "category": "Cát xây dựng",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá",
+    "unit": "m³ / Tấn",
+    "specification": "Độ đầm chặt K90 - K95, hệ số thoát nước tốt",
+    "applications": "San nền móng công trình nhà xưởng, khu đô thị, nền đường cao tốc",
+    "image": "/images/prod-catsanlap.jpg",
+    "isRecycled": false
+  },
+  {
+    "slug": "cot-lieu-tai-che",
+    "name": "Cốt liệu bê tông tái chế (RCA)",
+    "category": "Vật liệu tái chế",
+    "status": "draft",
+    "verified": false,
+    "price": "Liên hệ báo giá ưu đãi",
+    "unit": "m³ / Tấn",
+    "specification": "Sản xuất từ bê tông kết cấu phế thải qua máy nghiền kẹp hàm sàng tách thép",
+    "applications": "Tôn nền công trình sinh thái, móng đường nội bộ bãi xe, gia cố nền yếu, kinh tế tuần hoàn",
+    "image": "/images/prod-cotlieutaiche.jpg",
+    "isRecycled": true
+  }
+]

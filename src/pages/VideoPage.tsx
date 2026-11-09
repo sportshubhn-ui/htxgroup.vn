@@ -7,7 +7,7 @@ export function VideoPage() {
     {
       id: 1,
       title: 'Vận hành bãi tiếp nhận và trạm nghiền tái chế CTRXD Thượng Cát',
-      desc: 'Quy trình thu gom, tiếp nhận xe tải và vận hành máy nghiền hiện đại xử lý phế thải xây dựng tại Ngõ 46 Liên Mạc, Thượng Cát, Bắc Từ Liêm, Hà Nội.',
+      desc: 'Quy trình thu gom, tiếp nhận xe tải và vận hành máy nghiền hiện đại xử lý phế thải xây dựng tại Ngõ 46 Liên Mạc, Thượng Cát, Tây Hồ, Hà Nội.',
       embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       date: '08/11/2026',
     },
