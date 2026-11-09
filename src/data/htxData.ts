@@ -319,7 +319,7 @@ export const equipmentData = [
     name: 'Dây chuyền máy nghiền kẹp hàm cơ động',
     role: 'Nghiền đập thô bê tông khối lớn thành cốt liệu cỡ hạt theo yêu cầu',
     status: 'Đang vận hành tại bãi Liên Mạc',
-    image: '/images/equip-crusher.jpg',
+    image: '/images/equip-htx-crusher.jpg',
     features: ['Công suất nghiền 120-180 tấn/giờ', 'Cửa nạp rộng nhận khối bê tông kích thước lớn', 'Tích hợp băng tải từ tính tách kim loại']
   },
   {
@@ -327,7 +327,7 @@ export const equipmentData = [
     name: 'Trạm máy sàng rung phân cấp cốt liệu',
     role: 'Phân loại hỗn hợp nghiền thành đá 1x2, mạt đá, và cấp phối dăm',
     status: 'Đang vận hành',
-    image: '/images/equip-screen.jpg',
+    image: '/images/equip-htx-screen.jpg',
     features: ['3 tầng lưới sàng kích thước linh hoạt', 'Độ phân tách hạt chuẩn xác', 'Chống bít tắc hiệu quả']
   },
   {
@@ -335,7 +335,7 @@ export const equipmentData = [
     name: 'Đội xe tải ben 3 chân & 4 chân vận chuyển',
     role: 'Vận chuyển thu gom phế thải công trình và giao hàng vật liệu',
     status: 'Sẵn sàng điều động 24/7',
-    image: '/images/fleet-trucks.jpg',
+    image: '/images/equip-htx-fleet.jpg',
     features: ['Thùng xe phủ bạt kéo cơ học chống bụi', 'Đầy đủ đăng kiểm và giấy phép lưu hành đô thị', 'Giám sát lộ trình GPS thời gian thực']
   },
   {
@@ -343,7 +343,7 @@ export const equipmentData = [
     name: 'Máy xúc bánh xích gầu kẹp thủy lực',
     role: 'Bốc dỡ, nạp phễu và phân tách sắt thép cốt bê tông tại bãi',
     status: 'Đang vận hành',
-    image: '/images/equip-excavator.jpg',
+    image: '/images/equip-htx-excavator.jpg',
     features: ['Gầu kẹp xoay linh hoạt 360 độ', 'Lực bóp mạnh mẽ bẻ gãy kết cấu bê tông', 'Hiệu suất nạp liệu liên tục']
   }
 ]
