@@ -14,11 +14,11 @@ export function MediaLibraryPage() {
     { title: 'Trạm cân điện tử tự động 80T đón xe', category: 'fleet', image: '/images/weighbridge-truck.jpg' },
     { title: 'Mặt bằng bãi tập kết Ngõ 46 Liên Mạc', category: 'facility', image: '/images/facility-lienmac.jpg' },
     { title: 'Đội ngũ kỹ sư hiện trường và trạm nghiền hiện đại', category: 'facility', image: '/images/banner-htx-engineers-crusher.jpg' },
-    { title: 'Cốt liệu bê tông tái chế (RCA) 10-25mm', category: 'materials', image: '/images/prod-htx-cotlieutaiche.jpg' },
-    { title: 'Đá 1x2 xây dựng tiêu chuẩn', category: 'materials', image: '/images/prod-htx-da1x2.jpg' },
-    { title: 'Cát bê tông vàng rửa sạch', category: 'materials', image: '/images/prod-htx-catbetong.jpg' },
-    { title: 'Cát san lấp mặt bằng móng', category: 'materials', image: '/images/prod-htx-catsanlap.jpg' },
-    { title: 'Cấp phối đá dăm loại 1 và loại 2', category: 'materials', image: '/images/prod-htx-capphoida.jpg' },
+    { title: 'Cốt liệu bê tông tái chế (RCA) 10-25mm', category: 'materials', image: '/images/materials-cotlieutaiche.jpg' },
+    { title: 'Đá 1x2 xây dựng tiêu chuẩn', category: 'materials', image: '/images/materials-da-1x2.jpg' },
+    { title: 'Cát bê tông vàng rửa sạch', category: 'materials', image: '/images/materials-catbetong.jpg' },
+    { title: 'Cát san lấp mặt bằng móng', category: 'materials', image: '/images/materials-catsanlap.jpg' },
+    { title: 'Cấp phối đá dăm loại 1 và loại 2', category: 'materials', image: '/images/materials-capphoida.jpg' },
   ]
 
   const filtered = activeFilter === 'all'

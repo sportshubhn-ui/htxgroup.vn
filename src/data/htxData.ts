@@ -217,7 +217,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Cỡ hạt 10×25mm đến 10×28mm, đá dăm xanh xám sàng sạch bụi sét, hàm lượng hạt thoi dẹt thấp',
     applications: 'Đổ bê tông dầm, sàn, móng nhà cao tầng, cọc khoan nhồi, đường băng sân bay',
-    image: '/images/prod-htx-da1x2.jpg',
+    image: '/images/materials-da-1x2.jpg',
     isRecycled: false
   },
   {
@@ -230,7 +230,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Cỡ hạt từ 0 đến 37.5mm, cấp phối hạt liên tục đạt chuẩn đầm nén TCVN 8859:2011',
     applications: 'Làm lớp móng trên (Base) và móng dưới (Subbase) cho kết cấu đường giao thông, bến bãi',
-    image: '/images/prod-htx-capphoida.jpg',
+    image: '/images/materials-capphoida.jpg',
     isRecycled: false
   },
   {
@@ -243,7 +243,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Mô-đun độ lớn 2.0 - 3.3, cát vàng hạt to khai thác tự nhiên, rửa sạch bùn bụi < 1.5%',
     applications: 'Trộn bê tông thương phẩm mác cao, bê tông đúc sẵn, kết cấu chịu lực',
-    image: '/images/prod-htx-catbetong.jpg',
+    image: '/images/materials-catbetong.jpg',
     isRecycled: false
   },
   {
@@ -256,7 +256,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Mô-đun độ lớn 1.0 - 1.5, sàng lọc sạch hoàn toàn sỏi cuội, độ mịn đồng đều',
     applications: 'Trộn vữa xây gạch, trát tường nội ngoại thất phẳng mịn chống nứt rạn chân chim',
-    image: '/images/prod-htx-catxayto.jpg',
+    image: '/images/materials-catxayto.jpg',
     isRecycled: false
   },
   {
@@ -269,7 +269,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Cát đen san nền, độ đầm chặt K90 - K95, hệ số thấm và thoát nước ổn định',
     applications: 'San lấp mặt bằng khu công nghiệp, móng công trình nhà xưởng, gia cố nền đất yếu',
-    image: '/images/prod-htx-catsanlap.jpg',
+    image: '/images/materials-catsanlap.jpg',
     isRecycled: false
   },
   {
@@ -282,7 +282,7 @@ export const productsData = [
     unit: 'm³ / Tấn',
     specification: 'Sản xuất 100% từ bê tông phế thải nghiền sàng, phân loại hạt 0-40mm, sạch sắt thép',
     applications: 'Tôn nền công trình xanh, đắp nền đường nội bộ, gia cố móng, giải pháp giảm phát thải CO2',
-    image: '/images/prod-htx-cotlieutaiche.jpg',
+    image: '/images/materials-cotlieutaiche.jpg',
     isRecycled: true
   }
 ]
@@ -397,7 +397,7 @@ export const newsArticles = [
     slug: 'ung-dung-cot-lieu-be-tong-tai-che-rca',
     title: 'Ứng dụng cốt liệu bê tông tái chế (RCA) trong kết cấu áo đường và hạ tầng giao thông',
     date: '01/11/2026',
-    image: '/images/prod-htx-cotlieutaiche.jpg',
+    image: '/images/materials-cotlieutaiche.jpg',
     excerpt: 'Cốt liệu RCA mang lại hiệu quả kinh tế vượt trội, tiết kiệm 25-30% chi phí vật tư và giảm lượng phát thải carbon cho các dự án.',
     content: 'Cốt liệu bê tông tái chế (Recycled Concrete Aggregate - RCA) sau khi được loại bỏ tạp chất và phân loại hạt theo TCVN 8859 có độ bền kháng nén và khả năng chịu tải tương đương cấp phối đá dăm tự nhiên, là vật liệu lý tưởng cho các lớp móng Subbase và nền đường nội bộ.'
   }

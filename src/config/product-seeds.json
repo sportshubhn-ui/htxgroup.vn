@@ -9,7 +9,7 @@
     "unit": "m³ / Tấn",
     "specification": "Cỡ hạt 10×25mm đến 10×28mm, độ sạch cao, không lẫn bùn sét",
     "applications": "Đổ bê tông dầm, sàn, cột nhà cao tầng, đường băng, cầu cống",
-    "image": "/images/prod-htx-da1x2.jpg",
+    "image": "/images/materials-da-1x2.jpg",
     "isRecycled": false
   },
   {
@@ -22,7 +22,7 @@
     "unit": "m³ / Tấn",
     "specification": "Thành phần hạt phân bố liên tục theo TCVN 8859:2011",
     "applications": "Lớp móng trên (Base) và móng dưới (Subbase) kết cấu áo đường giao thông",
-    "image": "/images/prod-htx-capphoida.jpg",
+    "image": "/images/materials-capphoida.jpg",
     "isRecycled": false
   },
   {
@@ -35,7 +35,7 @@
     "unit": "m³ / Tấn",
     "specification": "Mô-đun độ lớn 2.0 - 3.3, hàm lượng bùn bụi < 1.5%",
     "applications": "Trộn bê tông tươi mác cao, bê tông đúc sẵn, cấu kiện đúc khuôn",
-    "image": "/images/prod-htx-catbetong.jpg",
+    "image": "/images/materials-catbetong.jpg",
     "isRecycled": false
   },
   {
@@ -48,7 +48,7 @@
     "unit": "m³ / Tấn",
     "specification": "Mô-đun độ lớn 1.0 - 1.5, sàng sạch tạp chất và sỏi cuội",
     "applications": "Vữa xây gạch, trát tường trong nhà và ngoài trời phẳng mịn",
-    "image": "/images/prod-htx-catxayto.jpg",
+    "image": "/images/materials-catxayto.jpg",
     "isRecycled": false
   },
   {
@@ -61,7 +61,7 @@
     "unit": "m³ / Tấn",
     "specification": "Độ đầm chặt K90 - K95, hệ số thoát nước tốt",
     "applications": "San nền móng công trình nhà xưởng, khu đô thị, nền đường cao tốc",
-    "image": "/images/prod-htx-catsanlap.jpg",
+    "image": "/images/materials-catsanlap.jpg",
     "isRecycled": false
   },
   {
@@ -74,7 +74,7 @@
     "unit": "m³ / Tấn",
     "specification": "Sản xuất từ bê tông kết cấu phế thải qua máy nghiền kẹp hàm sàng tách thép",
     "applications": "Tôn nền công trình sinh thái, móng đường nội bộ bãi xe, gia cố nền yếu, kinh tế tuần hoàn",
-    "image": "/images/prod-htx-cotlieutaiche.jpg",
+    "image": "/images/materials-cotlieutaiche.jpg",
     "isRecycled": true
   }
 ]
