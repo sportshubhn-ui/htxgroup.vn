@@ -7,6 +7,7 @@ interface SEOProps {
   image?: string
   url?: string
   type?: 'website' | 'article'
+  noIndex?: boolean
 }
 
 export function SEO({
@@ -15,6 +16,7 @@ export function SEO({
   image = '/brand/logo-glass.png',
   url,
   type = 'website',
+  noIndex = false,
 }: SEOProps) {
   const fullTitle = title
     ? `${title} | ${companyInfo.shortName}`
@@ -42,6 +44,7 @@ export function SEO({
       el.setAttribute('content', content)
     }
 
+    setMeta('robots', noIndex ? 'noindex, nofollow' : 'index, follow')
     setMeta('description', description)
     setMeta('og:title', fullTitle, true)
     setMeta('og:description', description, true)
@@ -104,7 +107,7 @@ export function SEO({
     }
 
     script.textContent = JSON.stringify(schemaData)
-  }, [fullTitle, description, image, currentUrl, type])
+  }, [fullTitle, description, image, currentUrl, type, noIndex])
 
   return null
 }

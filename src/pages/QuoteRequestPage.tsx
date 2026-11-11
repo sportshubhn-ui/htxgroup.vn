@@ -56,10 +56,12 @@ export function QuoteRequestPage() {
   const [accessCondition, setAccessCondition] = useState('Đường rộng, xe tải 4 chân tiếp cận được')
   const [vehicleCount, setVehicleCount] = useState('2')
   const [notes, setNotes] = useState('')
+  const [website, setWebsite] = useState('')
   const [consent, setConsent] = useState(true)
 
   // Submission result
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [quoteSuccess, setQuoteSuccess] = useState<InquiryPayload | null>(null)
 
   useEffect(() => {
@@ -72,48 +74,73 @@ export function QuoteRequestPage() {
   const handleTabChange = (t: QuoteType) => {
     setActiveTab(t)
     setSearchParams({ type: t })
+    setSubmitError(null)
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitError(null)
+
+    if (activeTab === 'mua-vat-lieu' && items.length === 0 && !notes.trim()) {
+      setSubmitError('Vui lòng chọn ít nhất 1 mặt hàng vật liệu từ catalog hoặc nhập tên vật liệu cần mua trong phần Ghi chú.')
+      return
+    }
+
     setSubmitting(true)
 
-    // Generate local inquiry reference code
-    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '')
-    const randomHex = Math.floor(1000 + Math.random() * 9000)
-    const refCode = `HTX-${dateStr}-${randomHex}`
-
-    const inquiryPayload = {
-      code: refCode,
+    const payload = {
       type: activeTab,
-      submittedAt: new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }),
       customerName,
       companyName,
       phone,
       email,
-      projectLocation,
-      wasteType,
-      estimatedVolume: `${estimatedVolume} ${volumeUnit}`,
+      website,
+      projectLocation:
+        activeTab === 'dua-vao-bai'
+          ? 'Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội'
+          : projectLocation,
+      wasteType:
+        activeTab === 'mua-vat-lieu'
+          ? `Đặt mua vật liệu (${items.length} mặt hàng)`
+          : wasteType,
+      estimatedVolume:
+        activeTab === 'thu-gom'
+          ? `${estimatedVolume} ${volumeUnit}`
+          : activeTab === 'dua-vao-bai'
+          ? `${vehicleCount} xe`
+          : items.length > 0
+          ? items.map((i) => `${i.name}: ${i.quantity} ${i.unit}`).join('; ')
+          : 'Theo yêu cầu ghi chú',
       expectedDate,
-      accessCondition,
-      vehicleCount,
+      accessCondition: activeTab === 'thu-gom' ? accessCondition : '',
+      vehicleCount: activeTab === 'dua-vao-bai' ? vehicleCount : '',
       notes,
       cartItems: activeTab === 'mua-vat-lieu' ? items : [],
     }
 
-    // Save to local storage demo inquiries
     try {
-      const existing = JSON.parse(localStorage.getItem('htx_inquiries') || '[]')
-      existing.unshift(inquiryPayload)
-      localStorage.setItem('htx_inquiries', JSON.stringify(existing))
-    } catch (err) {
-      console.error(err)
-    }
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const data = (await res.json()) as { ok?: boolean; error?: string; inquiry?: InquiryPayload }
 
-    setTimeout(() => {
+      if (!res.ok || !data.ok || !data.inquiry) {
+        setSubmitError(data.error || 'Không thể gửi yêu cầu lúc này. Vui lòng gọi Hotline 0707 155 666.')
+        setSubmitting(false)
+        return
+      }
+
+      if (activeTab === 'mua-vat-lieu') {
+        clearCart()
+      }
       setSubmitting(false)
-      setQuoteSuccess(inquiryPayload)
-    }, 600)
+      setQuoteSuccess(data.inquiry)
+    } catch {
+      setSubmitError('Lỗi kết nối máy chủ. Vui lòng thử lại hoặc gọi trực tiếp Hotline 0707 155 666.')
+      setSubmitting(false)
+    }
   }
 
   const downloadDraftSummary = () => {
@@ -127,7 +154,7 @@ export function QuoteRequestPage() {
       `Email: ${quoteSuccess.email || 'Không có'}\n` +
       `Địa điểm: ${quoteSuccess.projectLocation || 'Chưa cung cấp'}\n` +
       `Nội dung chi tiết: ${quoteSuccess.notes || 'Không có ghi chú'}\n` +
-      `Trạng thái: Đã ghi nhận hệ thống xem trước — Đang chờ nhân viên điều phối đối soát.\n` +
+      `Trạng thái: Đã gửi thành công tới hệ thống điều phối Hành Tinh Xanh — Đang chờ nhân viên xác nhận.\n` +
       `Hotline hỗ trợ: 0707 155 666`
 
     const blob = new Blob([text], { type: 'text/plain;charset=utf-8' })
@@ -558,6 +585,18 @@ export function QuoteRequestPage() {
                 />
               </div>
 
+              {/* Honeypot anti-spam */}
+              <input
+                type="text"
+                name="website"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
+
               {/* Consent checkbox per MASTER_BRIEF */}
               <div className="flex items-start gap-2.5 pt-1">
                 <input
@@ -572,6 +611,13 @@ export function QuoteRequestPage() {
                   Tôi đồng ý để <strong>Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh</strong> liên hệ theo số điện thoại đã cung cấp để trao đổi phương án và gửi báo giá theo chính sách bảo mật thông tin.
                 </label>
               </div>
+
+              {submitError && (
+                <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-xs text-red-800 flex items-center gap-2">
+                  <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+                  <span>{submitError}</span>
+                </div>
+              )}
 
               {/* Submit CTA */}
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">

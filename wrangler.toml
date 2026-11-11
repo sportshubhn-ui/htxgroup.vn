@@ -1,0 +1,7 @@
+name = "htxgroup-vn"
+compatibility_date = "2025-11-01"
+pages_build_output_dir = "dist"
+
+[[kv_namespaces]]
+binding = "HTX_INQUIRIES"
+id = "2cf59ac8a7c6443b90e897069d101af3"

@@ -12,7 +12,8 @@ import {
   ShieldCheck,
   Sprout,
   Navigation,
-  ExternalLink
+  ExternalLink,
+  AlertCircle
 } from 'lucide-react'
 import { companyInfo } from '@/data/htxData'
 
@@ -23,40 +24,45 @@ export function ContactPage() {
     phone: '',
     subject: '',
     message: '',
+    website: '',
   })
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [submittedCode, setSubmittedCode] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitError(null)
     setSubmitting(true)
 
-    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '')
-    const randomHex = Math.floor(1000 + Math.random() * 9000)
-    const refCode = `HTX-LH-${dateStr}-${randomHex}`
-
     try {
-      const existing = JSON.parse(localStorage.getItem('htx_inquiries') || '[]')
-      existing.unshift({
-        code: refCode,
-        type: 'lien-he',
-        submittedAt: new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }),
-        customerName: formData.fullName,
-        phone: formData.phone,
-        email: formData.email,
-        notes: `[${formData.subject}] ${formData.message}`,
-        status: 'new'
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'lien-he',
+          customerName: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          website: formData.website,
+          wasteType: formData.subject || 'Tư vấn dịch vụ / Hỗ trợ',
+          notes: formData.subject ? `[${formData.subject}] ${formData.message}` : formData.message,
+        }),
       })
-      localStorage.setItem('htx_inquiries', JSON.stringify(existing))
-    } catch (err) {
-      console.error(err)
-    }
+      const data = (await res.json()) as { ok?: boolean; error?: string; inquiry?: { code: string } }
+      if (!res.ok || !data.ok || !data.inquiry) {
+        setSubmitError(data.error || 'Không thể gửi yêu cầu lúc này. Vui lòng gọi Hotline 0707 155 666.')
+        setSubmitting(false)
+        return
+      }
 
-    setTimeout(() => {
       setSubmitting(false)
-      setSubmittedCode(refCode)
-      setFormData({ fullName: '', email: '', phone: '', subject: '', message: '' })
-    }, 500)
+      setSubmittedCode(data.inquiry.code)
+      setFormData({ fullName: '', email: '', phone: '', subject: '', message: '', website: '' })
+    } catch {
+      setSubmitError('Lỗi kết nối máy chủ. Vui lòng thử lại hoặc gọi trực tiếp Hotline 0707 155 666.')
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -300,6 +306,24 @@ export function ContactPage() {
                       className="w-full p-3.5 text-xs sm:text-sm border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#064D35] focus:outline-none"
                     />
                   </div>
+
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
+
+                  {submitError && (
+                    <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-xs text-red-800 flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
 
                   <button
                     type="submit"

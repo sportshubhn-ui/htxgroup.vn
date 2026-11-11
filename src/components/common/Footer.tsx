@@ -141,7 +141,6 @@ export function Footer() {
           <div className="flex flex-wrap gap-4">
             <Link to="/chinh-sach-bao-mat" className="hover:text-white transition">Chính sách bảo mật</Link>
             <Link to="/dieu-kien-giao-dich" className="hover:text-white transition">Điều kiện giao dịch</Link>
-            <Link to="/admin" className="hover:text-white transition">Cổng quản trị (Admin)</Link>
           </div>
         </div>
       </div>
