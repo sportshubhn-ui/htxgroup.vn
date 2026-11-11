@@ -275,7 +275,7 @@ export function QuoteRequestPage() {
                 <div className="p-3.5 bg-amber-50 rounded-xl text-xs text-amber-900 flex items-center gap-2.5 border border-amber-200">
                   <AlertCircle className="w-5 h-5 text-amber-700 shrink-0" />
                   <span>
-                    <strong>Điểm đổ:</strong> Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Giờ làm việc: 24/7. Trạm cân 80 tấn. "Lịch đề nghị — Chờ nhân viên điều phối xác nhận slot trước khi xe đến".
+                    <strong>Điểm đổ:</strong> Bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Giờ làm việc: 24/7. "Lịch đề nghị — Chờ nhân viên điều phối xác nhận slot trước khi xe đến".
                   </span>
                 </div>
               )}

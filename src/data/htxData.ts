@@ -127,7 +127,7 @@ export const homeHeroSlides = [
     image: '/images/banner-htx-facility-eco.jpg',
     badge: 'Cơ sở tiếp nhận hiện đại',
     title: 'Bãi tập kết & Xử lý tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội',
-    desc: 'Quy mô tiếp nhận liên tục 24/7 với trạm cân điện tử tự động 80 tấn, đường ven đê rộng rãi cho các đoàn xe ben 2.5T đến 30T và xe đầu kéo tiếp cận thuận lợi.',
+    desc: 'Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty liên tục 24/7, đường ven đê rộng rãi cho các đoàn xe ben 2.5T đến 30T và xe đầu kéo tiếp cận thuận lợi.',
     primaryCtaText: 'Đăng ký vào bãi',
     primaryCtaLink: '/yeu-cau-bao-gia?type=dua-vao-bai',
     secondaryCtaText: 'Xem vị trí & bản đồ',
@@ -167,13 +167,13 @@ export const servicesData = [
       'Kiểm tra tình trạng thùng bạt và vệ sinh lốp xe trước khi rời công trường',
       'Giám sát lộ trình GPS đảm bảo vận chuyển đúng điểm tập kết hợp pháp',
       'Đổ thải đúng vị trí quy định tại Bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội',
-      'Xuất phiếu cân đối soát và xác nhận khối lượng vận chuyển'
+      'Xuất biên bản đối soát và xác nhận khối lượng vận chuyển tại bãi chính quy của công ty'
     ]
   },
   {
     slug: 'tiep-nhan-tap-ket',
     name: 'Tiếp nhận & Tập kết chất thải rắn tại bãi Liên Mạc',
-    shortDesc: 'Cơ sở bãi tập kết hợp pháp tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Trang bị trạm cân 80 tấn, tiếp nhận phương tiện 24/7.',
+    shortDesc: 'Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội, tiếp nhận phương tiện 24/7.',
     iconName: 'Warehouse',
     image: '/images/service-htx-tiepnhan.jpg',
     targetCustomers: 'Các đơn vị vận tải, đội xe tư nhân, nhà thầu xây dựng có nhu cầu đổ thải hợp pháp.',
@@ -181,9 +181,9 @@ export const servicesData = [
     acceptedWaste: ['Bê tông tháo dỡ', 'Trạc thải gạch đá', 'Vữa xi măng', 'Đất đào sạch'],
     process: [
       'Phương tiện đến cổng bãi tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội',
-      'Xe lên bàn cân điện tử tự động 80T kiểm tra tải trọng và phân loại sơ bộ',
+      'Điều phối viên hướng dẫn xe vào bãi chính quy được cấp phép để kiểm tra và phân loại sơ bộ',
       'Hướng dẫn xe vào phân khu đổ quy định theo từng loại chất thải',
-      'Xe quay lại cân xuất tải để tính chính xác khối lượng ròng đã tiếp nhận',
+      'Nghiệm thu khối lượng và lập biên bản giao nhận tiếp nhận tại bãi chính quy của công ty',
       'Phát hành phiếu xuất nhập bãi có xác nhận'
     ]
   },
@@ -298,7 +298,7 @@ export const facilitiesData = [
     coordinates: '21.0963° N, 105.7485° E',
     openingHours: 'Hoạt động tiếp nhận 24/7 (Cả ngày Lễ & Chủ Nhật)',
     roadAccess: 'Đường ven đê Liên Mạc mở rộng, xe ben 3 chân, 4 chân, xe đầu kéo tiếp cận thuận lợi',
-    weighbridge: 'Trạm cân điện tử tự động 80 tấn cảm biến kỹ thuật số chính xác',
+    weighbridge: 'Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty',
     acceptedMaterials: [
       'Bê tông khối, dầm cột tháo dỡ công trình',
       'Gạch vỡ, vữa vụn, trạc xà bần xây dựng',
@@ -357,7 +357,7 @@ export const faqList = [
   {
     question: 'Quy trình đưa xe chở trạc thải vào đổ tại bãi Liên Mạc như thế nào?',
     category: 'Vận hành',
-    answer: 'Lái xe đưa phương tiện đến cổng bãi tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Xe sẽ lên bàn cân điện tử 80T cân tổng trọng lượng, sau đó đổ thải theo vị trí hướng dẫn của điều phối viên, và quay lại cân xuất tải để lấy phiếu cân xác nhận khối lượng tịnh.'
+    answer: 'Lái xe đưa phương tiện đến cổng bãi tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Điều phối viên hướng dẫn xe vào tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty, tiến hành kiểm tra, hướng dẫn vị trí đổ thải và lập biên bản giao nhận xác nhận khối lượng đầy đủ hợp pháp.'
   },
   {
     question: 'Hành Tinh Xanh có cung cấp dịch vụ thu gom trọn gói tại chân công trình không?',
@@ -390,8 +390,8 @@ export const newsArticles = [
     title: 'Công bố điểm tiếp nhận và tập kết chất thải rắn xây dựng tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội',
     date: '05/11/2026',
     image: '/images/banner-htx-facility-eco.jpg',
-    excerpt: 'Cơ sở bãi tập kết với trạm cân điện tử tự động 80 tấn phục vụ tiếp nhận phế thải công trình 24/7 trên địa bàn Hà Nội.',
-    content: 'Nhằm hỗ trợ các chủ đầu tư và nhà thầu có điểm đổ thải hợp pháp, Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh chính thức vận hành cơ sở bãi tập kết tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Bãi được trang bị trạm cân 80T kiểm soát tải trọng, hệ thống phun sương dập bụi và máy móc cơ giới phân loại phế thải chuyên nghiệp.'
+    excerpt: 'Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty phục vụ phế thải công trình 24/7 trên địa bàn Hà Nội.',
+    content: 'Nhằm hỗ trợ các chủ đầu tư và nhà thầu có điểm đổ thải hợp pháp, Công ty TNHH TM&DV Giải Pháp Hành Tinh Xanh chính thức tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Bãi có đầy đủ thủ tục môi trường, hệ thống phun sương dập bụi và máy móc cơ giới phân loại phế thải chuyên nghiệp.'
   },
   {
     slug: 'ung-dung-cot-lieu-be-tong-tai-che-rca',

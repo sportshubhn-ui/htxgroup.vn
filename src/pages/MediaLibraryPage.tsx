@@ -11,7 +11,7 @@ export function MediaLibraryPage() {
     { title: 'Trạm máy sàng rung 3 tầng phân cấp', category: 'machinery', image: '/images/equip-htx-screen.jpg' },
     { title: 'Máy xúc bánh xích gầu kẹp chuyên dụng', category: 'machinery', image: '/images/equip-htx-excavator.jpg' },
     { title: 'Đoàn xe ben 3 chân 4 chân vận chuyển', category: 'fleet', image: '/images/equip-htx-fleet.jpg' },
-    { title: 'Trạm cân điện tử tự động 80T đón xe', category: 'fleet', image: '/images/equip-htx-weighbridge.jpg' },
+    { title: 'Tiếp nhận xe tại bãi chính quy được cấp phép của công ty', category: 'facility', image: '/images/service-htx-tiepnhan.jpg' },
     { title: 'Mặt bằng bãi tập kết Ngõ 46 Liên Mạc', category: 'facility', image: '/images/facility-lienmac.jpg' },
     { title: 'Đội ngũ kỹ sư hiện trường và trạm nghiền hiện đại', category: 'facility', image: '/images/banner-htx-engineers-crusher.jpg' },
     { title: 'Cốt liệu bê tông tái chế (RCA) 10-25mm', category: 'materials', image: '/images/materials-cotlieutaiche.jpg' },

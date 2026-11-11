@@ -60,7 +60,7 @@ export function QualityPage() {
             </div>
             <h3 className="font-bold text-base text-gray-900 uppercase">Minh bạch khối lượng</h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Trạm cân kỹ thuật số 80 tấn kiểm định định kỳ, tự động lưu trữ và xuất phiếu cân xe chính xác đến từng kg cho từng chuyến xe vào/ra bãi.
+              Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty với quy trình kiểm soát nghiêm ngặt, lập biên bản giao nhận minh bạch cho từng chuyến xe vào/ra bãi.
             </p>
           </div>
         </div>

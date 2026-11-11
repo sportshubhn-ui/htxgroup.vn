@@ -96,7 +96,7 @@ export function MaterialDetailPage() {
                 <span>Phương thức giao nhận & thanh toán:</span>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Giao hàng bằng xe ben 3 chân - 4 chân hoặc khách tự điều xe lấy tại bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Cân xuất phiếu điện tử 80 tấn.
+                Giao hàng bằng xe ben 3 chân - 4 chân hoặc khách tự điều xe lấy tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Nghiệm thu và lập biên bản giao nhận đầy đủ.
               </p>
             </div>
           </div>

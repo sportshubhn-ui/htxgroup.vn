@@ -150,7 +150,7 @@ export function HomePage() {
                 Bạn cần thu gom phế thải công trình hoặc đưa xe vào bãi?
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận xe vào đổ tại Bãi Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội qua trạm cân 80 tấn.
+                Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội.
               </p>
             </div>
             <div className="pt-6 flex flex-wrap gap-3">
@@ -363,8 +363,8 @@ export function HomePage() {
               { step: '01', title: 'Tiếp nhận nhu cầu', desc: 'Qua hotline 0707 155 666 hoặc form trực tuyến trên website.' },
               { step: '02', title: 'Khảo sát & Xác nhận', desc: 'Cán bộ kỹ thuật kiểm tra vị trí công trình, điều kiện tiếp cận xe và mẫu phế thải.' },
               { step: '03', title: 'Báo giá & Hợp đồng', desc: 'Gửi bảng báo giá chi tiết, phương án xe và ký kết hợp đồng vận chuyển xử lý.' },
-              { step: '04', title: 'Triển khai thi công', desc: 'Bốc xúc, vận chuyển xe ben phủ bạt hoặc đón xe vào bãi cân điện tử 80T.' },
-              { step: '05', title: 'Bàn giao & Đối soát', desc: 'Ký biên bản bàn giao mặt bằng sạch và cung cấp đầy đủ phiếu cân tịnh.' },
+              { step: '04', title: 'Triển khai thi công', desc: 'Bốc xúc, vận chuyển xe ben phủ bạt hoặc tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty.' },
+              { step: '05', title: 'Bàn giao & Đối soát', desc: 'Ký biên bản bàn giao mặt bằng sạch và cung cấp đầy đủ biên bản nghiệm thu giao nhận.' },
             ].map((s) => (
               <div key={s.step} className="bg-white p-5 rounded-2xl border border-emerald-900/10 shadow-xs space-y-2">
                 <span className="w-8 h-8 rounded-full bg-emerald-100 text-[#064D35] font-black text-xs flex items-center justify-center">
@@ -463,8 +463,8 @@ export function HomePage() {
                     <strong className="text-gray-900">24/7 (Cả Thứ Bảy, Chủ Nhật & Ngày Lễ)</strong>
                   </div>
                   <div>
-                    <span className="text-gray-500 block">Trọng tải trạm cân:</span>
-                    <strong className="text-gray-900">Cân điện tử kỹ thuật số 80 Tấn</strong>
+                    <span className="text-gray-500 block">Quy chuẩn cơ sở:</span>
+                    <strong className="text-gray-900">Bãi chính quy được cấp phép của công ty</strong>
                   </div>
                   <div>
                     <span className="text-gray-500 block">Tiếp cận phương tiện:</span>

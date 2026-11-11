@@ -322,7 +322,7 @@ export function AdminPage() {
                   <strong className="text-sm font-bold text-[#064D35] block">{f.name}</strong>
                   <p className="text-gray-700"><strong>Địa chỉ:</strong> {f.address}</p>
                   <p className="text-gray-700"><strong>Giờ mở cửa:</strong> {f.openingHours}</p>
-                  <p className="text-gray-700"><strong>Trạm cân:</strong> {f.weighbridge}</p>
+                  <p className="text-gray-700"><strong>Quy chuẩn bãi:</strong> {f.weighbridge || 'Bãi chính quy được cấp phép của công ty'}</p>
                   <p className="text-gray-700"><strong>Tọa độ:</strong> {f.coordinates}</p>
                 </div>
               ))}

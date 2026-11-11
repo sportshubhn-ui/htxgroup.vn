@@ -20,7 +20,7 @@ export function FacilityDetailPage() {
     <div className="bg-[#FFFCF6] min-h-[80vh] py-10 lg:py-14">
       <SEO
         title="Bãi Tập Kết & Xử Lý CTRXD Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội"
-        description="Thông tin chi tiết bãi tập kết và xử lý chất thải rắn xây dựng tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Định vị Google Maps, trạm cân 80T, tiếp nhận 24/7."
+        description="Thông tin chi tiết tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội. Định vị Google Maps, tiếp nhận 24/7."
         image={facility.image}
       />
 
@@ -93,8 +93,8 @@ export function FacilityDetailPage() {
               <span>{facility.openingHours}</span>
             </div>
             <div className="p-3 bg-gray-50 rounded-xl">
-              <strong className="block text-gray-900 font-bold mb-1">Tải trọng trạm cân:</strong>
-              <span>{facility.weighbridge}</span>
+              <strong className="block text-gray-900 font-bold mb-1">Quy chuẩn cơ sở:</strong>
+              <span>{facility.weighbridge || 'Bãi chính quy được cấp phép của công ty'}</span>
             </div>
           </div>
         </div>
@@ -161,15 +161,15 @@ export function FacilityDetailPage() {
               <div className="space-y-3 text-xs text-emerald-100">
                 <div className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-[#B2E5C0] text-[#064D35] font-bold flex items-center justify-center shrink-0">1</span>
-                  <span>Xe vào cổng, dừng đúng vị trí bàn cân điện tử 80T kiểm tra tải trọng tổng.</span>
+                  <span>Xe vào cổng, điều phối viên hướng dẫn vào bãi chính quy được cấp phép để kiểm tra khối lượng và phân loại sơ bộ.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-[#B2E5C0] text-[#064D35] font-bold flex items-center justify-center shrink-0">2</span>
-                  <span>Cán bộ bãi kiểm tra chất lượng phế thải và hướng dẫn xe vào bãi đổ theo phân khu.</span>
+                  <span>Cán bộ bãi kiểm tra chất lượng phế thải và hướng dẫn xe vào bãi đổ theo phân khu quy định.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-[#B2E5C0] text-[#064D35] font-bold flex items-center justify-center shrink-0">3</span>
-                  <span>Xe quay lại bàn cân để cân xác định khối lượng tịnh và nhận phiếu cân điện tử.</span>
+                  <span>Nghiệm thu khối lượng và nhận biên bản giao nhận chính thức tại bãi chính quy của công ty.</span>
                 </div>
               </div>
 

@@ -97,7 +97,7 @@ export function AboutPage() {
             <div className="space-y-2 text-center p-4 bg-gray-50 rounded-2xl">
               <Award className="w-8 h-8 text-[#064D35] mx-auto" />
               <h4 className="font-bold text-sm text-gray-900">Chính xác & Trung thực</h4>
-              <p className="text-xs text-gray-600">Trạm cân điện tử tự động 80T xuất phiếu cân tịnh rõ ràng, không sai lệch khối lượng.</p>
+              <p className="text-xs text-gray-600">Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty, lập biên bản giao nhận rõ ràng, minh bạch.</p>
             </div>
             <div className="space-y-2 text-center p-4 bg-gray-50 rounded-2xl">
               <Sprout className="w-8 h-8 text-[#064D35] mx-auto" />

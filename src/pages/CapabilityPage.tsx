@@ -37,7 +37,7 @@ export function CapabilityPage() {
             HỒ SƠ NĂNG LỰC DOANH NGHIỆP
           </h1>
           <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-            Hành Tinh Xanh sở hữu nền tảng cơ sở bãi tập kết hợp pháp, dây chuyền thiết bị cơ giới đồng bộ và quy trình kiểm soát khối lượng minh bạch bằng trạm cân điện tử tự động.
+            Hành Tinh Xanh sở hữu nền tảng cơ sở bãi tập kết hợp pháp, dây chuyền thiết bị cơ giới đồng bộ và quy trình kiểm soát tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export function CapabilityPage() {
               <h3 className="font-bold text-base uppercase">Cơ sở bãi tập kết & xử lý</h3>
             </div>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Bãi tiếp nhận tại <strong>Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội</strong>. Mặt bằng rộng rãi, trạm cân điện tử 80T, tiếp nhận phương tiện 24/7 không gây ùn tắc giao thông.
+              Bãi tiếp nhận tại <strong>Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội</strong>. Mặt bằng rộng rãi, tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty, hoạt động 24/7 không gây ùn tắc giao thông.
             </p>
             <div className="pt-2">
               <Link

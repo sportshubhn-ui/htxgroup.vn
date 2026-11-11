@@ -151,7 +151,7 @@ export function ContactPage() {
                   <div>
                     <strong className="text-[#064D35] block font-bold">Bãi tập kết & Xử lý CTRXD:</strong>
                     <span className="text-gray-900 font-medium">{companyInfo.yardAddress}</span>
-                    <p className="text-[11px] text-emerald-800 mt-0.5">Trạm cân 80 tấn • Tiếp nhận xe 24/7</p>
+                    <p className="text-[11px] text-emerald-800 mt-0.5">Bãi chính quy được cấp phép • Tiếp nhận xe 24/7</p>
                   </div>
                 </div>
 

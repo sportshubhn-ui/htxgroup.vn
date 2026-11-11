@@ -64,7 +64,7 @@ export function PolicyPage() {
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Điều phối nhân viên liên hệ xác nhận tọa độ công trình và thời gian đón xe.</li>
-                  <li>Phát hành phiếu cân điện tử và đối soát khối lượng.</li>
+                  <li>Lập biên bản giao nhận và đối soát khối lượng tại bãi chính quy của công ty.</li>
                   <li>Gửi hợp đồng nguyên tắc hoặc biên bản bàn giao - xử lý chất thải rắn xây dựng.</li>
                 </ul>
               </section>
@@ -88,14 +88,14 @@ export function PolicyPage() {
               <section className="space-y-2">
                 <h3 className="font-bold text-gray-900 text-sm uppercase">2. Quy định về phương tiện vận tải</h3>
                 <p>
-                  Phương tiện lưu thông vào bãi phải chấp hành Luật Giao thông đường bộ, có bạt phủ cơ học che kín thành thùng, đảm bảo vệ sinh và không rơi vãi trên tuyến đường vận chuyển. Lái xe tuân thủ hướng dẫn của cán bộ điều phối trạm cân.
+                  Phương tiện lưu thông vào bãi phải chấp hành Luật Giao thông đường bộ, có bạt phủ cơ học che kín thành thùng, đảm bảo vệ sinh và không rơi vãi trên tuyến đường vận chuyển. Lái xe tuân thủ hướng dẫn của cán bộ điều phối tại bãi chính quy được cấp phép của công ty.
                 </p>
               </section>
 
               <section className="space-y-2">
                 <h3 className="font-bold text-gray-900 text-sm uppercase">3. Nghiệm thu khối lượng & Thanh toán</h3>
                 <p>
-                  Khối lượng giao dịch căn cứ theo phiếu cân điện tử 80T in tự động tại bãi. Các điều khoản thanh toán, xuất hóa đơn VAT được thực hiện theo hợp đồng cung ứng dịch vụ đã ký kết giữa hai bên.
+                  Khối lượng giao dịch căn cứ theo biên bản nghiệm thu giao nhận lập tại bãi chính quy được cấp phép của công ty. Các điều khoản thanh toán, xuất hóa đơn VAT được thực hiện theo hợp đồng cung ứng dịch vụ đã ký kết giữa hai bên.
                 </p>
               </section>
             </>

@@ -7,7 +7,7 @@ export function TechnologyPage() {
     {
       step: '01',
       title: 'Tiếp nhận & Kiểm tra phân loại đầu vào',
-      desc: 'Phương tiện chở bê tông tháo dỡ và trạc thải qua trạm cân 80T tại bãi Liên Mạc - Thượng Cát. Cán bộ kỹ thuật kiểm tra và loại bỏ rác thải sinh hoạt, gỗ mục trước khi tập kết.',
+      desc: 'Phương tiện chở bê tông tháo dỡ và trạc thải tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty ở Liên Mạc - Thượng Cát. Cán bộ kỹ thuật kiểm tra và phân loại sơ bộ trước khi tập kết.',
       icon: 'Scale'
     },
     {

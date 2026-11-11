@@ -51,7 +51,7 @@ export function Footer() {
                 <div>
                   <strong className="text-white block font-semibold">Bãi tập kết & Xử lý CTRXD:</strong>
                   <span className="text-[#B2E5C0] font-semibold">{companyInfo.yardAddress}</span>
-                  <p className="text-[11px] text-emerald-300/70 mt-1">Trạm cân 80 tấn • Tiếp nhận xe 24/7</p>
+                  <p className="text-[11px] text-emerald-300/70 mt-1">Bãi chính quy được cấp phép • Tiếp nhận xe 24/7</p>
                 </div>
               </div>
             </div>
@@ -116,7 +116,7 @@ export function Footer() {
             <div className="bg-emerald-950/70 rounded-xl p-3.5 text-xs border border-emerald-800/60 space-y-2">
               <p className="font-semibold text-white">Điểm tập kết Thượng Cát - Hà Nội:</p>
               <p className="text-emerald-200/80 leading-relaxed text-[11px]">
-                Tiếp nhận chất thải rắn xây dựng (CTRXD) từ các công trình phá dỡ và cải tạo đô thị. Cấp biên bản giao nhận và phiếu cân minh bạch.
+                Tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty từ các công trình phá dỡ và cải tạo đô thị. Cấp biên bản giao nhận và nghiệm thu minh bạch.
               </p>
               <div className="pt-1 flex flex-col gap-2">
                 <Link
