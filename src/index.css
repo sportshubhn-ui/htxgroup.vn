@@ -10,17 +10,28 @@
     --color-footer: #03271B;
   }
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
     font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #172D24;
     background-color: #FFFCF6;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     background-color: #FFFCF6;
     color: #172D24;
+    max-width: 100%;
     overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 }
 

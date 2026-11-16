@@ -75,18 +75,18 @@ export function HomePage() {
                     <span>{companyInfo.slogan}</span>
                   </div>
 
-                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight drop-shadow-md">
+                  <h1 className="text-xl xs:text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight drop-shadow-md break-words">
                     {slide.title}
                   </h1>
 
-                  <p className="text-xs sm:text-base text-emerald-100/90 bg-[#03271B]/70 p-4 rounded-xl backdrop-blur-xs max-w-2xl leading-relaxed border border-emerald-500/20">
+                  <p className="text-xs sm:text-base text-emerald-100/90 bg-[#03271B]/70 p-3 sm:p-4 rounded-xl backdrop-blur-xs max-w-2xl leading-relaxed border border-emerald-500/20">
                     {slide.desc}
                   </p>
 
-                  <div className="pt-2 flex flex-wrap gap-3">
+                  <div className="pt-2 flex flex-col xs:flex-row gap-2.5 sm:gap-3 w-full sm:w-auto">
                     <Link
                       to={slide.primaryCtaLink}
-                      className="inline-flex items-center gap-2 bg-[#064D35] hover:bg-[#043826] text-white px-6 py-3.5 rounded-xl font-bold uppercase text-xs tracking-wider transition shadow-lg shadow-emerald-950/40 cursor-pointer border border-[#B2E5C0]/40"
+                      className="inline-flex items-center justify-center gap-2 bg-[#064D35] hover:bg-[#043826] text-white px-6 py-3.5 rounded-xl font-bold uppercase text-xs tracking-wider transition shadow-lg shadow-emerald-950/40 cursor-pointer border border-[#B2E5C0]/40 text-center"
                     >
                       <span>{slide.primaryCtaText}</span>
                       <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
@@ -94,7 +94,7 @@ export function HomePage() {
 
                     <Link
                       to={slide.secondaryCtaLink}
-                      className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider backdrop-blur-xs border border-white/20 transition cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider backdrop-blur-xs border border-white/20 transition cursor-pointer text-center"
                     >
                       <span>{slide.secondaryCtaText}</span>
                     </Link>
@@ -105,20 +105,20 @@ export function HomePage() {
           </div>
         ))}
 
-        {/* Slider Controls */}
+        {/* Slider Controls - Responsive */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
+          className="hidden sm:flex absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white items-center justify-center transition backdrop-blur-xs cursor-pointer"
           aria-label="Previous Slide"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white flex items-center justify-center transition backdrop-blur-xs cursor-pointer"
+          className="hidden sm:flex absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#064D35] text-white items-center justify-center transition backdrop-blur-xs cursor-pointer"
           aria-label="Next Slide"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
         {/* Indicators */}
@@ -137,33 +137,33 @@ export function HomePage() {
       </section>
 
       {/* 2. HAI THẺ NHU CẦU CHÍNH (MASTER_BRIEF Section 5 Item 2) */}
-      <section className="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative z-20 -mt-6 sm:-mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Journey 1: Cần thu gom / đổ thải */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
+          <div className="bg-white rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-[#064D35] text-xs font-bold uppercase rounded-full">
                 <Truck className="w-3.5 h-3.5" />
                 <span>Hành trình 1 • Quản lý chất thải</span>
               </div>
-              <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
                 Bạn cần thu gom phế thải công trình hoặc đưa xe vào bãi?
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Khảo sát hiện trường tận nơi, xúc dọn trọn gói bằng máy xúc gầu kẹp và xe ben; hoặc tiếp nhận và tập kết tại bãi chính quy được cấp phép của công ty tại Ngõ 46 Liên Mạc - Thượng Cát - Hà Nội.
               </p>
             </div>
-            <div className="pt-6 flex flex-wrap gap-3">
+            <div className="pt-6 flex flex-col xs:flex-row gap-2.5 sm:gap-3">
               <Link
                 to="/yeu-cau-bao-gia?type=thu-gom"
-                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center gap-1.5 shadow-xs"
+                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-1.5 shadow-xs text-center"
               >
                 <span>Yêu cầu thu gom</span>
                 <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
               </Link>
               <Link
                 to="/yeu-cau-bao-gia?type=dua-vao-bai"
-                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition"
+                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition text-center justify-center flex items-center"
               >
                 Đăng ký vào bãi Liên Mạc
               </Link>
@@ -171,30 +171,30 @@ export function HomePage() {
           </div>
 
           {/* Journey 2: Cần mua vật liệu xây dựng & tái chế */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
+          <div className="bg-white rounded-3xl p-5 sm:p-8 border border-emerald-900/10 shadow-lg flex flex-col justify-between group hover:border-[#064D35] transition">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-[#064D35] text-xs font-bold uppercase rounded-full">
                 <Layers className="w-3.5 h-3.5" />
                 <span>Hành trình 2 • Cung ứng vật tư</span>
               </div>
-              <h2 className="text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#064D35] transition">
                 Bạn cần tìm vật liệu xây dựng hoặc cốt liệu tái chế (RCA)?
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 Cung cấp đá 1x2, cấp phối đá dăm, cát bê tông, cát xây tô, cát san lấp và cốt liệu bê tông tái chế (RCA) đạt chuẩn kỹ thuật, tối ưu chi phí và thân thiện môi trường.
               </p>
             </div>
-            <div className="pt-6 flex flex-wrap gap-3">
+            <div className="pt-6 flex flex-col xs:flex-row gap-2.5 sm:gap-3">
               <Link
                 to="/vat-lieu"
-                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center gap-1.5 shadow-xs"
+                className="px-5 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition flex items-center justify-center gap-1.5 shadow-xs text-center"
               >
                 <span>Xem catalog vật liệu</span>
                 <ArrowRight className="w-4 h-4 text-[#B2E5C0]" />
               </Link>
               <Link
                 to="/yeu-cau-bao-gia?type=mua-vat-lieu"
-                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition"
+                className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold uppercase transition text-center justify-center flex items-center"
               >
                 Nhận báo giá theo khối lượng
               </Link>
@@ -381,18 +381,18 @@ export function HomePage() {
       {/* 6 & 7. CƠ SỞ BÃI LIÊN MẠC & GOOGLE MAPS GHIM TÂM (CRITICAL REQUEST) */}
       <section className="py-16 bg-white border-t border-emerald-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-3xl p-6 sm:p-10 border-2 border-emerald-600/30 mb-10">
+          <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-3xl p-5 sm:p-10 border-2 border-emerald-600/30 mb-10">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               <div className="space-y-2 max-w-3xl">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#064D35] text-white text-[11px] font-extrabold uppercase rounded-md tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#B2E5C0]" />
                   <span>Công bố điểm tập kết chính thức</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#064D35]">
+                <h3 className="text-lg sm:text-2xl font-extrabold text-[#064D35]">
                   BÃI TẬP KẾT & XỬ LÝ CHẤT THẢI RẮN XÂY DỰNG HÀNH TINH XANH
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-800 flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#064D35] shrink-0" />
+                <p className="text-xs sm:text-sm text-gray-800 flex items-start sm:items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#064D35] shrink-0 mt-0.5 sm:mt-0" />
                   <span>
                     Địa chỉ tiếp nhận: <strong>{companyInfo.yardAddress}</strong>
                   </span>
@@ -402,17 +402,17 @@ export function HomePage() {
                 </p>
               </div>
 
-              <div className="shrink-0 flex flex-wrap gap-3">
+              <div className="w-full lg:w-auto flex flex-col xs:flex-row gap-2.5 sm:gap-3">
                 <Link
                   to="/yeu-cau-bao-gia?type=dua-vao-bai"
-                  className="px-5 py-3 bg-[#064D35] hover:bg-[#043826] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md flex items-center gap-2"
+                  className="px-5 py-3 bg-[#064D35] hover:bg-[#043826] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md flex items-center justify-center gap-2 text-center"
                 >
                   <Send className="w-4 h-4 text-[#B2E5C0]" />
                   <span>Đăng ký đưa xe vào bãi</span>
                 </Link>
                 <a
                   href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-                  className="px-4 py-3 bg-white border border-[#064D35] text-[#064D35] font-bold text-xs uppercase rounded-xl transition hover:bg-emerald-50 flex items-center gap-1.5"
+                  className="px-4 py-3 bg-white border border-[#064D35] text-[#064D35] font-bold text-xs uppercase rounded-xl transition hover:bg-emerald-50 flex items-center justify-center gap-1.5 text-center"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>{companyInfo.hotline}</span>
@@ -424,23 +424,23 @@ export function HomePage() {
           {/* Map interactive section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Map iframe */}
-            <div className="lg:col-span-8 bg-white rounded-3xl p-4 border border-emerald-900/10 shadow-md">
-              <div className="flex items-center justify-between pb-3 px-2 border-b border-gray-100 text-xs">
-                <span className="font-bold text-[#064D35] flex items-center gap-1.5">
-                  <MapPin className="w-4 h-4" />
-                  <span>Định vị Google Maps: {companyInfo.yardAddress}</span>
+            <div className="lg:col-span-8 bg-white rounded-3xl p-3 sm:p-4 border border-emerald-900/10 shadow-md">
+              <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-2 pb-3 px-1 sm:px-2 border-b border-gray-100 text-xs">
+                <span className="font-bold text-[#064D35] flex items-center gap-1.5 min-w-0">
+                  <MapPin className="w-4 h-4 shrink-0" />
+                  <span className="truncate">Định vị Google Maps: {companyInfo.yardAddress}</span>
                 </span>
                 <a
                   href={companyInfo.googleMapsDirectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#064D35] hover:underline font-bold flex items-center gap-1"
+                  className="text-[#064D35] hover:underline font-bold flex items-center gap-1 shrink-0"
                 >
                   <span>Mở Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
-              <div className="h-[360px] sm:h-[420px] rounded-2xl overflow-hidden mt-3 border border-gray-200">
+              <div className="h-[280px] xs:h-[340px] sm:h-[420px] rounded-2xl overflow-hidden mt-3 border border-gray-200">
                 <iframe
                   src={companyInfo.mapEmbedUrl}
                   title={`Bản đồ định vị ${companyInfo.yardAddress}`}
@@ -539,10 +539,10 @@ export function HomePage() {
             Hành Tinh Xanh sẵn sàng phục vụ Quý khách 24/7. Hỗ trợ đầy đủ thủ tục hóa đơn, biên bản xử lý chất thải rắn xây dựng theo đúng quy chuẩn pháp luật.
           </p>
 
-          <div className="pt-4 flex flex-wrap justify-center gap-4">
+          <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
             <Link
               to="/yeu-cau-bao-gia"
-              className="px-8 py-3.5 bg-[#B2E5C0] hover:bg-emerald-200 text-[#064D35] font-extrabold text-xs uppercase tracking-wider rounded-xl transition shadow-lg flex items-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-[#B2E5C0] hover:bg-emerald-200 text-[#064D35] font-extrabold text-xs uppercase tracking-wider rounded-xl transition shadow-lg flex items-center justify-center gap-2 cursor-pointer text-center"
             >
               <Send className="w-4 h-4" />
               <span>Gửi yêu cầu báo giá trực tuyến</span>
@@ -550,7 +550,7 @@ export function HomePage() {
 
             <a
               href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-              className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition border border-white/20 flex items-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl transition border border-white/20 flex items-center justify-center gap-2 cursor-pointer text-center"
             >
               <Phone className="w-4 h-4 text-[#B2E5C0]" />
               <span>Hotline 24/7: {companyInfo.hotline}</span>

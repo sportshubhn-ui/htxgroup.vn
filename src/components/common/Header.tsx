@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { Menu, X, ChevronDown, Phone, ShoppingCart, AlertCircle, MapPin, Send } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, ShoppingCart, MapPin, Send } from 'lucide-react'
 import { navigationItems, companyInfo } from '@/data/htxData'
 import { useQuoteCart } from '@/context/QuoteCartContext'
 import { cn } from '@/utils/cn'
@@ -22,14 +22,8 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FFFCF6] border-b border-emerald-900/10 shadow-xs">
-      {/* 1. Preview notice banner according to MASTER_BRIEF */}
-      <div className="bg-[#064D35] text-[#B2E5C0] text-[11px] py-1 px-4 text-center font-medium flex items-center justify-center gap-2 border-b border-emerald-800/50">
-        <AlertCircle className="w-3.5 h-3.5 text-[#B2E5C0] shrink-0" />
-        <span>Bản xem trước thử nghiệm (htxgroup.vn) — Một số thông tin đang chờ doanh nghiệp xác nhận hoàn tất</span>
-      </div>
-
-      {/* 2. Top contact bar */}
+    <header className="sticky top-0 z-50 bg-[#FFFCF6] border-b border-emerald-900/10 shadow-xs w-full max-w-full">
+      {/* 1. Top contact bar */}
       <div className="hidden lg:block bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-b border-emerald-200/80 py-2.5 text-xs text-[#172D24]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-3">
@@ -58,23 +52,23 @@ export function Header() {
         </div>
       </div>
 
-      {/* 3. Main Navigation Bar with ENLARGED LOGO & SLOGAN */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28">
-          {/* Logo & Slogan area - Enlarged per user feedback */}
-          <Link to="/" className="flex items-center gap-4 shrink-0 py-1 group" title={companyInfo.name}>
-            <picture>
+      {/* 2. Main Navigation Bar with ENLARGED LOGO & SLOGAN */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24 lg:h-28 gap-2">
+          {/* Logo & Slogan area */}
+          <Link to="/" className="flex items-center py-1 group min-w-0 flex-1 sm:flex-initial" title={companyInfo.name}>
+            <picture className="flex items-center">
               <source srcSet="/brand/logo-glass.webp" type="image/webp" />
               <img
                 src="/brand/logo-glass.png"
                 alt={companyInfo.name}
-                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[280px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[480px] object-contain group-hover:scale-[1.02] transition-transform drop-shadow-sm"
+                className="h-10 xs:h-12 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[190px] xs:max-w-[240px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[480px] object-contain group-hover:scale-[1.02] transition-transform drop-shadow-sm"
               />
             </picture>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center space-x-1">
+          <nav className="hidden xl:flex items-center space-x-1 shrink-0">
             {navigationItems.map((item) => {
               const hasChildren = item.children && item.children.length > 0
 
@@ -168,13 +162,13 @@ export function Header() {
           </div>
 
           {/* Mobile hamburger button */}
-          <div className="flex items-center gap-2 xl:hidden">
+          <div className="flex items-center gap-1.5 xs:gap-2 xl:hidden shrink-0">
             <button
               onClick={() => setCartDrawerOpen(!cartDrawerOpen)}
-              className="relative p-2 rounded-lg text-[#064D35] hover:bg-emerald-50 transition"
+              className="relative p-2 rounded-lg text-[#064D35] hover:bg-emerald-50 transition cursor-pointer"
               aria-label="Giỏ báo giá"
             >
-              <ShoppingCart className="w-6 h-6" />
+              <ShoppingCart className="w-5 h-5 xs:w-6 xs:h-6" />
               {totalCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-[#064D35] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {totalCount}
@@ -184,11 +178,11 @@ export function Header() {
 
             <button
               type="button"
-              className="p-2 rounded-lg text-gray-700 hover:text-[#064D35] hover:bg-emerald-50 transition focus:outline-none"
+              className="p-2 rounded-lg text-gray-700 hover:text-[#064D35] hover:bg-emerald-50 transition focus:outline-none cursor-pointer"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle navigation menu"
             >
-              {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+              {mobileOpen ? <X className="w-6 h-6 xs:w-7 xs:h-7" /> : <Menu className="w-6 h-6 xs:w-7 xs:h-7" />}
             </button>
           </div>
         </div>
@@ -197,7 +191,7 @@ export function Header() {
       {/* 4. Cart Drawer Overlay */}
       {cartDrawerOpen && (
         <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-xs transition-opacity">
-          <div className="bg-[#FFFCF6] w-full max-w-md h-full shadow-2xl flex flex-col border-l border-emerald-900/10">
+          <div className="bg-[#FFFCF6] w-full max-w-full sm:max-w-md h-full shadow-2xl flex flex-col border-l border-emerald-900/10">
             {/* Header */}
             <div className="p-4 border-b border-gray-200 flex items-center justify-between bg-emerald-50/50">
               <div className="flex items-center gap-2 text-[#064D35]">
@@ -288,7 +282,7 @@ export function Header() {
 
       {/* 5. Mobile Drawer */}
       {mobileOpen && (
-        <div className="xl:hidden bg-[#FFFCF6] border-t border-emerald-900/10 shadow-2xl max-h-[80vh] overflow-y-auto px-4 py-4 space-y-2">
+        <div className="xl:hidden bg-[#FFFCF6] border-t border-emerald-900/10 shadow-2xl max-h-[80vh] overflow-y-auto px-4 py-4 space-y-2 w-full max-w-full">
           {navigationItems.map((item) => {
             const hasChildren = item.children && item.children.length > 0
 
