@@ -5,10 +5,10 @@ import { ScrollToTop } from '@/components/common/ScrollToTop'
 
 export function MainLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-gray-900 antialiased selection:bg-emerald-100 selection:text-emerald-900 w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#FFFCF6] text-[#172D24] font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900 w-full max-w-full overflow-x-hidden">
       <ScrollToTop />
       <Header />
-      <main className="flex-grow w-full max-w-full overflow-x-hidden">
+      <main className="flex-grow w-full max-w-full overflow-x-hidden font-sans">
         <Outlet />
       </main>
       <Footer />

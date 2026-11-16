@@ -24,26 +24,26 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#FFFCF6] border-b border-emerald-900/10 shadow-xs w-full max-w-full">
       {/* 1. Top contact bar */}
-      <div className="hidden lg:block bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-b border-emerald-200/80 py-2.5 text-xs text-[#172D24]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <span className="font-black text-[#064D35] uppercase tracking-wider text-[13px]">
+      <div className="hidden lg:block bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border-b border-emerald-200/80 py-2 text-xs text-[#172D24]">
+        <div className="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-4">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="font-extrabold text-[#064D35] uppercase tracking-wide text-xs xl:text-[13px] truncate">
               {companyInfo.name}
             </span>
-            <span className="text-emerald-500 font-bold">•</span>
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#064D35] text-white font-bold text-[12px] tracking-wide shadow-xs">
+            <span className="text-emerald-500 font-bold shrink-0">•</span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#064D35] text-white font-bold text-[11px] xl:text-[12px] tracking-wide shadow-2xs shrink-0">
               "{companyInfo.slogan}"
             </span>
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4 xl:gap-5 shrink-0">
             <span className="flex items-center gap-1.5 text-xs text-gray-800 font-semibold">
-              <MapPin className="w-3.5 h-3.5 text-[#064D35]" />
+              <MapPin className="w-3.5 h-3.5 text-[#064D35] shrink-0" />
               <span>Bãi tiếp nhận: <strong className="text-[#064D35]">{companyInfo.yardAddress}</strong></span>
             </span>
             <a
               href={`tel:${companyInfo.hotline.replace(/\s/g, '')}`}
-              className="flex items-center gap-1.5 bg-[#064D35] hover:bg-[#043826] text-white px-3 py-1 rounded-full text-xs font-black transition shadow-xs"
+              className="flex items-center gap-1.5 bg-[#064D35] hover:bg-[#043826] text-white px-3 py-1 rounded-full text-xs font-bold transition shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#B2E5C0]" />
               <span>Hotline 24/7: {companyInfo.hotline}</span>
@@ -52,23 +52,23 @@ export function Header() {
         </div>
       </div>
 
-      {/* 2. Main Navigation Bar with ENLARGED LOGO & SLOGAN */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24 lg:h-28 gap-2">
+      {/* 2. Main Navigation Bar */}
+      <div className="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20 gap-3 xl:gap-5">
           {/* Logo & Slogan area */}
-          <Link to="/" className="flex items-center py-1 group min-w-0 flex-1 sm:flex-initial" title={companyInfo.name}>
+          <Link to="/" className="flex items-center py-1 group shrink-0" title={companyInfo.name}>
             <picture className="flex items-center">
               <source srcSet="/brand/logo-glass.webp" type="image/webp" />
               <img
                 src="/brand/logo-glass.png"
                 alt={companyInfo.name}
-                className="h-10 xs:h-12 sm:h-16 md:h-20 lg:h-24 w-auto max-w-[190px] xs:max-w-[240px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[480px] object-contain group-hover:scale-[1.02] transition-transform drop-shadow-sm"
+                className="h-9 xs:h-10 sm:h-12 lg:h-13 xl:h-14 w-auto object-contain group-hover:scale-[1.02] transition-transform drop-shadow-2xs"
               />
             </picture>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center space-x-1 shrink-0">
+          <nav className="hidden xl:flex items-center space-x-0.5 2xl:space-x-1 shrink-0">
             {navigationItems.map((item) => {
               const hasChildren = item.children && item.children.length > 0
 
@@ -79,10 +79,10 @@ export function Header() {
                     to={item.href}
                     className={({ isActive }) =>
                       cn(
-                        'px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors duration-150 rounded-md',
+                        'px-2.5 2xl:px-3 py-1.5 2xl:py-2 text-[12px] 2xl:text-[13px] font-bold uppercase tracking-wide transition-colors duration-150 rounded-lg',
                         isActive
-                          ? 'text-[#064D35] bg-emerald-100/70 font-black'
-                          : 'text-[#172D24] hover:text-[#064D35] hover:bg-emerald-50/60'
+                          ? 'text-[#064D35] bg-emerald-100/70 font-extrabold'
+                          : 'text-[#172D24] hover:text-[#064D35] hover:bg-emerald-50/70'
                       )
                     }
                   >
@@ -97,15 +97,15 @@ export function Header() {
                     to={item.href}
                     className={({ isActive }) =>
                       cn(
-                        'px-3 py-2 text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-1 rounded-md',
+                        'px-2.5 2xl:px-3 py-1.5 2xl:py-2 text-[12px] 2xl:text-[13px] font-bold uppercase tracking-wide transition-colors flex items-center gap-1 rounded-lg',
                         isActive
-                          ? 'text-[#064D35] bg-emerald-100/70 font-black'
-                          : 'text-[#172D24] group-hover:text-[#064D35] group-hover:bg-emerald-50/60'
+                          ? 'text-[#064D35] bg-emerald-100/70 font-extrabold'
+                          : 'text-[#172D24] group-hover:text-[#064D35] group-hover:bg-emerald-50/70'
                       )
                     }
                   >
                     <span>{item.title}</span>
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+                    <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 opacity-70 group-hover:opacity-100" />
                   </NavLink>
 
                   {/* Dropdown menu */}
@@ -119,7 +119,7 @@ export function Header() {
                             cn(
                               'block px-4 py-2.5 text-xs font-semibold transition-colors border-l-2',
                               isActive
-                                ? 'text-[#064D35] border-[#064D35] bg-emerald-50'
+                                ? 'text-[#064D35] border-[#064D35] bg-emerald-50 font-bold'
                                 : 'text-gray-700 border-transparent hover:text-[#064D35] hover:bg-emerald-50/60 hover:border-emerald-600'
                             )
                           }
@@ -135,11 +135,11 @@ export function Header() {
           </nav>
 
           {/* Right Action buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2 xl:gap-2.5 shrink-0">
             {/* Quote Cart Button */}
             <button
               onClick={() => setCartDrawerOpen(!cartDrawerOpen)}
-              className="relative p-2.5 rounded-xl border border-emerald-900/15 text-[#064D35] hover:bg-emerald-100/50 transition cursor-pointer"
+              className="relative p-2 xl:p-2.5 rounded-xl border border-emerald-900/15 text-[#064D35] hover:bg-emerald-100/50 transition cursor-pointer"
               title="Giỏ yêu cầu báo giá vật liệu"
               aria-label="Giỏ báo giá"
             >
@@ -154,7 +154,7 @@ export function Header() {
             {/* CTA Button */}
             <Link
               to="/yeu-cau-bao-gia"
-              className="px-4 py-2.5 bg-[#064D35] hover:bg-[#043826] text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-sm transition flex items-center gap-2 cursor-pointer border border-[#B2E5C0]/30"
+              className="px-3 xl:px-4 py-2 xl:py-2.5 bg-[#064D35] hover:bg-[#043826] text-white text-[11px] xl:text-xs font-bold uppercase tracking-wide rounded-xl shadow-2xs transition flex items-center gap-1.5 cursor-pointer border border-[#B2E5C0]/30 shrink-0"
             >
               <Send className="w-3.5 h-3.5 text-[#B2E5C0]" />
               <span>Yêu cầu báo giá</span>

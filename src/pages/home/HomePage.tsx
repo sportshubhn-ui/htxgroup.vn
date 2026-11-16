@@ -272,7 +272,7 @@ export function HomePage() {
               <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
                 Sản phẩm hạt nhân
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
                 DANH MỤC VẬT LIỆU XÂY DỰNG & CỐT LIỆU TÁI CHẾ
               </h2>
               <p className="mt-2 text-xs sm:text-sm text-gray-600">
@@ -350,7 +350,7 @@ export function HomePage() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
               Quy trình minh bạch
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
               QUY TRÌNH GIAO DỊCH TIÊU CHUẨN 5 BƯỚC
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-gray-600">
@@ -498,7 +498,7 @@ export function HomePage() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#064D35] bg-emerald-100 px-3.5 py-1 rounded-full">
               Trang thiết bị
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase text-[#064D35] tracking-tight mt-3">
               NĂNG LỰC MÁY MÓC & ĐỘI XE CHUYÊN DỤNG
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-gray-600">
